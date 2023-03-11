@@ -1,5 +1,5 @@
 -- Rebalancing of radar
-if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
+if settings.startup["kr-rebalance-radar"].value then
   data.raw["radar"]["radar"].max_health = 300
   data.raw["radar"]["radar"].max_distance_of_sector_revealed = 16
   data.raw["radar"]["radar"].max_distance_of_nearby_sector_revealed = 5

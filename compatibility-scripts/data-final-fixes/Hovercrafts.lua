@@ -10,20 +10,20 @@ if mods["Hovercrafts"] then
   end
 
   data.raw["car"]["hcraft-entity"].equipment_grid = "kr-car-grid"
-  if krastorio.general.getSafeSettingValue("enable-mcraft") then
+  if settings.startup["enable-mcraft"].value then
     data.raw["car"]["mcraft-entity"].equipment_grid = "kr-car-grid"
   end
   if
-    krastorio.general.getSafeSettingValue("enable-mcraft")
+    settings.startup["enable-mcraft"].value
     and (
       (mods["electric-vehicles-lib-reborn"] or mods["laser_tanks"])
-      and krastorio.general.getSafeSettingValue("lasertanks-electric-engine")
+      and settings.startup["lasertanks-electric-engine"].value
     )
   then
     createEGrid()
     data.raw["car"]["ecraft-entity"].equipment_grid = "krastorio-ecraft-grid"
   end
-  if mods["laser_tanks"] and krastorio.general.getSafeSettingValue("enable-lcraft") then
+  if mods["laser_tanks"] and settings.startup["enable-lcraft"].value then
     if not data.raw["equipment-grid"]["krastorio-ecraft-grid"] then
       createEGrid()
     end

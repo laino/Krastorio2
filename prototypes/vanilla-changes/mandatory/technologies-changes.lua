@@ -152,7 +152,7 @@ krastorio.technologies.setResearchUnitCount("kovarex-enrichment-process", 500)
 
 --------------------------------------------------------------------
 -- Loaders
-if krastorio.general.getSafeSettingValue("kr-loaders") then
+if settings.startup["kr-loaders"].value then
   krastorio.technologies.addUnlockRecipe("logistics", "kr-loader")
   krastorio.technologies.addUnlockRecipe("logistics-2", "kr-fast-loader")
   krastorio.technologies.addUnlockRecipe("logistics-3", "kr-express-loader")

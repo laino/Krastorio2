@@ -68,7 +68,7 @@ if mods["Nuclear Fuel"] then
   -- -- STACK SIZES
 
   -- Update stack sizes of items added by NF that should have been modified by K2.
-  local kr_stack_size_value = krastorio.general.getSafeSettingValue("kr-stack-size")
+  local kr_stack_size_value = settings.startup["kr-stack-size"].value
   if kr_stack_size_value and kr_stack_size_value ~= "No changes" then
     data.raw.item["plutonium"].stack_size = kr_stack_size_value
     data.raw.item["breeder-fuel-cell"].stack_size = 10

@@ -1,11 +1,11 @@
 local kr_icons_size = false
 
-if krastorio.general.getSafeSettingValue("kr-large-icons") then
+if settings.startup["kr-large-icons"].value then
   kr_icons_size = true
 end
 
 local s_tint = { r = 1, g = 1, b = 1, a = 1 } -- White (should be never setted)
-local setting_color = krastorio.general.getSafeSettingValue("kr-shelter-tint") or "Yellow"
+local setting_color = settings.startup["kr-shelter-tint"].value or "Yellow"
 
 s_tint = { r = 0.9, g = 0.7, b = 0, a = 0.75 }
 if setting_color == "Yellow" then

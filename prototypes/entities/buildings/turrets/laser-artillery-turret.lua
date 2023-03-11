@@ -260,6 +260,6 @@ data:extend({
 })
 
 -- Sound fixes if needed
-if krastorio.general.getSafeSettingValue("kr-fix-laser-artillery-turret") then
+if settings.startup["kr-fix-laser-artillery-turret"].value then
   data.raw["electric-turret"]["kr-laser-artillery-turret"].starting_attack_sound = nil
 end

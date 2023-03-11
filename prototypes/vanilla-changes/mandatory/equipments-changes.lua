@@ -234,7 +234,7 @@ data:extend({
   },
 })
 
-if krastorio.general.getSafeSettingValue("kr-spidertron-exoskeleton") then
+if settings.startup["kr-spidertron-exoskeleton"].value then
   table.insert(data.raw["equipment-grid"]["kr-spidertron-equipment-grid"].equipment_categories, "spidertron-only")
 end
 

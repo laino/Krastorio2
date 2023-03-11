@@ -21,11 +21,11 @@ function jackhammer.collect(player, surface, tiles, sel_area)
     if
       position.distance(tile.position --[[@as MapPosition]], player_pos) <= constants.jackhammer_max_reach
     then
-      i = i + 1
-      tiles_to_set[i] = { name = tile.hidden_tile or "landfill", position = tile.position }
       local mineable = tile.prototype.mineable_properties
       local products = mineable.products
       if mineable and mineable.minable and products then
+        i = i + 1
+        tiles_to_set[i] = { name = tile.hidden_tile or "landfill", position = tile.position }
         for _, product_ident in pairs(products) do
           local probability = product_ident.probability
           if product_ident.type == "item" and not probability or math.random() <= probability then

@@ -1,5 +1,5 @@
 -- -- -- Vanilla Vehicles changes
-if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
+if settings.startup["kr-rebalance-vehicles&fuels"].value then
   ---------------------
   -- -- Car
   --data.raw["item-with-entity-data"]["car"].subgroup = "k-vehicles"

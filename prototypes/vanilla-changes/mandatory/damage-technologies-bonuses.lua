@@ -1,6 +1,6 @@
 require("damage-technologies-bonuses-plus") -- the require can't be in the if statement
 
-if not krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
+if not settings.startup["kr-more-realistic-weapon"].value then
   -- -- Rebalance the bonus given by technologies to ammo and turrets damage and attack speed
 
   -- -- physical-projectile-damage

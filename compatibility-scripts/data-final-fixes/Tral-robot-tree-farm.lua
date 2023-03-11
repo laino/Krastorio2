@@ -26,7 +26,7 @@ if mods["Tral_robot_tree_farm"] then
   end
 
   -- if uniseed is active
-  if krastorio.general.getSafeSettingValue("rtf-uniseed") then
+  if settings.startup["rtf-uniseed"].value then
     local seed = data.raw["item"]["rtf-uniseed-seed"]
 
     add_seed_stuff(seed)

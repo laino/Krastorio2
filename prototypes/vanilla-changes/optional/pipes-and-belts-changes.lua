@@ -1,6 +1,6 @@
 -- -- -- Vanilla pipes and belts modification
 
-if krastorio.general.getSafeSettingValue("kr-pipes-and-belts-changes") then
+if settings.startup["kr-pipes-and-belts-changes"].value then
   -- -- Pipes
   data.raw["pipe-to-ground"]["pipe-to-ground"].fluid_box = {
     base_area = 1,

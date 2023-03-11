@@ -62,7 +62,7 @@ if mods["Aircraft"] then
   end
 
   --Change ammo if the option is active (DEPRECATED)
-  -- if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
+  -- if settings.startup["kr-more-realistic-weapon"].value then
   --  data.raw.gun["aircraft-machine-gun"].attack_parameters.ammo_category = "rifle-ammo"
   -- end
 

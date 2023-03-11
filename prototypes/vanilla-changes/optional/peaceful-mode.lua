@@ -1,6 +1,6 @@
 -- -- Peaceful mod
 
-if krastorio.general.getSafeSettingValue("kr-peaceful-mode") then
+if settings.startup["kr-peaceful-mode"].value then
   -- Item recipes fix
   krastorio.recipes.overrideIngredients("fertilizer", {
     { type = "fluid", name = "sulfuric-acid", amount = 50 },

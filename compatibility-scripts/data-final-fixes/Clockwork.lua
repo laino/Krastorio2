@@ -1,3 +1,3 @@
-if mods["Clockwork"] and krastorio.general.getSafeSettingValue("Clockwork-disable-nv") then
+if mods["Clockwork"] and settings.startup["Clockwork-disable-nv"].value then
   data.raw.technology["kr-imersite-night-vision-equipment"] = nil
 end

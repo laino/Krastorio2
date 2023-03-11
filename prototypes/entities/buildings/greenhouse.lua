@@ -1,6 +1,6 @@
 local kr_icons_size = false
 
-if krastorio.general.getSafeSettingValue("kr-large-icons") then
+if settings.startup["kr-large-icons"].value then
   kr_icons_size = true
 end
 

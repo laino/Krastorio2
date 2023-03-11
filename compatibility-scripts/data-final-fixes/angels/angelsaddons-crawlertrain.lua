@@ -10,7 +10,7 @@ if mods["angelsaddons-crawlertrain"] or mods["angelsaddons-mobility"] then
 
   local function changeLocomotiveBurnerCategory(locomotive_name)
     if
-      krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels")
+      settings.startup["kr-rebalance-vehicles&fuels"].value
       and data.raw.locomotive[locomotive_name]
       and data.raw.locomotive[locomotive_name].burner
     then

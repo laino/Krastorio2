@@ -1,4 +1,4 @@
-if krastorio.general.getSafeSettingValue("kr-impossible-more-than-difficult") then
+if settings.startup["kr-impossible-more-than-difficult"].value then
   -- Doubles expensive ingredients of all recipes
   for name, recipe in pairs(data.raw.recipe) do
     if not string.find(name, "^fill%-.*%-barrel$") and not string.find(name, "empty%-.*%-barrel$") then

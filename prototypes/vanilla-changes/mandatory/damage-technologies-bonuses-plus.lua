@@ -1,4 +1,4 @@
-if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
+if settings.startup["kr-more-realistic-weapon"].value then
   -- -- Rebalance the bonus given by technologies to ammo and turrets damage and attack speed
 
   -- -- physical-projectile-damage

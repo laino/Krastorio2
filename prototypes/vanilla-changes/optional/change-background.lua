@@ -14,7 +14,7 @@ backgrounds_util.addBackgroundImage("Factorio Alternative 3", "__Krastorio2Asset
 backgrounds_util.addBackgroundImage("Factorio Alternative 4", "__Krastorio2Assets__/backgrounds/factorio-alternative-4.jpg")
 
 -- Choose the background depending on the setting
-local path_name = krastorio.general.getSafeSettingValue("kr-main-menu-background")
+local path_name = settings.startup["kr-main-menu-background"].value
 if path_name then
   data.raw["utility-constants"]["default"].main_menu_background_image_location =
     backgrounds_util.getBackgroundPath(path_name)

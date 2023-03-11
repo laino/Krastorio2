@@ -1,5 +1,5 @@
 -- Rebalancing of radar
-if krastorio.general.getSafeSettingValue("kr-electric-poles-changes") then
+if settings.startup["kr-electric-poles-changes"].value then
   data.raw["electric-pole"]["small-electric-pole"].maximum_wire_distance = 7.75
 
   data.raw["electric-pole"]["medium-electric-pole"].maximum_wire_distance = 9.75

@@ -3,7 +3,7 @@ local sounds = require("__base__/prototypes/entity/sounds")
 
 local kr_icons_size = false
 
-if krastorio.general.getSafeSettingValue("kr-large-icons") then
+if settings.startup["kr-large-icons"].value then
   kr_icons_size = true
 end
 
@@ -16,7 +16,7 @@ circuit_connector_definitions["kr-big-container"] = circuit_connector_definition
   },
 })
 
-if krastorio.general.getSafeSettingValue("kr-containers") then
+if settings.startup["kr-containers"].value then
   data:extend({
     {
       type = "container",

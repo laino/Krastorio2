@@ -1,4 +1,4 @@
-if mods["LightedPolesPlus"] and krastorio.general.getSafeSettingValue("kr-electric-poles-changes") then
+if mods["LightedPolesPlus"] and settings.startup["kr-electric-poles-changes"].value then
   data.raw["electric-pole"]["lighted-small-electric-pole"].maximum_wire_distance = 7.75
 
   data.raw["electric-pole"]["lighted-medium-electric-pole"].maximum_wire_distance = 9.75

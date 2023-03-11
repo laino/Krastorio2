@@ -85,7 +85,7 @@ if mods["AsphaltRoads"] then
 
   -- Iterate each list
   for option_name, tiles in pairs(asphalt_roads_tiles_per_options) do
-    if krastorio.general.getSafeSettingValue(option_name) then -- if the option is "true"
+    if settings.startup[option_name].value then -- if the option is "true"
       for _, tile in pairs(tiles) do -- add each tiles
         table.insert(tile_filters, tile)
         table.insert(alt_tile_filters, tile)

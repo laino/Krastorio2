@@ -32,7 +32,7 @@ data:extend({
       time = 20,
     },
     -- Disable cost multiplier to avoid manually harvesting unreasonable amount of wood.
-    ignore_tech_cost_multiplier = not krastorio.general.getSafeSettingValue("kr-tech-multiplier-everywhere"),
+    ignore_tech_cost_multiplier = not settings.startup["kr-tech-multiplier-everywhere"].value,
   },
   {
     type = "technology",
@@ -99,7 +99,7 @@ data:extend({
       time = 30,
     },
     -- Disable cost multiplier to avoid manually harvesting unreasonable amount of wood.
-    ignore_tech_cost_multiplier = not krastorio.general.getSafeSettingValue("kr-tech-multiplier-everywhere"),
+    ignore_tech_cost_multiplier = not settings.startup["kr-tech-multiplier-everywhere"].value,
   },
   -----------------------------------------------------------------------
   -- AUTOMATION TIER AND UPPER
@@ -817,13 +817,13 @@ data:extend({
 })
 
 -- Loader recipes
-if krastorio.general.getSafeSettingValue("kr-loaders") then
+if settings.startup["kr-loaders"].value then
   krastorio.technologies.addUnlockRecipe("kr-logistic-4", "kr-advanced-loader")
   krastorio.technologies.addUnlockRecipe("kr-logistic-5", "kr-superior-loader")
 end
 
 -- Containers
-if krastorio.general.getSafeSettingValue("kr-containers") then
+if settings.startup["kr-containers"].value then
   data:extend({
     {
       type = "technology",

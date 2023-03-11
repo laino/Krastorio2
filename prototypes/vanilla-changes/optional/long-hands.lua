@@ -1,5 +1,5 @@
 -- -- -- Long hands
-local distant_reach_multiplier = krastorio.general.getSafeSettingValue("kr-long-hands")
+local distant_reach_multiplier = settings.startup["kr-long-hands"].value
 
 if distant_reach_multiplier and distant_reach_multiplier > 1 then
   data.raw["character"]["character"].build_distance = data.raw["character"]["character"].build_distance

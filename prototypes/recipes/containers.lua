@@ -1,4 +1,4 @@
-if krastorio.general.getSafeSettingValue("kr-containers") then
+if settings.startup["kr-containers"].value then
   data:extend({
     -- -- --
     -- MEDIUM CONTEINERS

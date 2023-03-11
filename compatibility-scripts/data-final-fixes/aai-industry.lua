@@ -21,7 +21,7 @@ if mods["aai-industry"] then
 
   -- AAI Industry makes Greenhouse a dependency of these technologies. Disable cost multiplier to avoid manually harvesting
   -- unreasonable amounts of wood.
-  local tech_multiplier_everywhere = krastorio.general.getSafeSettingValue("kr-tech-multiplier-everywhere")
+  local tech_multiplier_everywhere = settings.startup["kr-tech-multiplier-everywhere"].value
   if not tech_multiplier_everywhere then
     local tech = data.raw.technology["automation-science-pack"]
     if tech ~= nil then
@@ -38,7 +38,7 @@ if mods["aai-industry"] then
   end
 
   -- Fuel prerequisite
-  if krastorio.general.getSafeSettingValue("aai-fuel-processor") then
+  if settings.startup["aai-fuel-processor"].value then
     krastorio.technologies.addPrerequisite("kr-fuel", "fuel-processing")
   end
 
@@ -77,7 +77,7 @@ if mods["aai-industry"] then
   end, true)
 
   -- Fix for fuels
-  if krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels") then
+  if settings.startup["kr-rebalance-vehicles&fuels"].value then
     if data.raw.item["processed-fuel"] then
       data.raw.item["processed-fuel"].fuel_category = "vehicle-fuel"
       data.raw.item["processed-fuel"].fuel_acceleration_multiplier = 0.9

@@ -1,8 +1,8 @@
-if krastorio.general.getSafeSettingValue("kr-kl-stuff") then
+if settings.startup["kr-kl-stuff"].value then
   local stack_size = 100
 
   if stack_size > 100 then
-    stack_size = krastorio.general.getSafeSettingValue("kr-stack-size")
+    stack_size = settings.startup["kr-stack-size"].value
   end
 
   data:extend({

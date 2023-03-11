@@ -1,4 +1,4 @@
-if krastorio.general.getSafeSettingValue("kr-main-menu-song") then
+if settings.startup["kr-main-menu-song"].value then
   data:extend({
     -- Main Menu
     {

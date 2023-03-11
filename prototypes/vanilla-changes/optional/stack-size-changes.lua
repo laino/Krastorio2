@@ -1,4 +1,4 @@
-local kr_stack_size_value = krastorio.general.getSafeSettingValue("kr-stack-size")
+local kr_stack_size_value = settings.startup["kr-stack-size"].value
 
 if kr_stack_size_value and kr_stack_size_value ~= "No changes" then
   -- Special stack size

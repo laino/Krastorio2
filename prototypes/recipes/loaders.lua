@@ -1,4 +1,4 @@
-if krastorio.general.getSafeSettingValue("kr-loaders") then
+if settings.startup["kr-loaders"].value then
   local standard_loaders_crafting_speed = 2
 
   -- Variable utils

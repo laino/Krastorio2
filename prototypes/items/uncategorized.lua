@@ -3,7 +3,7 @@ local fuel_value, fuel_acceleration_multiplier, fuel_top_speed_multiplier = nil,
 local bio_fuel_value, bio_fuel_acceleration_multiplier, bio_fuel_top_speed_multiplier = nil, nil, nil
 local advanced_fuel_value, advanced_fuel_acceleration_multiplier, advanced_fuel_top_speed_multiplier = nil, nil, nil
 
-if krastorio.general.getSafeSettingValue("kr-rebalance-fuels") then
+if settings.startup["kr-rebalance-fuels"].value then
   -- Coke
   coke_value = "10MJ"
   coke_acceleration_multiplier = 0.9

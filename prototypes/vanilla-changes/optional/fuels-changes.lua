@@ -1,6 +1,6 @@
 -- -- -- Vanilla fuels changes
 --
-if krastorio.general.getSafeSettingValue("kr-rebalance-fuels") then
+if settings.startup["kr-rebalance-fuels"].value then
   ---------------------
   -- -- Wood
   data.raw.item["wood"].fuel_category = "chemical"

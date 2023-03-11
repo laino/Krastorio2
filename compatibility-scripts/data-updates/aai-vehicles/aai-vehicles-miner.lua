@@ -1,7 +1,7 @@
 if mods["aai-vehicles-miner"] then
   if data.raw["car"]["vehicle-miner"] then
     data.raw["car"]["vehicle-miner"].equipment_grid = "kr-car-grid"
-    if mods["aai-industry"] and krastorio.general.getSafeSettingValue("aai-fuel-processor") then
+    if mods["aai-industry"] and settings.startup["aai-fuel-processor"].value then
       krastorio.technologies.addPrerequisite("basic-vehicles", "fuel-processing")
     else
       krastorio.technologies.addPrerequisite("basic-vehicles", "kr-fuel")

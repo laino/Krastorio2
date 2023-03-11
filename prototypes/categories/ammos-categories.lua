@@ -30,7 +30,7 @@ data.raw["ammo-category"]["missiles-for-turrets"] = {
   name = "missiles-for-turrets",
 }
 
-if krastorio.general.getSafeSettingValue("kr-more-realistic-weapon") then
+if settings.startup["kr-more-realistic-weapon"].value then
   -- Pistol ammo
   data.raw["ammo-category"]["pistol-ammo"] = {
     bonus_gui_order = "r",

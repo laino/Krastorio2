@@ -2,7 +2,7 @@ local sounds = require("__base__/prototypes/entity/sounds")
 
 local color = require("__Krastorio2__/lib/private/data-stages/colorRGB")
 
-if krastorio.general.getSafeSettingValue("kr-loaders") then
+if settings.startup["kr-loaders"].value then
   -- Variable utils
   local loader_names = {
     [1] = "kr-loader",
