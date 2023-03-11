@@ -24,10 +24,7 @@ function freeplay.add_starting_items()
   -- Shelter
   items["kr-shelter"] = 1
   -- Electric poles
-  if
-    (game.active_mods["IndustrialRevolution"] or game.active_mods["aai-industry"])
-    and game.item_prototypes["medium-electric-pole"]
-  then
+  if game.active_mods["aai-industry"] and game.item_prototypes["medium-electric-pole"] then
     items["medium-electric-pole"] = 10
   end
   remote.call("freeplay", "set_created_items", items)

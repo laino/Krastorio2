@@ -140,19 +140,16 @@ if mods["deadlock-beltboxes-loaders"] then
 
   krCreateStacks(stackable_krastorio_items)
 
-  -- -- Inter/Cross compatibility with deadlock beltboxes loaders with IndustrialRevolution
-  if not mods["IndustrialRevolution"] then
-    stackable_krastorio_items = {
-      [1] = { -- Tier 1
-        "sand",
-        "glass",
-      },
-      [2] = { -- Tier 2
-        "steel-gear-wheel",
-        "steel-beam",
-      },
-    }
+  stackable_krastorio_items = {
+    [1] = { -- Tier 1
+      "sand",
+      "glass",
+    },
+    [2] = { -- Tier 2
+      "steel-gear-wheel",
+      "steel-beam",
+    },
+  }
 
-    krCreateStacks(stackable_krastorio_items)
-  end
+  krCreateStacks(stackable_krastorio_items)
 end

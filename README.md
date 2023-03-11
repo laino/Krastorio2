@@ -124,10 +124,8 @@ Krastorio 2 is _not_ compatible with [Bob's
 mods](https://mods.factorio.com/user/Bobingabout), with the exception of [Bob's
 adjustable inserters](https://mods.factorio.com/mod/bobinserters).
 
-Krastorio 2 has compatibility with [Industrial Revolution
-2](https://mods.factorio.com/mod/IndustrialRevolution). However, it is not
-compatible with IR3, and never will be. Because IR2 has been deprecated,
-support for it will be removed in the near future.
+Krastorio 2 is _not_ compatible with Industrial Revolution or Exotic
+Industries.
 
 ### Recommended companion mods
 

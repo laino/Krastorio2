@@ -1,7 +1,4 @@
--- -- KRASTORIO SETTINGS
--- Setting order "[a-z]NUMBER"
 data:extend({
-  -- Mod config (Setting order "aNUMBER")
   {
     type = "string-setting",
     name = "kr-stack-size",
@@ -76,8 +73,6 @@ data:extend({
     default_value = false,
     order = "zzz",
   },
-
-  -- S - Science (Setting order "sNUMBER")
   {
     type = "string-setting",
     name = "kr-automation-science-pack-recipe",
@@ -126,7 +121,6 @@ data:extend({
     allowed_values = { "Factorio", "Krastorio 2" },
     order = "s6",
   },
-  -- Skin content (Setting order "uNUMBER")
   {
     type = "string-setting",
     name = "kr-shelter-tint",
@@ -171,10 +165,8 @@ data:extend({
   },
 })
 
--- -- VANILLA CHANGES SETTINGS
--- Setting order "bNUMBER"
+-- VANILLA CHANGES SETTINGS
 data:extend({
-  -- B - Config
   {
     type = "bool-setting",
     name = "kr-rebalance-vehicles&fuels",

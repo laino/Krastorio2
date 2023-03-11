@@ -51,10 +51,7 @@ local science_pack_incompatibilities = {
 -- Sanitize matter tech card from T1 packs
 krastorio.technologies.removeSciencePackIncompatibleWith("matter-tech-card", science_pack_incompatibilities)
 -- Sanitize space science pack from T1 packs
-krastorio.technologies.removeSciencePackIncompatibleWith(
-  kr_optimization_tech_card_name,
-  science_pack_incompatibilities
-)
+krastorio.technologies.removeSciencePackIncompatibleWith(kr_optimization_tech_card_name, science_pack_incompatibilities)
 -- Sanitize advanced tech card from T1 packs
 krastorio.technologies.removeSciencePackIncompatibleWith("advanced-tech-card", science_pack_incompatibilities)
 -- Sanitize singularity tech card from T1 packs
@@ -103,7 +100,6 @@ require("__Krastorio2__/compatibility-scripts/data-final-fixes/deadlock-beltboxe
 require("__Krastorio2__/compatibility-scripts/data-final-fixes/ElectricTrain")
 require("__Krastorio2__/compatibility-scripts/data-final-fixes/FoodIndustry")
 require("__Krastorio2__/compatibility-scripts/data-final-fixes/Hovercrafts")
-require("__Krastorio2__/compatibility-scripts/data-final-fixes/IndustrialRevolution")
 require("__Krastorio2__/compatibility-scripts/data-final-fixes/LightedPolesPlus")
 require("__Krastorio2__/compatibility-scripts/data-final-fixes/Nuclear Fuel")
 -- Pyanodons (multiple scripts)
