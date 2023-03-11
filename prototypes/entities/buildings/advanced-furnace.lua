@@ -1,13 +1,13 @@
 function furnacekpipepictures_a()
   return {
     north = {
-      filename = kr_entities_path .. "advanced-furnace/advanced-furnace-k-pipe-N.png",
+      filename = "__Krastorio2Assets__/entities/advanced-furnace/advanced-furnace-k-pipe-N.png",
       priority = "extra-high",
       width = 35,
       height = 18,
       shift = util.by_pixel(2.5, 14),
       hr_version = {
-        filename = kr_entities_path .. "advanced-furnace/hr-advanced-furnace-k-pipe-N.png",
+        filename = "__Krastorio2Assets__/entities/advanced-furnace/hr-advanced-furnace-k-pipe-N.png",
         priority = "extra-high",
         width = 71,
         height = 38,
@@ -16,13 +16,13 @@ function furnacekpipepictures_a()
       },
     },
     east = {
-      filename = kr_entities_path .. "advanced-furnace/advanced-furnace-k-pipe-E-top.png",
+      filename = "__Krastorio2Assets__/entities/advanced-furnace/advanced-furnace-k-pipe-E-top.png",
       priority = "extra-high",
       width = 30, --20,
       height = 38,
       shift = util.by_pixel(-29, 1),
       hr_version = {
-        filename = kr_entities_path .. "advanced-furnace/hr-advanced-furnace-k-pipe-E-top.png",
+        filename = "__Krastorio2Assets__/entities/advanced-furnace/hr-advanced-furnace-k-pipe-E-top.png",
         priority = "extra-high",
         width = 59, --42,
         height = 76,
@@ -31,13 +31,13 @@ function furnacekpipepictures_a()
       },
     },
     south = {
-      filename = kr_entities_path .. "advanced-furnace/advanced-furnace-k-pipe-S-right.png",
+      filename = "__Krastorio2Assets__/entities/advanced-furnace/advanced-furnace-k-pipe-S-right.png",
       priority = "extra-high",
       width = 44,
       height = 31,
       shift = util.by_pixel(0, -31.5),
       hr_version = {
-        filename = kr_entities_path .. "advanced-furnace/hr-advanced-furnace-k-pipe-S-right.png",
+        filename = "__Krastorio2Assets__/entities/advanced-furnace/hr-advanced-furnace-k-pipe-S-right.png",
         priority = "extra-high",
         width = 88,
         height = 61,
@@ -46,13 +46,13 @@ function furnacekpipepictures_a()
       },
     },
     west = {
-      filename = kr_entities_path .. "advanced-furnace/advanced-furnace-k-pipe-W-bottom.png",
+      filename = "__Krastorio2Assets__/entities/advanced-furnace/advanced-furnace-k-pipe-W-bottom.png",
       priority = "extra-high",
       width = 19,
       height = 37,
       shift = util.by_pixel(25.5, 1.5),
       hr_version = {
-        filename = kr_entities_path .. "advanced-furnace/hr-advanced-furnace-k-pipe-W-bottom.png",
+        filename = "__Krastorio2Assets__/entities/advanced-furnace/hr-advanced-furnace-k-pipe-W-bottom.png",
         priority = "extra-high",
         width = 39,
         height = 73,
@@ -66,13 +66,13 @@ end
 function furnacekpipepictures_b()
   return {
     north = {
-      filename = kr_entities_path .. "advanced-furnace/advanced-furnace-k-pipe-N.png",
+      filename = "__Krastorio2Assets__/entities/advanced-furnace/advanced-furnace-k-pipe-N.png",
       priority = "extra-high",
       width = 35,
       height = 18,
       shift = util.by_pixel(2.5, 14),
       hr_version = {
-        filename = kr_entities_path .. "advanced-furnace/hr-advanced-furnace-k-pipe-N.png",
+        filename = "__Krastorio2Assets__/entities/advanced-furnace/hr-advanced-furnace-k-pipe-N.png",
         priority = "extra-high",
         width = 71,
         height = 38,
@@ -81,13 +81,13 @@ function furnacekpipepictures_b()
       },
     },
     east = {
-      filename = kr_entities_path .. "advanced-furnace/advanced-furnace-k-pipe-E-bottom.png",
+      filename = "__Krastorio2Assets__/entities/advanced-furnace/advanced-furnace-k-pipe-E-bottom.png",
       priority = "extra-high",
       width = 38, --20,
       height = 38,
       shift = util.by_pixel(-33, 1),
       hr_version = {
-        filename = kr_entities_path .. "advanced-furnace/hr-advanced-furnace-k-pipe-E-bottom.png",
+        filename = "__Krastorio2Assets__/entities/advanced-furnace/hr-advanced-furnace-k-pipe-E-bottom.png",
         priority = "extra-high",
         width = 76, --42,
         height = 76,
@@ -96,13 +96,13 @@ function furnacekpipepictures_b()
       },
     },
     south = {
-      filename = kr_entities_path .. "advanced-furnace/advanced-furnace-k-pipe-S-left.png",
+      filename = "__Krastorio2Assets__/entities/advanced-furnace/advanced-furnace-k-pipe-S-left.png",
       priority = "extra-high",
       width = 44,
       height = 31,
       shift = util.by_pixel(0, -31.5),
       hr_version = {
-        filename = kr_entities_path .. "advanced-furnace/hr-advanced-furnace-k-pipe-S-left.png",
+        filename = "__Krastorio2Assets__/entities/advanced-furnace/hr-advanced-furnace-k-pipe-S-left.png",
         priority = "extra-high",
         width = 88,
         height = 61,
@@ -111,13 +111,13 @@ function furnacekpipepictures_b()
       },
     },
     west = {
-      filename = kr_entities_path .. "advanced-furnace/advanced-furnace-k-pipe-W-top.png",
+      filename = "__Krastorio2Assets__/entities/advanced-furnace/advanced-furnace-k-pipe-W-top.png",
       priority = "extra-high",
       width = 19,
       height = 42, --37,
       shift = util.by_pixel(25.5, -2.25),
       hr_version = {
-        filename = kr_entities_path .. "advanced-furnace/hr-advanced-furnace-k-pipe-W-top.png",
+        filename = "__Krastorio2Assets__/entities/advanced-furnace/hr-advanced-furnace-k-pipe-W-top.png",
         priority = "extra-high",
         width = 39,
         height = 87, --73,
@@ -138,7 +138,7 @@ if krastorio.general.getSafeSettingValue("kr-large-icons") then
 end
 
 local advanced_furnace_sound = {
-  filename = kr_buildings_sounds_path .. "advanced-furnace.ogg",
+  filename = "__Krastorio2Assets__/sounds/buildings/advanced-furnace.ogg",
   volume = 0.50,
   aggregation = {
     max_count = 2,
@@ -151,7 +151,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "kr-advanced-furnace",
-    icon = kr_entities_icons_path .. "advanced-furnace.png",
+    icon = "__Krastorio2Assets__/icons/entities/advanced-furnace.png",
     icon_size = 128,
     icon_mipmaps = 4,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -245,14 +245,14 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "advanced-furnace/advanced-furnace.png",
+          filename = "__Krastorio2Assets__/entities/advanced-furnace/advanced-furnace.png",
           priority = "high",
           width = 240,
           height = 240,
           shift = { 0, -0.1 },
           frame_count = 1,
           hr_version = {
-            filename = kr_entities_path .. "advanced-furnace/hr-advanced-furnace.png",
+            filename = "__Krastorio2Assets__/entities/advanced-furnace/hr-advanced-furnace.png",
             priority = "high",
             width = 480,
             height = 480,
@@ -262,7 +262,7 @@ data:extend({
           },
         },
         {
-          filename = kr_entities_path .. "advanced-furnace/advanced-furnace-sh.png",
+          filename = "__Krastorio2Assets__/entities/advanced-furnace/advanced-furnace-sh.png",
           priority = "high",
           scale = scale,
           width = 83,
@@ -271,7 +271,7 @@ data:extend({
           frame_count = 1,
           draw_as_shadow = true,
           hr_version = {
-            filename = kr_entities_path .. "advanced-furnace/hr-advanced-furnace-sh.png",
+            filename = "__Krastorio2Assets__/entities/advanced-furnace/hr-advanced-furnace-sh.png",
             priority = "high",
             width = 165,
             height = 480,
@@ -287,7 +287,7 @@ data:extend({
       {
         constant_speed = true,
         animation = {
-          filename = kr_entities_path .. "advanced-furnace/advanced-furnace-anim-light.png",
+          filename = "__Krastorio2Assets__/entities/advanced-furnace/advanced-furnace-anim-light.png",
           priority = "high",
           width = 240,
           height = 240,
@@ -297,7 +297,7 @@ data:extend({
           animation_speed = 0.8,
           draw_as_light = true,
           hr_version = {
-            filename = kr_entities_path .. "advanced-furnace/hr-advanced-furnace-anim-light.png",
+            filename = "__Krastorio2Assets__/entities/advanced-furnace/hr-advanced-furnace-anim-light.png",
             priority = "high",
             width = 480,
             height = 480,
@@ -313,7 +313,7 @@ data:extend({
       {
         constant_speed = true,
         animation = {
-          filename = kr_entities_path .. "advanced-furnace/advanced-furnace-anim-glow.png",
+          filename = "__Krastorio2Assets__/entities/advanced-furnace/advanced-furnace-anim-glow.png",
           priority = "high",
           width = 240,
           height = 240,
@@ -325,7 +325,7 @@ data:extend({
           fadeout = true,
           blend_mode = "additive",
           hr_version = {
-            filename = kr_entities_path .. "advanced-furnace/hr-advanced-furnace-anim-glow.png",
+            filename = "__Krastorio2Assets__/entities/advanced-furnace/hr-advanced-furnace-anim-glow.png",
             priority = "high",
             width = 480,
             height = 480,
@@ -343,7 +343,7 @@ data:extend({
       {
         constant_speed = true,
         animation = {
-          filename = kr_entities_path .. "advanced-furnace/advanced-furnace-anim.png",
+          filename = "__Krastorio2Assets__/entities/advanced-furnace/advanced-furnace-anim.png",
           priority = "high",
           width = 240,
           height = 240,
@@ -352,7 +352,7 @@ data:extend({
           line_length = 4,
           animation_speed = 0.8,
           hr_version = {
-            filename = kr_entities_path .. "advanced-furnace/hr-advanced-furnace-anim.png",
+            filename = "__Krastorio2Assets__/entities/advanced-furnace/hr-advanced-furnace-anim.png",
             priority = "high",
             width = 480,
             height = 480,
@@ -388,7 +388,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = kr_entities_path .. "advanced-furnace/advanced-furnace-reflection.png",
+        filename = "__Krastorio2Assets__/entities/advanced-furnace/advanced-furnace-reflection.png",
         priority = "extra-high",
         width = 80,
         height = 60,

@@ -7,17 +7,12 @@ if krastorio.general.getSafeSettingValue("kr-large-icons") then
   kr_icons_size = true
 end
 
-local _medium_containers = "containers/big-containers/"
-local _specific = "big-buffer-container/"
-local _icon_path = kr_entities_icons_path .. _medium_containers
-local _sprites_path = kr_entities_path .. _medium_containers .. _specific
-
 if krastorio.general.getSafeSettingValue("kr-containers") then
   data:extend({
     {
       type = "logistic-container",
       name = "kr-big-buffer-container",
-      icon = _icon_path .. "big-buffer-container.png",
+      icon = "__Krastorio2Assets__/icons/entities/containers/big-containers/big-buffer-container.png",
       icon_size = 64,
       icon_mipmaps = 4,
       flags = { "placeable-player", "player-creation", "not-rotatable" },
@@ -40,7 +35,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
       vehicle_impact_sound = sounds.generic_impact,
       opened_duration = logistic_chest_opened_duration,
       animation = {
-        filename = _sprites_path .. "big-buffer-container.png",
+        filename = "__Krastorio2Assets__/entities/containers/big-containers/big-buffer-container/big-buffer-container.png",
         priority = "extra-high",
         width = 213,
         height = 213,
@@ -48,7 +43,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
         line_length = 2,
         scale = 1.2,
         hr_version = {
-          filename = _sprites_path .. "hr-big-buffer-container.png",
+          filename = "__Krastorio2Assets__/entities/containers/big-containers/big-buffer-container/hr-big-buffer-container.png",
           priority = "extra-high",
           width = 512,
           height = 512,
@@ -60,7 +55,7 @@ if krastorio.general.getSafeSettingValue("kr-containers") then
 
       water_reflection = {
         pictures = {
-          filename = kr_entities_path .. "containers/big-containers/big-container-reflection.png",
+          filename = "__Krastorio2Assets__/entities/containers/big-containers/big-container-reflection.png",
           priority = "extra-high",
           width = 60,
           height = 50,

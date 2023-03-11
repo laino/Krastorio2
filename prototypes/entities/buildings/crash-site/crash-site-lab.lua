@@ -8,7 +8,7 @@ data:extend({
     localised_name = { "entity-name.kr-damaged-ship-research-computer" },
     localised_description = { "entity-description.kr-crash-site-building" },
     has_backer_name = false,
-    icon = kr_crash_site_icons_path .. "crash-site-lab-repaired.png",
+    icon = "__Krastorio2Assets__/icons/entities/crash-site/crash-site-lab-repaired.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-player", "player-creation", "hidden", "not-rotatable" },
@@ -44,14 +44,14 @@ data:extend({
     },
     integration_patch_render_layer = "decals",
     integration_patch = {
-      filename = kr_crash_site_sprites_path .. "lab/crash-site-lab-ground.png",
+      filename = "__Krastorio2Assets__/entities/crash-site/lab/crash-site-lab-ground.png",
       width = 352,
       height = 170,
       shift = util.by_pixel(-48, 12),
       frame_count = 1,
       line_length = 1,
       hr_version = {
-        filename = kr_crash_site_sprites_path .. "lab/hr-crash-site-lab-ground.png",
+        filename = "__Krastorio2Assets__/entities/crash-site/lab/hr-crash-site-lab-ground.png",
         width = 700,
         height = 344,
         shift = util.by_pixel(-49, 11),
@@ -63,7 +63,7 @@ data:extend({
     on_animation = {
       layers = {
         {
-          filename = kr_crash_site_sprites_path .. "lab/crash-site-lab-repaired.png",
+          filename = "__Krastorio2Assets__/entities/crash-site/lab/crash-site-lab-repaired.png",
           width = 244,
           height = 126,
           frame_count = 1,
@@ -72,7 +72,7 @@ data:extend({
           animation_speed = 1 / 3,
           shift = util.by_pixel(-18, 14),
           hr_version = {
-            filename = kr_crash_site_sprites_path .. "lab/hr-crash-site-lab-repaired.png",
+            filename = "__Krastorio2Assets__/entities/crash-site/lab/hr-crash-site-lab-repaired.png",
             width = 488,
             height = 252,
             frame_count = 1,
@@ -84,7 +84,7 @@ data:extend({
           },
         },
         {
-          filename = kr_crash_site_sprites_path .. "lab/crash-site-lab-repaired-beams.png",
+          filename = "__Krastorio2Assets__/entities/crash-site/lab/crash-site-lab-repaired-beams.png",
           width = 68,
           height = 50,
           frame_count = 24,
@@ -94,7 +94,7 @@ data:extend({
           draw_as_glow = true,
           blend_mode = "additive",
           hr_version = {
-            filename = kr_crash_site_sprites_path .. "lab/hr-crash-site-lab-repaired-beams.png",
+            filename = "__Krastorio2Assets__/entities/crash-site/lab/hr-crash-site-lab-repaired-beams.png",
             width = 130,
             height = 100,
             frame_count = 24,
@@ -107,7 +107,7 @@ data:extend({
           },
         },
         {
-          filename = kr_crash_site_sprites_path .. "lab/crash-site-lab-repaired-beams-light.png",
+          filename = "__Krastorio2Assets__/entities/crash-site/lab/crash-site-lab-repaired-beams-light.png",
           width = 68,
           height = 50,
           frame_count = 24,
@@ -117,7 +117,7 @@ data:extend({
           draw_as_light = true,
           blend_mode = "additive",
           hr_version = {
-            filename = kr_crash_site_sprites_path .. "lab/hr-crash-site-lab-repaired-beams-light.png",
+            filename = "__Krastorio2Assets__/entities/crash-site/lab/hr-crash-site-lab-repaired-beams-light.png",
             width = 130,
             height = 100,
             frame_count = 24,
@@ -130,7 +130,7 @@ data:extend({
           },
         },
         {
-          filename = kr_crash_site_sprites_path .. "lab/crash-site-lab-repaired-shadow.png",
+          filename = "__Krastorio2Assets__/entities/crash-site/lab/crash-site-lab-repaired-shadow.png",
           width = 350,
           height = 148,
           frame_count = 1,
@@ -140,7 +140,7 @@ data:extend({
           shift = util.by_pixel(-12, 12),
           draw_as_shadow = true,
           hr_version = {
-            filename = kr_crash_site_sprites_path .. "lab/hr-crash-site-lab-repaired-shadow.png",
+            filename = "__Krastorio2Assets__/entities/crash-site/lab/hr-crash-site-lab-repaired-shadow.png",
             width = 696,
             height = 302,
             frame_count = 1,
@@ -157,7 +157,7 @@ data:extend({
     off_animation = {
       layers = {
         {
-          filename = kr_crash_site_sprites_path .. "lab/crash-site-lab-repaired.png",
+          filename = "__Krastorio2Assets__/entities/crash-site/lab/crash-site-lab-repaired.png",
           width = 244,
           height = 126,
           frame_count = 1,
@@ -166,7 +166,7 @@ data:extend({
           animation_speed = 1 / 3,
           shift = util.by_pixel(-18, 14),
           hr_version = {
-            filename = kr_crash_site_sprites_path .. "lab/hr-crash-site-lab-repaired.png",
+            filename = "__Krastorio2Assets__/entities/crash-site/lab/hr-crash-site-lab-repaired.png",
             width = 488,
             height = 252,
             frame_count = 1,
@@ -178,7 +178,7 @@ data:extend({
           },
         },
         {
-          filename = kr_crash_site_sprites_path .. "lab/crash-site-lab-repaired-shadow.png",
+          filename = "__Krastorio2Assets__/entities/crash-site/lab/crash-site-lab-repaired-shadow.png",
           width = 350,
           height = 148,
           frame_count = 1,
@@ -188,7 +188,7 @@ data:extend({
           shift = util.by_pixel(-12, 12),
           draw_as_shadow = true,
           hr_version = {
-            filename = kr_crash_site_sprites_path .. "lab/hr-crash-site-lab-repaired-shadow.png",
+            filename = "__Krastorio2Assets__/entities/crash-site/lab/hr-crash-site-lab-repaired-shadow.png",
             width = 696,
             height = 302,
             frame_count = 1,

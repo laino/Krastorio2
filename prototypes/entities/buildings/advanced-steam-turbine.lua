@@ -2,7 +2,7 @@ data:extend({
   {
     type = "generator",
     name = "kr-advanced-steam-turbine",
-    icon = kr_entities_icons_path .. "advanced-steam-turbine.png",
+    icon = "__Krastorio2Assets__/icons/entities/advanced-steam-turbine.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-neutral", "player-creation" },
@@ -42,14 +42,14 @@ data:extend({
     horizontal_animation = {
       layers = {
         {
-          filename = kr_entities_path .. "advanced-steam-turbine/advanced-steam-turbine-H.png",
+          filename = "__Krastorio2Assets__/entities/advanced-steam-turbine/advanced-steam-turbine-H.png",
           width = 235,
           height = 134,
           frame_count = 6,
           shift = { 0, -0.2 },
           line_length = 2,
           hr_version = {
-            filename = kr_entities_path .. "advanced-steam-turbine/hr-advanced-steam-turbine-H.png",
+            filename = "__Krastorio2Assets__/entities/advanced-steam-turbine/hr-advanced-steam-turbine-H.png",
             width = 469,
             height = 270,
             frame_count = 6,
@@ -59,7 +59,7 @@ data:extend({
           },
         },
         {
-          filename = kr_entities_path .. "advanced-steam-turbine/advanced-steam-turbine-sh-H.png",
+          filename = "__Krastorio2Assets__/entities/advanced-steam-turbine/advanced-steam-turbine-sh-H.png",
           width = 258,
           height = 113,
           frame_count = 6,
@@ -67,7 +67,7 @@ data:extend({
           line_length = 3,
           draw_as_shadow = true,
           hr_version = {
-            filename = kr_entities_path .. "advanced-steam-turbine/hr-advanced-steam-turbine-sh-H.png",
+            filename = "__Krastorio2Assets__/entities/advanced-steam-turbine/hr-advanced-steam-turbine-sh-H.png",
             width = 514,
             height = 225,
             frame_count = 6,
@@ -82,14 +82,14 @@ data:extend({
     vertical_animation = {
       layers = {
         {
-          filename = kr_entities_path .. "advanced-steam-turbine/advanced-steam-turbine-V.png",
+          filename = "__Krastorio2Assets__/entities/advanced-steam-turbine/advanced-steam-turbine-V.png",
           width = 165,
           height = 250,
           frame_count = 6,
           line_length = 6,
           shift = { 0.26, 0 },
           hr_version = {
-            filename = kr_entities_path .. "advanced-steam-turbine/hr-advanced-steam-turbine-V.png",
+            filename = "__Krastorio2Assets__/entities/advanced-steam-turbine/hr-advanced-steam-turbine-V.png",
             width = 330,
             height = 500,
             frame_count = 6,
@@ -99,7 +99,7 @@ data:extend({
           },
         },
         {
-          filename = kr_entities_path .. "advanced-steam-turbine/advanced-steam-turbine-sh-V.png",
+          filename = "__Krastorio2Assets__/entities/advanced-steam-turbine/advanced-steam-turbine-sh-V.png",
           width = 175,
           height = 213,
           frame_count = 6,
@@ -107,7 +107,7 @@ data:extend({
           shift = { 0.48, 0.36 },
           draw_as_shadow = true,
           hr_version = {
-            filename = kr_entities_path .. "advanced-steam-turbine/hr-advanced-steam-turbine-sh-V.png",
+            filename = "__Krastorio2Assets__/entities/advanced-steam-turbine/hr-advanced-steam-turbine-sh-V.png",
             width = 350,
             height = 425,
             frame_count = 6,
@@ -136,7 +136,7 @@ data:extend({
     },
     working_sound = {
       sound = {
-        filename = kr_buildings_sounds_path .. "advanced-steam-turbine.ogg",
+        filename = "__Krastorio2Assets__/sounds/buildings/advanced-steam-turbine.ogg",
         volume = 1.2,
       },
       match_speed_to_activity = true,

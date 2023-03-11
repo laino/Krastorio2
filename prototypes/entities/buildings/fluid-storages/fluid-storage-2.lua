@@ -1,10 +1,8 @@
-local _fluid_storages_path = kr_entities_path .. "fluid-storages/"
-
 data:extend({
   {
     type = "storage-tank",
     name = "kr-fluid-storage-2",
-    icon = kr_entities_icons_path .. "fluid-storages/fluid-storage-2.png",
+    icon = "__Krastorio2Assets__/icons/entities/fluid-storages/fluid-storage-2.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-player", "player-creation", "not-rotatable" },
@@ -41,13 +39,13 @@ data:extend({
       picture = {
         sheets = {
           {
-            filename = _fluid_storages_path .. "fluid-storage-2/fluid-storage-2.png",
+            filename = "__Krastorio2Assets__/entities/fluid-storages/fluid-storage-2/fluid-storage-2.png",
             priority = "extra-high",
             frames = 1,
             width = 213,
             height = 213,
             hr_version = {
-              filename = _fluid_storages_path .. "fluid-storage-2/hr-fluid-storage-2.png",
+              filename = "__Krastorio2Assets__/entities/fluid-storages/fluid-storage-2/hr-fluid-storage-2.png",
               priority = "extra-high",
               frames = 1,
               scale = 0.5,
@@ -56,14 +54,14 @@ data:extend({
             },
           },
           {
-            filename = _fluid_storages_path .. "fluid-storage-2/fluid-storage-2-sh.png",
+            filename = "__Krastorio2Assets__/entities/fluid-storages/fluid-storage-2/fluid-storage-2-sh.png",
             priority = "extra-high",
             frames = 1,
             width = 213,
             height = 213,
             draw_as_shadow = true,
             hr_version = {
-              filename = _fluid_storages_path .. "fluid-storage-2/hr-fluid-storage-2-sh.png",
+              filename = "__Krastorio2Assets__/entities/fluid-storages/fluid-storage-2/hr-fluid-storage-2-sh.png",
               priority = "extra-high",
               frames = 1,
               scale = 0.5,
@@ -128,7 +126,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = kr_entities_path .. "fluid-storages/fluid-storage-2/fluid-storage-2-reflection.png",
+        filename = "__Krastorio2Assets__/entities/fluid-storages/fluid-storage-2/fluid-storage-2-reflection.png",
         priority = "extra-high",
         width = 52,
         height = 48,

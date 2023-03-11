@@ -11,7 +11,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "kr-atmospheric-condenser",
-    icon = kr_entities_icons_path .. "atmospheric-condenser.png",
+    icon = "__Krastorio2Assets__/icons/entities/atmospheric-condenser.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -29,7 +29,7 @@ data:extend({
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        pipe_picture = kr_pipe_path,
+        pipe_picture = kr_pipe_patch,
         base_area = 10,
         base_level = 1,
         pipe_connections = {
@@ -52,14 +52,14 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "atmospheric-condenser/atmospheric-condenser.png",
+          filename = "__Krastorio2Assets__/entities/atmospheric-condenser/atmospheric-condenser.png",
           width = 190,
           height = 190,
           frame_count = 20,
           line_length = 5,
           shift = { 0, 0 },
           hr_version = {
-            filename = kr_entities_path .. "atmospheric-condenser/hr-atmospheric-condenser.png",
+            filename = "__Krastorio2Assets__/entities/atmospheric-condenser/hr-atmospheric-condenser.png",
             width = 380,
             height = 380,
             scale = 0.5,
@@ -69,7 +69,7 @@ data:extend({
           },
         },
         {
-          filename = kr_entities_path .. "atmospheric-condenser/atmospheric-condenser-sh.png",
+          filename = "__Krastorio2Assets__/entities/atmospheric-condenser/atmospheric-condenser-sh.png",
           width = 190,
           height = 190,
           frame_count = 1,
@@ -77,7 +77,7 @@ data:extend({
           draw_as_shadow = true,
           shift = { 0, 0 },
           hr_version = {
-            filename = kr_entities_path .. "atmospheric-condenser/hr-atmospheric-condenser-sh.png",
+            filename = "__Krastorio2Assets__/entities/atmospheric-condenser/hr-atmospheric-condenser-sh.png",
             width = 380,
             height = 380,
             scale = 0.5,
@@ -94,7 +94,7 @@ data:extend({
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = {
-        filename = kr_buildings_sounds_path .. "atmospheric-condenser.ogg",
+        filename = "__Krastorio2Assets__/sounds/buildings/atmospheric-condenser.ogg",
         volume = 1.2,
       },
       idle_sound = {
@@ -112,7 +112,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = kr_entities_path .. "atmospheric-condenser/atmospheric-condenser-reflection.png",
+        filename = "__Krastorio2Assets__/entities/atmospheric-condenser/atmospheric-condenser-reflection.png",
         priority = "extra-high",
         width = 42,
         height = 38,

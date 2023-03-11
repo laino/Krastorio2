@@ -1,4 +1,4 @@
-local variations_util = require(kr_public_lib .. "create-roboport-states")
+local variations_util = require("__Krastorio2__/lib/public/data-stages/create-roboport-states")
 
 if mods["IndustrialRevolution"] then
   -----------------------------------------------------------------------------------------------------------------------
@@ -110,7 +110,7 @@ if mods["IndustrialRevolution"] then
       localised_name = { "entity-name.kr-wind-turbine" },
       localised_description = { "entity-description.kr-wind-turbine" },
       mod = "Krastorio2",
-      icon = kr_technologies_icons_path .. "wind-turbine.png",
+      icon = "__Krastorio2Assets__/technologies/wind-turbine.png",
       icon_size = 256,
       icon_mipmaps = 4,
       effects = {
@@ -316,7 +316,7 @@ if mods["IndustrialRevolution"] then
       icons = {
         { icon = "__IndustrialRevolution__/graphics/icons/64/gold-ingot.png", icon_size = 64, mipmap_count = 4 },
         {
-          icon = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png",
+          icon = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals.png",
           icon_size = 64,
           scale = 0.22,
           shift = { -8, -8 },
@@ -355,7 +355,7 @@ if mods["IndustrialRevolution"] then
       icons = {
         { icon = "__IndustrialRevolution__/graphics/icons/64/chromium-pure.png", icon_size = 64, mipmap_count = 4 },
         {
-          icon = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png",
+          icon = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals.png",
           icon_size = 64,
           scale = 0.22,
           shift = { -8, -8 },
@@ -391,7 +391,7 @@ if mods["IndustrialRevolution"] then
       icons = {
         { icon = "__IndustrialRevolution__/graphics/icons/64/lead-pure.png", icon_size = 64, mipmap_count = 4 },
         {
-          icon = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png",
+          icon = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals.png",
           icon_size = 64,
           scale = 0.22,
           shift = { -8, -8 },
@@ -427,7 +427,7 @@ if mods["IndustrialRevolution"] then
       icons = {
         { icon = "__IndustrialRevolution__/graphics/icons/64/nickel-pure.png", icon_size = 64, mipmap_count = 4 },
         {
-          icon = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png",
+          icon = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals.png",
           icon_size = 64,
           scale = 0.22,
           shift = { -8, -8 },
@@ -463,7 +463,7 @@ if mods["IndustrialRevolution"] then
       icons = {
         { icon = "__IndustrialRevolution__/graphics/icons/64/tellurium-pure.png", icon_size = 64, mipmap_count = 4 },
         {
-          icon = kr_items_with_variations_icons_path .. "rare-metals/rare-metals.png",
+          icon = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals.png",
           icon_size = 64,
           scale = 0.22,
           shift = { -8, -8 },
@@ -506,7 +506,7 @@ if mods["IndustrialRevolution"] then
   data.raw.recipe["enriched-copper-plate"].icons = {
     { icon = "__IndustrialRevolution__/graphics/icons/64/copper-ingot.png", icon_size = 64 },
     {
-      icon = kr_items_with_variations_icons_path .. "enriched-copper/enriched-copper.png",
+      icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-copper/enriched-copper.png",
       icon_size = 64,
       scale = 0.22,
       shift = { -8, -8 },
@@ -519,7 +519,7 @@ if mods["IndustrialRevolution"] then
   data.raw.recipe["enriched-iron-plate"].icons = {
     { icon = "__IndustrialRevolution__/graphics/icons/64/iron-ingot.png", icon_size = 64 },
     {
-      icon = kr_items_with_variations_icons_path .. "enriched-iron/enriched-iron.png",
+      icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-iron/enriched-iron.png",
       icon_size = 64,
       scale = 0.22,
       shift = { -8, -8 },
@@ -701,14 +701,14 @@ if mods["IndustrialRevolution"] then
     {
       type = "item",
       name = "charged-lithium-sulfur-battery",
-      icon = kr_graphic_mod_path .. "compatibility/IndustrialRevolution/charged-lithium-sulfur-battery.png",
+      icon = "__Krastorio2Assets__/compatibility/IndustrialRevolution/charged-lithium-sulfur-battery.png",
       icon_size = 64,
       icon_mipmaps = 4,
       pictures = {
         layers = {
           {
             size = 64,
-            filename = kr_graphic_mod_path .. "compatibility/IndustrialRevolution/charged-lithium-sulfur-battery.png",
+            filename = "__Krastorio2Assets__/compatibility/IndustrialRevolution/charged-lithium-sulfur-battery.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -716,7 +716,7 @@ if mods["IndustrialRevolution"] then
             draw_as_light = true,
             flags = { "light" },
             size = 64,
-            filename = kr_items_icons_path .. "lithium-sulfur-battery-light.png",
+            filename = "__Krastorio2Assets__/icons/items/lithium-sulfur-battery-light.png",
             scale = 0.25,
             mipmap_count = 4,
           },
@@ -786,7 +786,7 @@ if mods["IndustrialRevolution"] then
         name = "kr-matter-" .. sub_name .. "-processing",
         mod = "Krastorio2",
         icons = {
-          { icon = kr_technologies_icons_path .. "backgrounds/matter.png", icon_size = 256, icon_mipmaps = 4 },
+          { icon = "__Krastorio2Assets__/technologies/backgrounds/matter.png", icon_size = 256, icon_mipmaps = 4 },
           {
             icon = "__IndustrialRevolution__/graphics/icons/64/" .. sub_name .. "-pure.png",
             icon_size = 64,
@@ -853,18 +853,18 @@ if mods["IndustrialRevolution"] then
     {
       type = "item",
       name = "crushed-rare-metals",
-      icon = kr_graphic_mod_path .. "compatibility/IndustrialRevolution/crushed-rare-metals.png",
+      icon = "__Krastorio2Assets__/compatibility/IndustrialRevolution/crushed-rare-metals.png",
       icon_size = 64,
       icon_mipmaps = 4,
       pictures = {
         {
-          filename = kr_graphic_mod_path .. "compatibility/IndustrialRevolution/crushed-rare-metals.png",
+          filename = "__Krastorio2Assets__/compatibility/IndustrialRevolution/crushed-rare-metals.png",
           size = 64,
           scale = 0.25,
           mipmap_count = 4,
         },
         {
-          filename = kr_graphic_mod_path .. "compatibility/IndustrialRevolution/crushed-rare-metals-1.png",
+          filename = "__Krastorio2Assets__/compatibility/IndustrialRevolution/crushed-rare-metals-1.png",
           size = 64,
           scale = 0.25,
           mipmap_count = 4,
@@ -878,7 +878,7 @@ if mods["IndustrialRevolution"] then
       type = "recipe",
       name = "crushed-rare-metals",
       category = "grinding-2",
-      icon = kr_graphic_mod_path .. "compatibility/IndustrialRevolution/crushed-rare-metals.png",
+      icon = "__Krastorio2Assets__/compatibility/IndustrialRevolution/crushed-rare-metals.png",
       icon_size = 64,
       icon_mipmaps = 4,
       always_show_products = true,

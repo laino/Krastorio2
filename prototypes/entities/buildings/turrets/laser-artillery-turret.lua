@@ -5,7 +5,7 @@ function laser_artillery_turret_sheet(inputs)
   return {
     layers = {
       {
-        filename = kr_entities_path .. "turrets/laser-artillery-turret-sheet.png",
+        filename = "__Krastorio2Assets__/entities/turrets/laser-artillery-turret-sheet.png",
         width = 220,
         height = 190,
         line_length = inputs.frame_count or 8,
@@ -14,7 +14,7 @@ function laser_artillery_turret_sheet(inputs)
         direction_count = 64,
         shift = { 0, -0.7 },
         hr_version = {
-          filename = kr_entities_path .. "turrets/hr-laser-artillery-turret-sheet.png",
+          filename = "__Krastorio2Assets__/entities/turrets/hr-laser-artillery-turret-sheet.png",
           width = 440,
           height = 380,
           line_length = inputs.frame_count or 8,
@@ -27,7 +27,7 @@ function laser_artillery_turret_sheet(inputs)
       },
       {
         flags = { "mask" },
-        filename = kr_entities_path .. "turrets/laser-artillery-turret-sheet-mask.png",
+        filename = "__Krastorio2Assets__/entities/turrets/laser-artillery-turret-sheet-mask.png",
         width = 220,
         height = 190,
         line_length = inputs.frame_count or 8,
@@ -38,7 +38,7 @@ function laser_artillery_turret_sheet(inputs)
         apply_runtime_tint = true,
         hr_version = {
           flags = { "mask" },
-          filename = kr_entities_path .. "turrets/hr-laser-artillery-turret-sheet-mask.png",
+          filename = "__Krastorio2Assets__/entities/turrets/hr-laser-artillery-turret-sheet-mask.png",
           width = 440,
           height = 380,
           line_length = inputs.frame_count or 8,
@@ -51,7 +51,7 @@ function laser_artillery_turret_sheet(inputs)
         },
       },
       {
-        filename = kr_entities_path .. "turrets/laser-artillery-turret-sheet-shadow.png",
+        filename = "__Krastorio2Assets__/entities/turrets/laser-artillery-turret-sheet-shadow.png",
         width = 230,
         height = 190,
         line_length = inputs.frame_count or 8,
@@ -61,7 +61,7 @@ function laser_artillery_turret_sheet(inputs)
         shift = { 0.9, 0.05 },
         draw_as_shadow = true,
         hr_version = {
-          filename = kr_entities_path .. "turrets/hr-laser-artillery-turret-sheet-shadow.png",
+          filename = "__Krastorio2Assets__/entities/turrets/hr-laser-artillery-turret-sheet-shadow.png",
           width = 460,
           height = 380,
           line_length = inputs.frame_count or 8,
@@ -81,7 +81,7 @@ data:extend({
   {
     type = "electric-turret",
     name = "kr-laser-artillery-turret",
-    icon = kr_entities_icons_path .. "laser-artillery-turret.png",
+    icon = "__Krastorio2Assets__/icons/entities/laser-artillery-turret.png",
     icon_size = 64,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "kr-laser-artillery-turret" },
@@ -99,7 +99,7 @@ data:extend({
     base_picture = {
       layers = {
         {
-          filename = kr_entities_path .. "turrets/kr-turret-base.png",
+          filename = "__Krastorio2Assets__/entities/turrets/kr-turret-base.png",
           priority = "high",
           width = 220,
           height = 190,
@@ -108,7 +108,7 @@ data:extend({
           frame_count = 1,
           shift = { 0, -0.8 },
           hr_version = {
-            filename = kr_entities_path .. "turrets/hr-kr-turret-base.png",
+            filename = "__Krastorio2Assets__/entities/turrets/hr-kr-turret-base.png",
             priority = "high",
             width = 440,
             height = 380,
@@ -120,7 +120,7 @@ data:extend({
           },
         },
         {
-          filename = kr_entities_path .. "turrets/kr-turret-base-mask.png",
+          filename = "__Krastorio2Assets__/entities/turrets/kr-turret-base-mask.png",
           flags = { "mask", "low-object" },
           line_length = 1,
           width = 220,
@@ -131,7 +131,7 @@ data:extend({
           shift = { 0, -0.8 },
           apply_runtime_tint = true,
           hr_version = {
-            filename = kr_entities_path .. "turrets/hr-kr-turret-base-mask.png",
+            filename = "__Krastorio2Assets__/entities/turrets/hr-kr-turret-base-mask.png",
             flags = { "mask", "low-object" },
             line_length = 1,
             width = 440,
@@ -145,7 +145,7 @@ data:extend({
           },
         },
         {
-          filename = kr_entities_path .. "turrets/kr-turret-base-shadow.png",
+          filename = "__Krastorio2Assets__/entities/turrets/kr-turret-base-shadow.png",
           line_length = 1,
           width = 220,
           height = 190,
@@ -155,7 +155,7 @@ data:extend({
           frame_count = 1,
           shift = { 0, -0.8 },
           hr_version = {
-            filename = kr_entities_path .. "turrets/hr-kr-turret-base-shadow.png",
+            filename = "__Krastorio2Assets__/entities/turrets/hr-kr-turret-base-shadow.png",
             line_length = 1,
             width = 440,
             height = 380,
@@ -220,14 +220,14 @@ data:extend({
       --warmup = 27, -- its strongly reduce rate of fire, was used to sync the sounds of turret when shot
       sound = {
         {
-          filename = kr_weapons_sounds_path .. "laser-artillery-turret-shot.ogg",
+          filename = "__Krastorio2Assets__/sounds/weapons/laser-artillery-turret-shot.ogg",
           volume = 1,
         },
       },
     },
     starting_attack_sound = {
       {
-        filename = kr_weapons_sounds_path .. "laser-artillery-turret-starting_attack_sound.ogg",
+        filename = "__Krastorio2Assets__/sounds/weapons/laser-artillery-turret-starting_attack_sound.ogg",
         volume = 0.40,
         audible_distance_modifier = 0.5,
         aggregation = {
@@ -239,7 +239,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = kr_entities_path .. "turrets/turrets-reflection.png",
+        filename = "__Krastorio2Assets__/entities/turrets/turrets-reflection.png",
         priority = "extra-high",
         width = 50,
         height = 50,

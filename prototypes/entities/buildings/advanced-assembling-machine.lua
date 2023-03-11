@@ -1,13 +1,13 @@
 function assemblerkpipepictures()
   return {
     north = {
-      filename = kr_entities_path .. "advanced-assembling-machine/advanced-assembling-machine-k-pipe-N.png",
+      filename = "__Krastorio2Assets__/entities/advanced-assembling-machine/advanced-assembling-machine-k-pipe-N.png",
       priority = "extra-high",
       width = 35,
       height = 18,
       shift = util.by_pixel(2.5, 14),
       hr_version = {
-        filename = kr_entities_path .. "advanced-assembling-machine/hr-advanced-assembling-machine-k-pipe-N.png",
+        filename = "__Krastorio2Assets__/entities/advanced-assembling-machine/hr-advanced-assembling-machine-k-pipe-N.png",
         priority = "extra-high",
         width = 71,
         height = 38,
@@ -16,13 +16,13 @@ function assemblerkpipepictures()
       },
     },
     east = {
-      filename = kr_entities_path .. "advanced-assembling-machine/advanced-assembling-machine-k-pipe-E.png",
+      filename = "__Krastorio2Assets__/entities/advanced-assembling-machine/advanced-assembling-machine-k-pipe-E.png",
       priority = "extra-high",
       width = 20,
       height = 38,
       shift = util.by_pixel(-25, 1),
       hr_version = {
-        filename = kr_entities_path .. "advanced-assembling-machine/hr-advanced-assembling-machine-k-pipe-E.png",
+        filename = "__Krastorio2Assets__/entities/advanced-assembling-machine/hr-advanced-assembling-machine-k-pipe-E.png",
         priority = "extra-high",
         width = 42,
         height = 76,
@@ -31,13 +31,13 @@ function assemblerkpipepictures()
       },
     },
     south = {
-      filename = kr_entities_path .. "advanced-assembling-machine/advanced-assembling-machine-k-pipe-S.png",
+      filename = "__Krastorio2Assets__/entities/advanced-assembling-machine/advanced-assembling-machine-k-pipe-S.png",
       priority = "extra-high",
       width = 44,
       height = 31,
       shift = util.by_pixel(0, -31.5),
       hr_version = {
-        filename = kr_entities_path .. "advanced-assembling-machine/hr-advanced-assembling-machine-k-pipe-S.png",
+        filename = "__Krastorio2Assets__/entities/advanced-assembling-machine/hr-advanced-assembling-machine-k-pipe-S.png",
         priority = "extra-high",
         width = 88,
         height = 61,
@@ -46,13 +46,13 @@ function assemblerkpipepictures()
       },
     },
     west = {
-      filename = kr_entities_path .. "advanced-assembling-machine/advanced-assembling-machine-k-pipe-W.png",
+      filename = "__Krastorio2Assets__/entities/advanced-assembling-machine/advanced-assembling-machine-k-pipe-W.png",
       priority = "extra-high",
       width = 19,
       height = 37,
       shift = util.by_pixel(25.5, 1.5),
       hr_version = {
-        filename = kr_entities_path .. "advanced-assembling-machine/hr-advanced-assembling-machine-k-pipe-W.png",
+        filename = "__Krastorio2Assets__/entities/advanced-assembling-machine/hr-advanced-assembling-machine-k-pipe-W.png",
         priority = "extra-high",
         width = 39,
         height = 73,
@@ -76,7 +76,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "kr-advanced-assembling-machine",
-    icon = kr_entities_icons_path .. "advanced-assembling-machine.png",
+    icon = "__Krastorio2Assets__/icons/entities/advanced-assembling-machine.png",
     icon_size = 64,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
     minable = { mining_time = 1, result = "kr-advanced-assembling-machine" },
@@ -116,7 +116,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "advanced-assembling-machine/advanced-assembling-machine.png",
+          filename = "__Krastorio2Assets__/entities/advanced-assembling-machine/advanced-assembling-machine.png",
           priority = "high",
           width = 160,
           height = 160,
@@ -125,7 +125,7 @@ data:extend({
           animation_speed = 0.25,
           shift = { 0, 0 },
           hr_version = {
-            filename = kr_entities_path .. "advanced-assembling-machine/hr-advanced-assembling-machine.png",
+            filename = "__Krastorio2Assets__/entities/advanced-assembling-machine/hr-advanced-assembling-machine.png",
             priority = "high",
             width = 320,
             height = 320,
@@ -137,7 +137,7 @@ data:extend({
           },
         },
         {
-          filename = kr_entities_path .. "advanced-assembling-machine/advanced-assembling-machine-w1.png",
+          filename = "__Krastorio2Assets__/entities/advanced-assembling-machine/advanced-assembling-machine-w1.png",
           priority = "high",
           width = 64,
           height = 72,
@@ -146,7 +146,7 @@ data:extend({
           line_length = 8,
           animation_speed = 0.1,
           hr_version = {
-            filename = kr_entities_path .. "advanced-assembling-machine/hr-advanced-assembling-machine-w1.png",
+            filename = "__Krastorio2Assets__/entities/advanced-assembling-machine/hr-advanced-assembling-machine-w1.png",
             priority = "high",
             width = 128,
             height = 144,
@@ -158,7 +158,7 @@ data:extend({
           },
         },
         {
-          filename = kr_entities_path .. "advanced-assembling-machine/advanced-assembling-machine-steam.png",
+          filename = "__Krastorio2Assets__/entities/advanced-assembling-machine/advanced-assembling-machine-steam.png",
           priority = "high",
           width = 40,
           height = 40,
@@ -167,7 +167,7 @@ data:extend({
           line_length = 8,
           animation_speed = 1.5,
           hr_version = {
-            filename = kr_entities_path .. "advanced-assembling-machine/hr-advanced-assembling-machine-steam.png",
+            filename = "__Krastorio2Assets__/entities/advanced-assembling-machine/hr-advanced-assembling-machine-steam.png",
             priority = "high",
             width = 80,
             height = 81,
@@ -179,7 +179,7 @@ data:extend({
           },
         },
         {
-          filename = kr_entities_path .. "advanced-assembling-machine/advanced-assembling-machine-sh.png",
+          filename = "__Krastorio2Assets__/entities/advanced-assembling-machine/advanced-assembling-machine-sh.png",
           priority = "high",
           width = 173,
           height = 151,
@@ -189,7 +189,7 @@ data:extend({
           animation_speed = 0.1,
           draw_as_shadow = true,
           hr_version = {
-            filename = kr_entities_path .. "advanced-assembling-machine/hr-advanced-assembling-machine-sh.png",
+            filename = "__Krastorio2Assets__/entities/advanced-assembling-machine/hr-advanced-assembling-machine-sh.png",
             priority = "high",
             width = 346,
             height = 302,
@@ -202,7 +202,7 @@ data:extend({
           },
         },
         {
-          filename = kr_entities_path .. "advanced-assembling-machine/advanced-assembling-machine-w2.png",
+          filename = "__Krastorio2Assets__/entities/advanced-assembling-machine/advanced-assembling-machine-w2.png",
           priority = "high",
           width = 19,
           height = 13,
@@ -212,7 +212,7 @@ data:extend({
           animation_speed = 0.1,
           shift = { 0.17, -1.445 },
           hr_version = {
-            filename = kr_entities_path .. "advanced-assembling-machine/hr-advanced-assembling-machine-w2.png",
+            filename = "__Krastorio2Assets__/entities/advanced-assembling-machine/hr-advanced-assembling-machine-w2.png",
             priority = "high",
             width = 37,
             height = 25,
@@ -225,7 +225,7 @@ data:extend({
           },
         },
         {
-          filename = kr_entities_path .. "advanced-assembling-machine/advanced-assembling-machine-w3.png",
+          filename = "__Krastorio2Assets__/entities/advanced-assembling-machine/advanced-assembling-machine-w3.png",
           priority = "high",
           width = 12,
           height = 9,
@@ -235,7 +235,7 @@ data:extend({
           animation_speed = 0.1,
           shift = { 0.93, -2.05 },
           hr_version = {
-            filename = kr_entities_path .. "advanced-assembling-machine/hr-advanced-assembling-machine-w3.png",
+            filename = "__Krastorio2Assets__/entities/advanced-assembling-machine/hr-advanced-assembling-machine-w3.png",
             priority = "high",
             width = 23,
             height = 15,
@@ -248,7 +248,7 @@ data:extend({
           },
         },
         {
-          filename = kr_entities_path .. "advanced-assembling-machine/advanced-assembling-machine-w3.png",
+          filename = "__Krastorio2Assets__/entities/advanced-assembling-machine/advanced-assembling-machine-w3.png",
           priority = "high",
           width = 12,
           height = 9,
@@ -258,7 +258,7 @@ data:extend({
           animation_speed = 0.1,
           shift = { 0.868, -0.082 },
           hr_version = {
-            filename = kr_entities_path .. "advanced-assembling-machine/hr-advanced-assembling-machine-w3.png",
+            filename = "__Krastorio2Assets__/entities/advanced-assembling-machine/hr-advanced-assembling-machine-w3.png",
             priority = "high",
             width = 23,
             height = 15,
@@ -271,7 +271,7 @@ data:extend({
           },
         },
         {
-          filename = kr_entities_path .. "advanced-assembling-machine/advanced-assembling-machine-w3.png",
+          filename = "__Krastorio2Assets__/entities/advanced-assembling-machine/advanced-assembling-machine-w3.png",
           priority = "high",
           width = 12,
           height = 9,
@@ -281,7 +281,7 @@ data:extend({
           animation_speed = 0.1,
           shift = { 0.868, 0.552 },
           hr_version = {
-            filename = kr_entities_path .. "advanced-assembling-machine/hr-advanced-assembling-machine-w3.png",
+            filename = "__Krastorio2Assets__/entities/advanced-assembling-machine/hr-advanced-assembling-machine-w3.png",
             priority = "high",
             width = 23,
             height = 15,
@@ -306,7 +306,7 @@ data:extend({
     working_sound = {
       sound = {
         {
-          filename = kr_buildings_sounds_path .. "advanced-assembling-machine.ogg",
+          filename = "__Krastorio2Assets__/sounds/buildings/advanced-assembling-machine.ogg",
           volume = 0.8,
         },
       },
@@ -326,7 +326,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = kr_entities_path .. "advanced-assembling-machine/advanced-assembling-machine-reflection.png",
+        filename = "__Krastorio2Assets__/entities/advanced-assembling-machine/advanced-assembling-machine-reflection.png",
         priority = "extra-high",
         width = 70,
         height = 50,

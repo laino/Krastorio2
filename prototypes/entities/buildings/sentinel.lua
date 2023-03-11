@@ -5,7 +5,7 @@ data:extend({
   {
     type = "radar",
     name = "kr-sentinel",
-    icon = kr_entities_icons_path .. "sentinel.png",
+    icon = "__Krastorio2Assets__/icons/entities/sentinel.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-player", "player-creation" },
@@ -37,7 +37,7 @@ data:extend({
     pictures = {
       layers = {
         {
-          filename = kr_entities_path .. "sentinel/sentinel.png",
+          filename = "__Krastorio2Assets__/entities/sentinel/sentinel.png",
           priority = "low",
           width = 64,
           height = 64,
@@ -47,7 +47,7 @@ data:extend({
           shift = { 0.21, -0.2 },
           scale = 0.6,
           hr_version = {
-            filename = kr_entities_path .. "sentinel/hr-sentinel.png",
+            filename = "__Krastorio2Assets__/entities/sentinel/hr-sentinel.png",
             priority = "low",
             width = 128,
             height = 128,
@@ -62,7 +62,7 @@ data:extend({
     },
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
-      sound = { filename = kr_buildings_sounds_path .. "sentinel.ogg" },
+      sound = { filename = "__Krastorio2Assets__/sounds/buildings/sentinel.ogg" },
       apparent_volume = 1,
     },
     radius_minimap_visualisation_color = { r = 0.059, g = 0.092, b = 0.235, a = 0.275 },

@@ -8,7 +8,7 @@ data:extend({
     localised_name = { "entity-name.kr-damaged-ship-assembler" },
     localised_description = { "entity-description.kr-crash-site-building" },
     has_backer_name = false,
-    icon = kr_crash_site_icons_path .. "crash-site-assembling-machine-2-repaired.png",
+    icon = "__Krastorio2Assets__/icons/entities/crash-site/crash-site-assembling-machine-2-repaired.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-player", "player-creation", "hidden", "not-rotatable" },
@@ -38,14 +38,14 @@ data:extend({
     alert_icon_shift = util.by_pixel(-3, -12),
     integration_patch_render_layer = "decals",
     integration_patch = {
-      filename = kr_crash_site_sprites_path .. "assembling-machine/crash-site-assembling-machine-2-ground.png",
+      filename = "__Krastorio2Assets__/entities/crash-site/assembling-machine/crash-site-assembling-machine-2-ground.png",
       width = 146,
       height = 106,
       shift = util.by_pixel(-8, -4),
       frame_count = 1,
       line_length = 1,
       hr_version = {
-        filename = kr_crash_site_sprites_path .. "assembling-machine/hr-crash-site-assembling-machine-2-ground.png",
+        filename = "__Krastorio2Assets__/entities/crash-site/assembling-machine/hr-crash-site-assembling-machine-2-ground.png",
         width = 290,
         height = 238,
         shift = util.by_pixel(-8, -10),
@@ -57,7 +57,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_crash_site_sprites_path .. "assembling-machine/crash-site-assembling-machine-2-repaired.png",
+          filename = "__Krastorio2Assets__/entities/crash-site/assembling-machine/crash-site-assembling-machine-2-repaired.png",
           width = 100,
           height = 98,
           frame_count = 20,
@@ -65,8 +65,7 @@ data:extend({
           shift = util.by_pixel(-4, -10),
           animation_speed = 2,
           hr_version = {
-            filename = kr_crash_site_sprites_path
-              .. "assembling-machine/hr-crash-site-assembling-machine-2-repaired.png",
+            filename = "__Krastorio2Assets__/entities/crash-site/assembling-machine/hr-crash-site-assembling-machine-2-repaired.png",
             width = 198,
             height = 200,
             frame_count = 20,
@@ -77,8 +76,7 @@ data:extend({
           },
         },
         {
-          filename = kr_crash_site_sprites_path
-            .. "assembling-machine/crash-site-assembling-machine-2-repaired-shadow.png",
+          filename = "__Krastorio2Assets__/entities/crash-site/assembling-machine/crash-site-assembling-machine-2-repaired-shadow.png",
           width = 106,
           height = 86,
           frame_count = 20,
@@ -87,8 +85,7 @@ data:extend({
           shift = util.by_pixel(2, -8),
           animation_speed = 2,
           hr_version = {
-            filename = kr_crash_site_sprites_path
-              .. "assembling-machine/hr-crash-site-assembling-machine-2-repaired-shadow.png",
+            filename = "__Krastorio2Assets__/entities/crash-site/assembling-machine/hr-crash-site-assembling-machine-2-repaired-shadow.png",
             width = 208,
             height = 174,
             frame_count = 20,
@@ -104,8 +101,7 @@ data:extend({
     working_visualisations = {
       {
         animation = {
-          filename = kr_crash_site_sprites_path
-            .. "assembling-machine/crash-site-assembling-machine-2-repaired-light.png",
+          filename = "__Krastorio2Assets__/entities/crash-site/assembling-machine/crash-site-assembling-machine-2-repaired-light.png",
           width = 84,
           height = 62,
           frame_count = 20,
@@ -115,8 +111,7 @@ data:extend({
           blend_mode = "additive",
           animation_speed = 2,
           hr_version = {
-            filename = kr_crash_site_sprites_path
-              .. "assembling-machine/hr-crash-site-assembling-machine-2-repaired-light.png",
+            filename = "__Krastorio2Assets__/entities/crash-site/assembling-machine/hr-crash-site-assembling-machine-2-repaired-light.png",
             width = 174,
             height = 124,
             frame_count = 20,

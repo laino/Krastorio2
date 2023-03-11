@@ -15,7 +15,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
       type = "corpse",
       name = "advanced-radar-remnants",
       localised_name = { "remnant-name", { "entity-name.advanced-radar" } },
-      icon = kr_entities_icons_path .. "remnants-icon.png",
+      icon = "__Krastorio2Assets__/icons/entities/remnants-icon.png",
       icon_size = 32,
       flags = { "placeable-neutral", "building-direction-8-way", "not-on-map" },
       selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
@@ -28,7 +28,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
       final_render_layer = "remnants",
       remove_on_tile_placement = false,
       animation = make_rotated_animation_variations_from_sheet(1, {
-        filename = kr_remnants_path .. "advanced-radar-remnant/radar-remnants.png",
+        filename = "__Krastorio2Assets__/entities/remnants/advanced-radar-remnant/radar-remnants.png",
         line_length = 1,
         width = 142,
         height = 106,
@@ -38,7 +38,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
         direction_count = 1,
         shift = util.by_pixel(12, 4),
         hr_version = {
-          filename = kr_remnants_path .. "advanced-radar-remnant/hr-radar-remnants.png",
+          filename = "__Krastorio2Assets__/entities/remnants/advanced-radar-remnant/hr-radar-remnants.png",
           line_length = 1,
           width = 282,
           height = 212,
@@ -57,7 +57,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
     {
       type = "item",
       name = "advanced-radar",
-      icon = kr_entities_icons_path .. "advanced-radar.png",
+      icon = "__Krastorio2Assets__/icons/entities/advanced-radar.png",
       icon_size = 64,
       icon_mipmaps = 4,
       subgroup = "radars-and-rockets",
@@ -71,7 +71,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
     {
       type = "radar",
       name = "advanced-radar",
-      icon = kr_entities_icons_path .. "advanced-radar.png",
+      icon = "__Krastorio2Assets__/icons/entities/advanced-radar.png",
       icon_size = 64,
       icon_mipmaps = 4,
       flags = { "placeable-player", "player-creation" },
@@ -101,14 +101,14 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
       },
       energy_usage = "2MW",
       integration_patch = {
-        filename = kr_entities_path .. "advanced-radar/radar-integration.png",
+        filename = "__Krastorio2Assets__/entities/advanced-radar/radar-integration.png",
         priority = "low",
         width = 119,
         height = 108,
         direction_count = 1,
         shift = util.by_pixel(1.5, 4),
         hr_version = {
-          filename = kr_entities_path .. "advanced-radar/hr-radar-integration.png",
+          filename = "__Krastorio2Assets__/entities/advanced-radar/hr-radar-integration.png",
           priority = "low",
           width = 238,
           height = 216,
@@ -120,7 +120,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
       pictures = {
         layers = {
           {
-            filename = kr_entities_path .. "advanced-radar/radar.png",
+            filename = "__Krastorio2Assets__/entities/advanced-radar/radar.png",
             priority = "low",
             width = 98,
             height = 128,
@@ -129,7 +129,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
             line_length = 8,
             shift = util.by_pixel(1, -16),
             hr_version = {
-              filename = kr_entities_path .. "advanced-radar/hr-radar.png",
+              filename = "__Krastorio2Assets__/entities/advanced-radar/hr-radar.png",
               priority = "low",
               width = 196,
               height = 254,
@@ -141,7 +141,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
             },
           },
           {
-            filename = kr_entities_path .. "advanced-radar/radar-shadow.png",
+            filename = "__Krastorio2Assets__/entities/advanced-radar/radar-shadow.png",
             priority = "low",
             width = 172,
             height = 94,
@@ -151,7 +151,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
             shift = util.by_pixel(39, 3),
             draw_as_shadow = true,
             hr_version = {
-              filename = kr_entities_path .. "advanced-radar/hr-radar-shadow.png",
+              filename = "__Krastorio2Assets__/entities/advanced-radar/hr-radar-shadow.png",
               priority = "low",
               width = 343,
               height = 186,
@@ -196,7 +196,7 @@ if krastorio.general.getSafeSettingValue("kr-rebalance-radar") then
     {
       type = "technology",
       name = "advanced-radar",
-      icon = kr_technologies_icons_path .. "advanced-radar.png",
+      icon = "__Krastorio2Assets__/technologies/advanced-radar.png",
       icon_size = 256,
       icon_mipmaps = 4,
       prerequisites = { "kr-radar", "advanced-electronics" },

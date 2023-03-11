@@ -5,7 +5,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "kr-filtration-plant",
-    icon = kr_entities_icons_path .. "filtration-plant.png",
+    icon = "__Krastorio2Assets__/icons/entities/filtration-plant.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -23,7 +23,7 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        pipe_picture = kr_pipe_path,
+        pipe_picture = kr_pipe_patch,
         base_area = 10,
         base_level = -1,
         pipe_connections = { { type = "input", position = { 0, -4 } } },
@@ -31,7 +31,7 @@ data:extend({
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        pipe_picture = kr_pipe_path,
+        pipe_picture = kr_pipe_patch,
         base_area = 10,
         base_level = 1,
         pipe_connections = { { type = "output", position = { 0, 4 } } },
@@ -44,7 +44,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = kr_entities_path .. "filtration-plant/filtration-plant.png",
+          filename = "__Krastorio2Assets__/entities/filtration-plant/filtration-plant.png",
           priority = "high",
           width = 230,
           height = 260,
@@ -52,7 +52,7 @@ data:extend({
           frame_count = 1,
           scale = 1,
           hr_version = {
-            filename = kr_entities_path .. "filtration-plant/hr-filtration-plant.png",
+            filename = "__Krastorio2Assets__/entities/filtration-plant/hr-filtration-plant.png",
             priority = "high",
             width = 460,
             height = 520,
@@ -62,7 +62,7 @@ data:extend({
           },
         },
         {
-          filename = kr_entities_path .. "filtration-plant/filtration-plant-sh.png",
+          filename = "__Krastorio2Assets__/entities/filtration-plant/filtration-plant-sh.png",
           priority = "high",
           width = 249,
           height = 219,
@@ -71,7 +71,7 @@ data:extend({
           scale = 1,
           draw_as_shadow = true,
           hr_version = {
-            filename = kr_entities_path .. "filtration-plant/hr-filtration-plant-sh.png",
+            filename = "__Krastorio2Assets__/entities/filtration-plant/hr-filtration-plant-sh.png",
             priority = "high",
             width = 498,
             height = 438,
@@ -86,7 +86,7 @@ data:extend({
     working_visualisations = {
       {
         animation = {
-          filename = kr_entities_path .. "filtration-plant/filtration-plant-working.png",
+          filename = "__Krastorio2Assets__/entities/filtration-plant/filtration-plant-working.png",
           priority = "high",
           width = 170,
           height = 185,
@@ -96,7 +96,7 @@ data:extend({
           animation_speed = 0.6,
           scale = 1,
           hr_version = {
-            filename = kr_entities_path .. "filtration-plant/hr-filtration-plant-working.png",
+            filename = "__Krastorio2Assets__/entities/filtration-plant/hr-filtration-plant-working.png",
             priority = "high",
             width = 340,
             height = 370,
@@ -111,7 +111,7 @@ data:extend({
       {
         apply_recipe_tint = "primary",
         animation = {
-          filename = kr_entities_path .. "filtration-plant/filtration-plant-dirty-mask.png",
+          filename = "__Krastorio2Assets__/entities/filtration-plant/filtration-plant-dirty-mask.png",
           width = 78,
           height = 60,
           frame_count = 30,
@@ -119,7 +119,7 @@ data:extend({
           animation_speed = 0.6,
           shift = { 1.61, -1.02 },
           hr_version = {
-            filename = kr_entities_path .. "filtration-plant/hr-filtration-plant-dirty-mask.png",
+            filename = "__Krastorio2Assets__/entities/filtration-plant/hr-filtration-plant-dirty-mask.png",
             width = 156,
             height = 120,
             scale = 0.5,
@@ -133,7 +133,7 @@ data:extend({
       {
         apply_recipe_tint = "secondary",
         animation = {
-          filename = kr_entities_path .. "filtration-plant/filtration-plant-clear-mask.png",
+          filename = "__Krastorio2Assets__/entities/filtration-plant/filtration-plant-clear-mask.png",
           width = 78,
           height = 60,
           frame_count = 30,
@@ -141,7 +141,7 @@ data:extend({
           animation_speed = 0.6,
           shift = { 1.61, 1.31 },
           hr_version = {
-            filename = kr_entities_path .. "filtration-plant/hr-filtration-plant-clear-mask.png",
+            filename = "__Krastorio2Assets__/entities/filtration-plant/hr-filtration-plant-clear-mask.png",
             width = 156,
             height = 120,
             scale = 0.5,
@@ -155,7 +155,7 @@ data:extend({
     },
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
-      sound = { filename = kr_buildings_sounds_path .. "filtration-plant.ogg" },
+      sound = { filename = "__Krastorio2Assets__/sounds/buildings/filtration-plant.ogg" },
       idle_sound = { filename = "__base__/sound/idle1.ogg" },
       apparent_volume = 1.25,
     },

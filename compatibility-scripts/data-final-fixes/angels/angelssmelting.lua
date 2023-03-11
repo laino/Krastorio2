@@ -128,16 +128,16 @@ if mods["angelssmelting"] then
 
   for _, recipe_name in pairs(iron_recipes) do
     if data.raw.recipe[recipe_name] then
-      data.raw.recipe[recipe_name].icons[1].icon = kr_items_icons_path .. "copper-plate.png"
+      data.raw.recipe[recipe_name].icons[1].icon = "__Krastorio2Assets__/icons/items/copper-plate.png"
       data.raw.recipe[recipe_name].icons[2].icon_size = 32
       data.raw.recipe[recipe_name].icon_size = 64
     end
   end
 
   data.raw.recipe["enriched-copper-plate"].icons = {
-    { icon = kr_items_icons_path .. "copper-plate.png", icon_size = 64 },
+    { icon = "__Krastorio2Assets__/icons/items/copper-plate.png", icon_size = 64 },
     {
-      icon = kr_items_with_variations_icons_path .. "enriched-copper/enriched-copper.png",
+      icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-copper/enriched-copper.png",
       icon_size = 64,
       scale = 0.2,
       shift = { -10, -10 },
@@ -153,7 +153,7 @@ if mods["angelssmelting"] then
 
   for _, recipe_name in pairs(iron_recipes) do
     if data.raw.recipe[recipe_name] then
-      data.raw.recipe[recipe_name].icons[1].icon = kr_items_icons_path .. "steel-plate.png"
+      data.raw.recipe[recipe_name].icons[1].icon = "__Krastorio2Assets__/icons/items/steel-plate.png"
       data.raw.recipe[recipe_name].icons[2].icon_size = 32
       data.raw.recipe[recipe_name].icon_size = 64
     end

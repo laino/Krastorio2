@@ -2,7 +2,7 @@ data:extend({
   {
     type = "pump",
     name = "kr-steel-pump",
-    icon = kr_entities_icons_path .. "steel-pump.png",
+    icon = "__Krastorio2Assets__/icons/entities/steel-pump.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-neutral", "player-creation" },
@@ -40,7 +40,7 @@ data:extend({
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     animations = {
       north = {
-        filename = kr_entities_path .. "steel-pump/steel-pump-north.png",
+        filename = "__Krastorio2Assets__/entities/steel-pump/steel-pump-north.png",
         width = 53,
         height = 79,
         line_length = 8,
@@ -48,7 +48,7 @@ data:extend({
         animation_speed = 0.5,
         shift = util.by_pixel(8.000, 7.500),
         hr_version = {
-          filename = kr_entities_path .. "steel-pump/hr-steel-pump-north.png",
+          filename = "__Krastorio2Assets__/entities/steel-pump/hr-steel-pump-north.png",
           width = 103,
           height = 164,
           scale = 0.5,
@@ -59,7 +59,7 @@ data:extend({
         },
       },
       east = {
-        filename = kr_entities_path .. "steel-pump/steel-pump-east.png",
+        filename = "__Krastorio2Assets__/entities/steel-pump/steel-pump-east.png",
         width = 66,
         height = 60,
         line_length = 8,
@@ -67,7 +67,7 @@ data:extend({
         animation_speed = 0.5,
         shift = util.by_pixel(0, 4),
         hr_version = {
-          filename = kr_entities_path .. "steel-pump/hr-steel-pump-east.png",
+          filename = "__Krastorio2Assets__/entities/steel-pump/hr-steel-pump-east.png",
           width = 130,
           height = 109,
           scale = 0.5,
@@ -78,7 +78,7 @@ data:extend({
         },
       },
       south = {
-        filename = kr_entities_path .. "steel-pump/steel-pump-south.png",
+        filename = "__Krastorio2Assets__/entities/steel-pump/steel-pump-south.png",
         width = 62,
         height = 87,
         line_length = 8,
@@ -86,7 +86,7 @@ data:extend({
         animation_speed = 0.5,
         shift = util.by_pixel(13.5, 0.5),
         hr_version = {
-          filename = kr_entities_path .. "steel-pump/hr-steel-pump-south.png",
+          filename = "__Krastorio2Assets__/entities/steel-pump/hr-steel-pump-south.png",
           width = 114,
           height = 160,
           scale = 0.5,
@@ -97,7 +97,7 @@ data:extend({
         },
       },
       west = {
-        filename = kr_entities_path .. "steel-pump/steel-pump-west.png",
+        filename = "__Krastorio2Assets__/entities/steel-pump/steel-pump-west.png",
         width = 69,
         height = 51,
         line_length = 8,
@@ -105,7 +105,7 @@ data:extend({
         animation_speed = 0.5,
         shift = util.by_pixel(0.5, -0.5),
         hr_version = {
-          filename = kr_entities_path .. "steel-pump/hr-steel-pump-west.png",
+          filename = "__Krastorio2Assets__/entities/steel-pump/hr-steel-pump-west.png",
           width = 131,
           height = 111,
           scale = 0.5,
@@ -123,14 +123,14 @@ data:extend({
         west = {
           [1] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/V-R-135-load-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-R-135-load-standup-base.png",
               width = 55,
               height = 63,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(-23.5, -13.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-R-135-load-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-R-135-load-standup-base.png",
                 width = 110,
                 height = 126,
                 scale = 0.5,
@@ -159,14 +159,14 @@ data:extend({
           },
           [2] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/V-R-246-load-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-R-246-load-standup-base.png",
               width = 55,
               height = 74,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(-23.5, -22),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-R-246-load-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-R-246-load-standup-base.png",
                 width = 110,
                 height = 148,
                 scale = 0.5,
@@ -212,14 +212,14 @@ data:extend({
           },
           [3] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/V-R-135-load-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-R-135-load-standup-base.png",
               width = 55,
               height = 63,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(-23.5, -13.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-R-135-load-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-R-135-load-standup-base.png",
                 width = 110,
                 height = 126,
                 scale = 0.5,
@@ -248,14 +248,14 @@ data:extend({
           },
           [4] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/V-R-246-load-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-R-246-load-standup-base.png",
               width = 55,
               height = 74,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(-23.5, -22),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-R-246-load-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-R-246-load-standup-base.png",
                 width = 110,
                 height = 148,
                 scale = 0.5,
@@ -301,14 +301,14 @@ data:extend({
           },
           [5] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/V-R-135-load-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-R-135-load-standup-base.png",
               width = 55,
               height = 63,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(-23.5, -13.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-R-135-load-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-R-135-load-standup-base.png",
                 width = 110,
                 height = 126,
                 scale = 0.5,
@@ -354,14 +354,14 @@ data:extend({
           },
           [6] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/V-R-246-load-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-R-246-load-standup-base.png",
               width = 55,
               height = 74,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(-23.5, -22),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-R-246-load-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-R-246-load-standup-base.png",
                 width = 110,
                 height = 148,
                 scale = 0.5,
@@ -409,14 +409,14 @@ data:extend({
         north = {
           [1] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/H-B-123456-load-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-B-123456-load-standup-base.png",
               width = 46,
               height = 80,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(0, -62),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-load-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-B-123456-load-standup-base.png",
                 width = 91,
                 height = 160,
                 scale = 0.5,
@@ -462,14 +462,14 @@ data:extend({
           },
           [2] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/H-B-123456-load-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-B-123456-load-standup-base.png",
               width = 46,
               height = 80,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(0, -62),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-load-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-B-123456-load-standup-base.png",
                 width = 91,
                 height = 160,
                 scale = 0.5,
@@ -515,14 +515,14 @@ data:extend({
           },
           [3] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/H-B-123456-load-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-B-123456-load-standup-base.png",
               width = 46,
               height = 80,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(0, -62),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-load-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-B-123456-load-standup-base.png",
                 width = 91,
                 height = 160,
                 scale = 0.5,
@@ -568,14 +568,14 @@ data:extend({
           },
           [4] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/H-B-123456-load-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-B-123456-load-standup-base.png",
               width = 46,
               height = 80,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(0, -62),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-load-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-B-123456-load-standup-base.png",
                 width = 91,
                 height = 160,
                 scale = 0.5,
@@ -587,14 +587,14 @@ data:extend({
           },
           [5] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/H-B-123456-load-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-B-123456-load-standup-base.png",
               width = 46,
               height = 80,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(0, -62),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-load-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-B-123456-load-standup-base.png",
                 width = 91,
                 height = 160,
                 scale = 0.5,
@@ -640,14 +640,14 @@ data:extend({
           },
           [6] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/H-B-123456-load-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-B-123456-load-standup-base.png",
               width = 46,
               height = 80,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(0, -62),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-load-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-B-123456-load-standup-base.png",
                 width = 91,
                 height = 160,
                 scale = 0.5,
@@ -695,14 +695,14 @@ data:extend({
         east = {
           [1] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/V-L-135-load-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-L-135-load-standup-base.png",
               width = 55,
               height = 63,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(23.5, -16.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-L-135-load-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-L-135-load-standup-base.png",
                 width = 110,
                 height = 127,
                 scale = 0.5,
@@ -714,14 +714,14 @@ data:extend({
           },
           [2] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/V-L-2-load-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-L-2-load-standup-base.png",
               width = 55,
               height = 73,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(23.5, -24.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-L-2-load-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-L-2-load-standup-base.png",
                 width = 110,
                 height = 148,
                 scale = 0.5,
@@ -733,14 +733,14 @@ data:extend({
           },
           [3] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/V-L-135-load-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-L-135-load-standup-base.png",
               width = 55,
               height = 63,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(23.5, -16.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-L-135-load-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-L-135-load-standup-base.png",
                 width = 110,
                 height = 127,
                 scale = 0.5,
@@ -753,14 +753,14 @@ data:extend({
           [4] = {},
           [5] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/V-L-135-load-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-L-135-load-standup-base.png",
               width = 55,
               height = 63,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(23.5, -16.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-L-135-load-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-L-135-load-standup-base.png",
                 width = 110,
                 height = 127,
                 scale = 0.5,
@@ -785,14 +785,14 @@ data:extend({
         west = {
           [1] = {
             standup_top = {
-              filename = kr_entities_path .. "steel-pump/connector/V-L-135-unload-standup-top.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-L-135-unload-standup-top.png",
               width = 61,
               height = 35,
               line_length = 1,
               frame_count = 19,
               shift = util.by_pixel(18.5, -31.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-L-135-unload-standup-top.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-L-135-unload-standup-top.png",
                 width = 123,
                 height = 70,
                 scale = 0.5,
@@ -819,14 +819,14 @@ data:extend({
               },
             },
             connector = {
-              filename = kr_entities_path .. "steel-pump/connector/V-L-1-unload-connect.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-L-1-unload-connect.png",
               width = 54,
               height = 60,
               line_length = 1,
               frame_count = 16,
               shift = util.by_pixel(46, -22),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-L-1-unload-connect.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-L-1-unload-connect.png",
                 width = 106,
                 height = 119,
                 scale = 0.5,
@@ -855,14 +855,14 @@ data:extend({
           },
           [2] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/V-L-246-unload-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-L-246-unload-standup-base.png",
               width = 55,
               height = 73,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(23.5, -24.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-L-246-unload-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-L-246-unload-standup-base.png",
                 width = 110,
                 height = 148,
                 scale = 0.5,
@@ -872,14 +872,14 @@ data:extend({
               },
             },
             standup_top = {
-              filename = kr_entities_path .. "steel-pump/connector/V-L-246-unload-standup-top.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-L-246-unload-standup-top.png",
               width = 60,
               height = 55,
               line_length = 1,
               frame_count = 19,
               shift = util.by_pixel(19, -41.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-L-246-unload-standup-top.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-L-246-unload-standup-top.png",
                 width = 121,
                 height = 110,
                 scale = 0.5,
@@ -906,14 +906,14 @@ data:extend({
               },
             },
             connector = {
-              filename = kr_entities_path .. "steel-pump/connector/V-L-2-unload-connect.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-L-2-unload-connect.png",
               width = 54,
               height = 51,
               line_length = 1,
               frame_count = 16,
               shift = util.by_pixel(45, -49.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-L-2-unload-connect.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-L-2-unload-connect.png",
                 width = 107,
                 height = 102,
                 scale = 0.5,
@@ -942,14 +942,14 @@ data:extend({
           },
           [3] = {
             standup_top = {
-              filename = kr_entities_path .. "steel-pump/connector/V-L-135-unload-standup-top.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-L-135-unload-standup-top.png",
               width = 61,
               height = 35,
               line_length = 1,
               frame_count = 19,
               shift = util.by_pixel(18.5, -31.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-L-135-unload-standup-top.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-L-135-unload-standup-top.png",
                 width = 123,
                 height = 70,
                 scale = 0.5,
@@ -976,14 +976,14 @@ data:extend({
               },
             },
             connector = {
-              filename = kr_entities_path .. "steel-pump/connector/V-L-3-unload-connect.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-L-3-unload-connect.png",
               width = 53,
               height = 53,
               line_length = 1,
               frame_count = 16,
               shift = util.by_pixel(45.5, -25.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-L-3-unload-connect.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-L-3-unload-connect.png",
                 width = 106,
                 height = 105,
                 scale = 0.5,
@@ -1012,14 +1012,14 @@ data:extend({
           },
           [4] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/V-L-246-unload-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-L-246-unload-standup-base.png",
               width = 55,
               height = 73,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(23.5, -24.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-L-246-unload-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-L-246-unload-standup-base.png",
                 width = 110,
                 height = 148,
                 scale = 0.5,
@@ -1029,14 +1029,14 @@ data:extend({
               },
             },
             standup_top = {
-              filename = kr_entities_path .. "steel-pump/connector/V-L-246-unload-standup-top.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-L-246-unload-standup-top.png",
               width = 60,
               height = 55,
               line_length = 1,
               frame_count = 19,
               shift = util.by_pixel(19, -41.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-L-246-unload-standup-top.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-L-246-unload-standup-top.png",
                 width = 121,
                 height = 110,
                 scale = 0.5,
@@ -1063,14 +1063,14 @@ data:extend({
               },
             },
             connector = {
-              filename = kr_entities_path .. "steel-pump/connector/V-L-4-unload-connect.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-L-4-unload-connect.png",
               width = 55,
               height = 43,
               line_length = 1,
               frame_count = 16,
               shift = util.by_pixel(45.5, -51.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-L-4-unload-connect.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-L-4-unload-connect.png",
                 width = 109,
                 height = 87,
                 scale = 0.5,
@@ -1082,14 +1082,14 @@ data:extend({
           },
           [5] = {
             standup_top = {
-              filename = kr_entities_path .. "steel-pump/connector/V-L-135-unload-standup-top.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-L-135-unload-standup-top.png",
               width = 61,
               height = 35,
               line_length = 1,
               frame_count = 19,
               shift = util.by_pixel(18.5, -31.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-L-135-unload-standup-top.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-L-135-unload-standup-top.png",
                 width = 123,
                 height = 70,
                 scale = 0.5,
@@ -1116,14 +1116,14 @@ data:extend({
               },
             },
             connector = {
-              filename = kr_entities_path .. "steel-pump/connector/V-L-5-unload-connect.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-L-5-unload-connect.png",
               width = 54,
               height = 45,
               line_length = 1,
               frame_count = 16,
               shift = util.by_pixel(46, -29.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-L-5-unload-connect.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-L-5-unload-connect.png",
                 width = 108,
                 height = 90,
                 scale = 0.5,
@@ -1152,14 +1152,14 @@ data:extend({
           },
           [6] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/V-L-246-unload-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-L-246-unload-standup-base.png",
               width = 55,
               height = 73,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(23.5, -24.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-L-246-unload-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-L-246-unload-standup-base.png",
                 width = 110,
                 height = 148,
                 scale = 0.5,
@@ -1169,14 +1169,14 @@ data:extend({
               },
             },
             standup_top = {
-              filename = kr_entities_path .. "steel-pump/connector/V-L-246-unload-standup-top.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-L-246-unload-standup-top.png",
               width = 60,
               height = 55,
               line_length = 1,
               frame_count = 19,
               shift = util.by_pixel(19, -41.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-L-246-unload-standup-top.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-L-246-unload-standup-top.png",
                 width = 121,
                 height = 110,
                 scale = 0.5,
@@ -1203,14 +1203,14 @@ data:extend({
               },
             },
             connector = {
-              filename = kr_entities_path .. "steel-pump/connector/V-L-6-unload-connect.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-L-6-unload-connect.png",
               width = 54,
               height = 35,
               line_length = 1,
               frame_count = 16,
               shift = util.by_pixel(45, -54.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-L-6-unload-connect.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-L-6-unload-connect.png",
                 width = 107,
                 height = 70,
                 scale = 0.5,
@@ -1241,14 +1241,14 @@ data:extend({
         north = {
           [1] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/H-T-123456-unload-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-T-123456-unload-standup-base.png",
               width = 46,
               height = 54,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(0, 16),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-T-123456-unload-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-T-123456-unload-standup-base.png",
                 width = 91,
                 height = 107,
                 scale = 0.5,
@@ -1258,14 +1258,14 @@ data:extend({
               },
             },
             standup_top = {
-              filename = kr_entities_path .. "steel-pump/connector/H-T-123456-unload-standup-top.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-T-123456-unload-standup-top.png",
               width = 22,
               height = 55,
               line_length = 1,
               frame_count = 19,
               shift = util.by_pixel(0, 0.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-T-123456-unload-standup-top.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-T-123456-unload-standup-top.png",
                 width = 46,
                 height = 109,
                 scale = 0.5,
@@ -1292,14 +1292,14 @@ data:extend({
               },
             },
             connector = {
-              filename = kr_entities_path .. "steel-pump/connector/H-T-135-unload-connect.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-T-135-unload-connect.png",
               width = 45,
               height = 50,
               line_length = 1,
               frame_count = 16,
               shift = util.by_pixel(3.5, 1),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-T-135-unload-connect.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-T-135-unload-connect.png",
                 width = 89,
                 height = 99,
                 scale = 0.5,
@@ -1328,14 +1328,14 @@ data:extend({
           },
           [2] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/H-T-123456-unload-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-T-123456-unload-standup-base.png",
               width = 46,
               height = 54,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(0, 16),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-T-123456-unload-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-T-123456-unload-standup-base.png",
                 width = 91,
                 height = 107,
                 scale = 0.5,
@@ -1345,14 +1345,14 @@ data:extend({
               },
             },
             standup_top = {
-              filename = kr_entities_path .. "steel-pump/connector/H-T-123456-unload-standup-top.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-T-123456-unload-standup-top.png",
               width = 22,
               height = 55,
               line_length = 1,
               frame_count = 19,
               shift = util.by_pixel(0, 0.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-T-123456-unload-standup-top.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-T-123456-unload-standup-top.png",
                 width = 46,
                 height = 109,
                 scale = 0.5,
@@ -1379,14 +1379,14 @@ data:extend({
               },
             },
             connector = {
-              filename = kr_entities_path .. "steel-pump/connector/H-T-246-unload-connect.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-T-246-unload-connect.png",
               width = 38,
               height = 49,
               line_length = 1,
               frame_count = 16,
               shift = util.by_pixel(-1, 0.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-T-246-unload-connect.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-T-246-unload-connect.png",
                 width = 76,
                 height = 99,
                 scale = 0.5,
@@ -1415,14 +1415,14 @@ data:extend({
           },
           [3] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/H-T-123456-unload-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-T-123456-unload-standup-base.png",
               width = 46,
               height = 54,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(0, 16),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-T-123456-unload-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-T-123456-unload-standup-base.png",
                 width = 91,
                 height = 107,
                 scale = 0.5,
@@ -1432,14 +1432,14 @@ data:extend({
               },
             },
             standup_top = {
-              filename = kr_entities_path .. "steel-pump/connector/H-T-123456-unload-standup-top.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-T-123456-unload-standup-top.png",
               width = 22,
               height = 55,
               line_length = 1,
               frame_count = 19,
               shift = util.by_pixel(0, 0.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-T-123456-unload-standup-top.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-T-123456-unload-standup-top.png",
                 width = 46,
                 height = 109,
                 scale = 0.5,
@@ -1466,14 +1466,14 @@ data:extend({
               },
             },
             connector = {
-              filename = kr_entities_path .. "steel-pump/connector/H-T-135-unload-connect.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-T-135-unload-connect.png",
               width = 45,
               height = 50,
               line_length = 1,
               frame_count = 16,
               shift = util.by_pixel(3.5, 1),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-T-135-unload-connect.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-T-135-unload-connect.png",
                 width = 89,
                 height = 99,
                 scale = 0.5,
@@ -1502,14 +1502,14 @@ data:extend({
           },
           [4] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/H-T-123456-unload-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-T-123456-unload-standup-base.png",
               width = 46,
               height = 54,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(0, 16),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-T-123456-unload-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-T-123456-unload-standup-base.png",
                 width = 91,
                 height = 107,
                 scale = 0.5,
@@ -1519,14 +1519,14 @@ data:extend({
               },
             },
             standup_top = {
-              filename = kr_entities_path .. "steel-pump/connector/H-T-123456-unload-standup-top.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-T-123456-unload-standup-top.png",
               width = 22,
               height = 55,
               line_length = 1,
               frame_count = 19,
               shift = util.by_pixel(0, 0.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-T-123456-unload-standup-top.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-T-123456-unload-standup-top.png",
                 width = 46,
                 height = 109,
                 scale = 0.5,
@@ -1553,14 +1553,14 @@ data:extend({
               },
             },
             connector = {
-              filename = kr_entities_path .. "steel-pump/connector/H-T-246-unload-connect.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-T-246-unload-connect.png",
               width = 38,
               height = 49,
               line_length = 1,
               frame_count = 16,
               shift = util.by_pixel(-1, 0.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-T-246-unload-connect.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-T-246-unload-connect.png",
                 width = 76,
                 height = 99,
                 scale = 0.5,
@@ -1589,14 +1589,14 @@ data:extend({
           },
           [5] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/H-T-123456-unload-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-T-123456-unload-standup-base.png",
               width = 46,
               height = 54,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(0, 16),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-T-123456-unload-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-T-123456-unload-standup-base.png",
                 width = 91,
                 height = 107,
                 scale = 0.5,
@@ -1606,14 +1606,14 @@ data:extend({
               },
             },
             standup_top = {
-              filename = kr_entities_path .. "steel-pump/connector/H-T-123456-unload-standup-top.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-T-123456-unload-standup-top.png",
               width = 22,
               height = 55,
               line_length = 1,
               frame_count = 19,
               shift = util.by_pixel(0, 0.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-T-123456-unload-standup-top.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-T-123456-unload-standup-top.png",
                 width = 46,
                 height = 109,
                 scale = 0.5,
@@ -1640,14 +1640,14 @@ data:extend({
               },
             },
             connector = {
-              filename = kr_entities_path .. "steel-pump/connector/H-T-135-unload-connect.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-T-135-unload-connect.png",
               width = 45,
               height = 50,
               line_length = 1,
               frame_count = 16,
               shift = util.by_pixel(3.5, 1),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-T-135-unload-connect.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-T-135-unload-connect.png",
                 width = 89,
                 height = 99,
                 scale = 0.5,
@@ -1676,14 +1676,14 @@ data:extend({
           },
           [6] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/H-T-123456-unload-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-T-123456-unload-standup-base.png",
               width = 46,
               height = 54,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(0, 16),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-T-123456-unload-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-T-123456-unload-standup-base.png",
                 width = 91,
                 height = 107,
                 scale = 0.5,
@@ -1693,14 +1693,14 @@ data:extend({
               },
             },
             standup_top = {
-              filename = kr_entities_path .. "steel-pump/connector/H-T-123456-unload-standup-top.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-T-123456-unload-standup-top.png",
               width = 22,
               height = 55,
               line_length = 1,
               frame_count = 19,
               shift = util.by_pixel(0, 0.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-T-123456-unload-standup-top.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-T-123456-unload-standup-top.png",
                 width = 46,
                 height = 109,
                 scale = 0.5,
@@ -1727,14 +1727,14 @@ data:extend({
               },
             },
             connector = {
-              filename = kr_entities_path .. "steel-pump/connector/H-T-246-unload-connect.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-T-246-unload-connect.png",
               width = 38,
               height = 49,
               line_length = 1,
               frame_count = 16,
               shift = util.by_pixel(-1, 0.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-T-246-unload-connect.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-T-246-unload-connect.png",
                 width = 76,
                 height = 99,
                 scale = 0.5,
@@ -1765,14 +1765,14 @@ data:extend({
         east = {
           [1] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/V-R-135-unload-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-R-135-unload-standup-base.png",
               width = 55,
               height = 63,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(-23.5, -13.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-R-135-unload-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-R-135-unload-standup-base.png",
                 width = 110,
                 height = 126,
                 scale = 0.5,
@@ -1782,14 +1782,14 @@ data:extend({
               },
             },
             standup_top = {
-              filename = kr_entities_path .. "steel-pump/connector/V-R-135-unload-standup-top.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-R-135-unload-standup-top.png",
               width = 60,
               height = 35,
               line_length = 1,
               frame_count = 19,
               shift = util.by_pixel(-19, -28.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-R-135-unload-standup-top.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-R-135-unload-standup-top.png",
                 width = 121,
                 height = 70,
                 scale = 0.5,
@@ -1799,14 +1799,14 @@ data:extend({
               },
             },
             connector = {
-              filename = kr_entities_path .. "steel-pump/connector/V-R-1-unload-connect.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-R-1-unload-connect.png",
               width = 53,
               height = 56,
               line_length = 1,
               frame_count = 16,
               shift = util.by_pixel(-43.5, -21),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-R-1-unload-connect.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-R-1-unload-connect.png",
                 width = 107,
                 height = 115,
                 scale = 0.5,
@@ -1835,14 +1835,14 @@ data:extend({
           },
           [2] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/V-R-246-unload-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-R-246-unload-standup-base.png",
               width = 55,
               height = 74,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(-23.5, -22),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-R-246-unload-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-R-246-unload-standup-base.png",
                 width = 110,
                 height = 148,
                 scale = 0.5,
@@ -1852,14 +1852,14 @@ data:extend({
               },
             },
             standup_top = {
-              filename = kr_entities_path .. "steel-pump/connector/V-R-246-unload-standup-top.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-R-246-unload-standup-top.png",
               width = 60,
               height = 55,
               line_length = 1,
               frame_count = 19,
               shift = util.by_pixel(-19, -38.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-R-246-unload-standup-top.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-R-246-unload-standup-top.png",
                 width = 121,
                 height = 110,
                 scale = 0.5,
@@ -1886,14 +1886,14 @@ data:extend({
               },
             },
             connector = {
-              filename = kr_entities_path .. "steel-pump/connector/V-R-2-unload-connect.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-R-2-unload-connect.png",
               width = 54,
               height = 47,
               line_length = 1,
               frame_count = 16,
               shift = util.by_pixel(-43, -47.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-R-2-unload-connect.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-R-2-unload-connect.png",
                 width = 107,
                 height = 96,
                 scale = 0.5,
@@ -1922,14 +1922,14 @@ data:extend({
           },
           [3] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/V-R-135-unload-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-R-135-unload-standup-base.png",
               width = 55,
               height = 63,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(-23.5, -13.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-R-135-unload-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-R-135-unload-standup-base.png",
                 width = 110,
                 height = 126,
                 scale = 0.5,
@@ -1939,14 +1939,14 @@ data:extend({
               },
             },
             standup_top = {
-              filename = kr_entities_path .. "steel-pump/connector/V-R-135-unload-standup-top.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-R-135-unload-standup-top.png",
               width = 60,
               height = 35,
               line_length = 1,
               frame_count = 19,
               shift = util.by_pixel(-19, -28.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-R-135-unload-standup-top.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-R-135-unload-standup-top.png",
                 width = 121,
                 height = 70,
                 scale = 0.5,
@@ -1973,14 +1973,14 @@ data:extend({
               },
             },
             connector = {
-              filename = kr_entities_path .. "steel-pump/connector/V-R-3-unload-connect.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-R-3-unload-connect.png",
               width = 53,
               height = 50,
               line_length = 1,
               frame_count = 17,
               shift = util.by_pixel(-43.5, -25),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-R-3-unload-connect.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-R-3-unload-connect.png",
                 width = 106,
                 height = 99,
                 scale = 0.5,
@@ -2009,14 +2009,14 @@ data:extend({
           },
           [4] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/V-R-246-unload-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-R-246-unload-standup-base.png",
               width = 55,
               height = 74,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(-23.5, -22),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-R-246-unload-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-R-246-unload-standup-base.png",
                 width = 110,
                 height = 148,
                 scale = 0.5,
@@ -2026,14 +2026,14 @@ data:extend({
               },
             },
             standup_top = {
-              filename = kr_entities_path .. "steel-pump/connector/V-R-246-unload-standup-top.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-R-246-unload-standup-top.png",
               width = 60,
               height = 55,
               line_length = 1,
               frame_count = 19,
               shift = util.by_pixel(-19, -38.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-R-246-unload-standup-top.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-R-246-unload-standup-top.png",
                 width = 121,
                 height = 110,
                 scale = 0.5,
@@ -2060,14 +2060,14 @@ data:extend({
               },
             },
             connector = {
-              filename = kr_entities_path .. "steel-pump/connector/V-R-4-unload-connect.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-R-4-unload-connect.png",
               width = 53,
               height = 40,
               line_length = 1,
               frame_count = 16,
               shift = util.by_pixel(-43.5, -50),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-R-4-unload-connect.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-R-4-unload-connect.png",
                 width = 105,
                 height = 80,
                 scale = 0.5,
@@ -2096,14 +2096,14 @@ data:extend({
           },
           [5] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/V-R-135-unload-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-R-135-unload-standup-base.png",
               width = 55,
               height = 63,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(-23.5, -13.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-R-135-unload-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-R-135-unload-standup-base.png",
                 width = 110,
                 height = 126,
                 scale = 0.5,
@@ -2113,14 +2113,14 @@ data:extend({
               },
             },
             standup_top = {
-              filename = kr_entities_path .. "steel-pump/connector/V-R-135-unload-standup-top.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-R-135-unload-standup-top.png",
               width = 60,
               height = 35,
               line_length = 1,
               frame_count = 19,
               shift = util.by_pixel(-19, -28.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-R-135-unload-standup-top.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-R-135-unload-standup-top.png",
                 width = 121,
                 height = 70,
                 scale = 0.5,
@@ -2147,14 +2147,14 @@ data:extend({
               },
             },
             connector = {
-              filename = kr_entities_path .. "steel-pump/connector/V-R-5-unload-connect.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-R-5-unload-connect.png",
               width = 54,
               height = 41,
               line_length = 1,
               frame_count = 16,
               shift = util.by_pixel(-44, -27.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-R-5-unload-connect.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-R-5-unload-connect.png",
                 width = 106,
                 height = 82,
                 scale = 0.5,
@@ -2183,14 +2183,14 @@ data:extend({
           },
           [6] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/V-R-246-unload-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-R-246-unload-standup-base.png",
               width = 55,
               height = 74,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(-23.5, -22),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-R-246-unload-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-R-246-unload-standup-base.png",
                 width = 110,
                 height = 148,
                 scale = 0.5,
@@ -2200,14 +2200,14 @@ data:extend({
               },
             },
             standup_top = {
-              filename = kr_entities_path .. "steel-pump/connector/V-R-246-unload-standup-top.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-R-246-unload-standup-top.png",
               width = 60,
               height = 55,
               line_length = 1,
               frame_count = 19,
               shift = util.by_pixel(-19, -38.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-R-246-unload-standup-top.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-R-246-unload-standup-top.png",
                 width = 121,
                 height = 110,
                 scale = 0.5,
@@ -2234,14 +2234,14 @@ data:extend({
               },
             },
             connector = {
-              filename = kr_entities_path .. "steel-pump/connector/V-R-6-unload-connect.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/V-R-6-unload-connect.png",
               width = 54,
               height = 32,
               line_length = 1,
               frame_count = 16,
               shift = util.by_pixel(-44, -54),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-V-R-6-unload-connect.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-V-R-6-unload-connect.png",
                 width = 106,
                 height = 63,
                 scale = 0.5,
@@ -2272,14 +2272,14 @@ data:extend({
         south = {
           [1] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/H-B-123456-unload-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-B-123456-unload-standup-base.png",
               width = 46,
               height = 80,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(0, -62),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-unload-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-B-123456-unload-standup-base.png",
                 width = 91,
                 height = 160,
                 scale = 0.5,
@@ -2289,14 +2289,14 @@ data:extend({
               },
             },
             standup_top = {
-              filename = kr_entities_path .. "steel-pump/connector/H-B-123456-unload-standup-top.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-B-123456-unload-standup-top.png",
               width = 22,
               height = 73,
               line_length = 1,
               frame_count = 19,
               shift = util.by_pixel(0, -72.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-unload-standup-top.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-B-123456-unload-standup-top.png",
                 width = 46,
                 height = 146,
                 scale = 0.5,
@@ -2323,14 +2323,14 @@ data:extend({
               },
             },
             connector = {
-              filename = kr_entities_path .. "steel-pump/connector/H-B-135-unload-connect.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-B-135-unload-connect.png",
               width = 39,
               height = 50,
               line_length = 1,
               frame_count = 16,
               shift = util.by_pixel(4.5, -103),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-B-135-unload-connect.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-B-135-unload-connect.png",
                 width = 78,
                 height = 100,
                 scale = 0.5,
@@ -2359,14 +2359,14 @@ data:extend({
           },
           [2] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/H-B-123456-unload-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-B-123456-unload-standup-base.png",
               width = 46,
               height = 80,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(0, -62),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-unload-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-B-123456-unload-standup-base.png",
                 width = 91,
                 height = 160,
                 scale = 0.5,
@@ -2376,14 +2376,14 @@ data:extend({
               },
             },
             standup_top = {
-              filename = kr_entities_path .. "steel-pump/connector/H-B-123456-unload-standup-top.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-B-123456-unload-standup-top.png",
               width = 22,
               height = 73,
               line_length = 1,
               frame_count = 19,
               shift = util.by_pixel(0, -72.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-unload-standup-top.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-B-123456-unload-standup-top.png",
                 width = 46,
                 height = 146,
                 scale = 0.5,
@@ -2410,14 +2410,14 @@ data:extend({
               },
             },
             connector = {
-              filename = kr_entities_path .. "steel-pump/connector/H-B-246-unload-connect.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-B-246-unload-connect.png",
               width = 37,
               height = 47,
               line_length = 1,
               frame_count = 16,
               shift = util.by_pixel(-3.5, -103.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-B-246-unload-connect.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-B-246-unload-connect.png",
                 width = 74,
                 height = 95,
                 scale = 0.5,
@@ -2446,14 +2446,14 @@ data:extend({
           },
           [3] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/H-B-123456-unload-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-B-123456-unload-standup-base.png",
               width = 46,
               height = 80,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(0, -62),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-unload-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-B-123456-unload-standup-base.png",
                 width = 91,
                 height = 160,
                 scale = 0.5,
@@ -2463,14 +2463,14 @@ data:extend({
               },
             },
             standup_top = {
-              filename = kr_entities_path .. "steel-pump/connector/H-B-123456-unload-standup-top.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-B-123456-unload-standup-top.png",
               width = 22,
               height = 73,
               line_length = 1,
               frame_count = 19,
               shift = util.by_pixel(0, -72.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-unload-standup-top.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-B-123456-unload-standup-top.png",
                 width = 46,
                 height = 146,
                 scale = 0.5,
@@ -2497,14 +2497,14 @@ data:extend({
               },
             },
             connector = {
-              filename = kr_entities_path .. "steel-pump/connector/H-B-135-unload-connect.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-B-135-unload-connect.png",
               width = 39,
               height = 50,
               line_length = 1,
               frame_count = 16,
               shift = util.by_pixel(4.5, -103),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-B-135-unload-connect.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-B-135-unload-connect.png",
                 width = 78,
                 height = 100,
                 scale = 0.5,
@@ -2533,14 +2533,14 @@ data:extend({
           },
           [4] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/H-B-123456-unload-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-B-123456-unload-standup-base.png",
               width = 46,
               height = 80,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(0, -62),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-unload-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-B-123456-unload-standup-base.png",
                 width = 91,
                 height = 160,
                 scale = 0.5,
@@ -2550,14 +2550,14 @@ data:extend({
               },
             },
             standup_top = {
-              filename = kr_entities_path .. "steel-pump/connector/H-B-123456-unload-standup-top.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-B-123456-unload-standup-top.png",
               width = 22,
               height = 73,
               line_length = 1,
               frame_count = 19,
               shift = util.by_pixel(0, -72.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-unload-standup-top.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-B-123456-unload-standup-top.png",
                 width = 46,
                 height = 146,
                 scale = 0.5,
@@ -2584,14 +2584,14 @@ data:extend({
               },
             },
             connector = {
-              filename = kr_entities_path .. "steel-pump/connector/H-B-246-unload-connect.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-B-246-unload-connect.png",
               width = 37,
               height = 47,
               line_length = 1,
               frame_count = 16,
               shift = util.by_pixel(-3.5, -103.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-B-246-unload-connect.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-B-246-unload-connect.png",
                 width = 74,
                 height = 95,
                 scale = 0.5,
@@ -2620,14 +2620,14 @@ data:extend({
           },
           [5] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/H-B-123456-unload-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-B-123456-unload-standup-base.png",
               width = 46,
               height = 80,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(0, -62),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-unload-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-B-123456-unload-standup-base.png",
                 width = 91,
                 height = 160,
                 scale = 0.5,
@@ -2637,14 +2637,14 @@ data:extend({
               },
             },
             standup_top = {
-              filename = kr_entities_path .. "steel-pump/connector/H-B-123456-unload-standup-top.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-B-123456-unload-standup-top.png",
               width = 22,
               height = 73,
               line_length = 1,
               frame_count = 19,
               shift = util.by_pixel(0, -72.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-unload-standup-top.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-B-123456-unload-standup-top.png",
                 width = 46,
                 height = 146,
                 scale = 0.5,
@@ -2671,14 +2671,14 @@ data:extend({
               },
             },
             connector = {
-              filename = kr_entities_path .. "steel-pump/connector/H-B-135-unload-connect.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-B-135-unload-connect.png",
               width = 39,
               height = 50,
               line_length = 1,
               frame_count = 16,
               shift = util.by_pixel(4.5, -103),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-B-135-unload-connect.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-B-135-unload-connect.png",
                 width = 78,
                 height = 100,
                 scale = 0.5,
@@ -2707,14 +2707,14 @@ data:extend({
           },
           [6] = {
             standup_base = {
-              filename = kr_entities_path .. "steel-pump/connector/H-B-123456-unload-standup-base.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-B-123456-unload-standup-base.png",
               width = 46,
               height = 80,
               line_length = 1,
               frame_count = 20,
               shift = util.by_pixel(0, -62),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-unload-standup-base.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-B-123456-unload-standup-base.png",
                 width = 91,
                 height = 160,
                 scale = 0.5,
@@ -2724,14 +2724,14 @@ data:extend({
               },
             },
             standup_top = {
-              filename = kr_entities_path .. "steel-pump/connector/H-B-123456-unload-standup-top.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-B-123456-unload-standup-top.png",
               width = 22,
               height = 73,
               line_length = 1,
               frame_count = 19,
               shift = util.by_pixel(0, -72.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-B-123456-unload-standup-top.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-B-123456-unload-standup-top.png",
                 width = 46,
                 height = 146,
                 scale = 0.5,
@@ -2758,14 +2758,14 @@ data:extend({
               },
             },
             connector = {
-              filename = kr_entities_path .. "steel-pump/connector/H-B-246-unload-connect.png",
+              filename = "__Krastorio2Assets__/entities/steel-pump/connector/H-B-246-unload-connect.png",
               width = 37,
               height = 47,
               line_length = 1,
               frame_count = 16,
               shift = util.by_pixel(-3.5, -103.5),
               hr_version = {
-                filename = kr_entities_path .. "steel-pump/connector/hr-H-B-246-unload-connect.png",
+                filename = "__Krastorio2Assets__/entities/steel-pump/connector/hr-H-B-246-unload-connect.png",
                 width = 74,
                 height = 95,
                 scale = 0.5,

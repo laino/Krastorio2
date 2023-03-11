@@ -341,10 +341,10 @@ data:extend({
         },
       },
       inner_corner = {
-        picture = kr_tiles_path .. "reinforced-plates/concrete-inner-corner.png",
+        picture = "__Krastorio2Assets__/tiles/reinforced-plates/concrete-inner-corner.png",
         count = 16,
         hr_version = {
-          picture = kr_tiles_path .. "reinforced-plates/hr-concrete-inner-corner.png",
+          picture = "__Krastorio2Assets__/tiles/reinforced-plates/hr-concrete-inner-corner.png",
           count = 16,
           scale = 0.5,
         },
@@ -360,10 +360,10 @@ data:extend({
       },
 
       outer_corner = {
-        picture = kr_tiles_path .. "reinforced-plates/concrete-outer-corner.png",
+        picture = "__Krastorio2Assets__/tiles/reinforced-plates/concrete-outer-corner.png",
         count = 8,
         hr_version = {
-          picture = kr_tiles_path .. "reinforced-plates/hr-concrete-outer-corner.png",
+          picture = "__Krastorio2Assets__/tiles/reinforced-plates/hr-concrete-outer-corner.png",
           count = 8,
           scale = 0.5,
         },
@@ -379,10 +379,10 @@ data:extend({
       },
 
       side = {
-        picture = kr_tiles_path .. "reinforced-plates/concrete-side.png",
+        picture = "__Krastorio2Assets__/tiles/reinforced-plates/concrete-side.png",
         count = 16,
         hr_version = {
-          picture = kr_tiles_path .. "reinforced-plates/hr-concrete-side.png",
+          picture = "__Krastorio2Assets__/tiles/reinforced-plates/hr-concrete-side.png",
           count = 16,
           scale = 0.5,
         },
@@ -398,10 +398,10 @@ data:extend({
       },
 
       u_transition = {
-        picture = kr_tiles_path .. "reinforced-plates/concrete-u.png",
+        picture = "__Krastorio2Assets__/tiles/reinforced-plates/concrete-u.png",
         count = 8,
         hr_version = {
-          picture = kr_tiles_path .. "reinforced-plates/hr-concrete-u.png",
+          picture = "__Krastorio2Assets__/tiles/reinforced-plates/hr-concrete-u.png",
           count = 8,
           scale = 0.5,
         },
@@ -417,10 +417,10 @@ data:extend({
       },
 
       o_transition = {
-        picture = kr_tiles_path .. "reinforced-plates/concrete-o.png",
+        picture = "__Krastorio2Assets__/tiles/reinforced-plates/concrete-o.png",
         count = 4,
         hr_version = {
-          picture = kr_tiles_path .. "reinforced-plates/hr-concrete-o.png",
+          picture = "__Krastorio2Assets__/tiles/reinforced-plates/hr-concrete-o.png",
           count = 4,
           scale = 0.5,
         },
@@ -436,10 +436,10 @@ data:extend({
       },
 
       material_background = {
-        picture = kr_tiles_path .. "reinforced-plates/black-reinforced-plate.png",
+        picture = "__Krastorio2Assets__/tiles/reinforced-plates/black-reinforced-plate.png",
         count = 16,
         hr_version = {
-          picture = kr_tiles_path .. "reinforced-plates/hr-black-reinforced-plate.png",
+          picture = "__Krastorio2Assets__/tiles/reinforced-plates/hr-black-reinforced-plate.png",
           count = 16,
           scale = 0.5,
         },
@@ -583,10 +583,10 @@ data:extend({
       },
 
       material_background = {
-        picture = kr_tiles_path .. "reinforced-plates/white-reinforced-plate.png",
+        picture = "__Krastorio2Assets__/tiles/reinforced-plates/white-reinforced-plate.png",
         count = 16,
         hr_version = {
-          picture = kr_tiles_path .. "reinforced-plates/hr-white-reinforced-plate.png",
+          picture = "__Krastorio2Assets__/tiles/reinforced-plates/hr-white-reinforced-plate.png",
           count = 16,
           scale = 0.5,
         },

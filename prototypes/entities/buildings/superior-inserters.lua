@@ -8,7 +8,7 @@ data:extend({
   {
     type = "inserter",
     name = "kr-superior-inserter",
-    icon = kr_entities_icons_path .. "inserters/superior-inserter.png",
+    icon = "__Krastorio2Assets__/icons/entities/inserters/superior-inserter.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -40,12 +40,12 @@ data:extend({
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = sounds.inserter_fast,
     hand_base_picture = {
-      filename = kr_entities_path .. "superior-inserters/superior-inserter-hand-base.png",
+      filename = "__Krastorio2Assets__/entities/superior-inserters/superior-inserter-hand-base.png",
       priority = "extra-high",
       width = 8,
       height = 34,
       hr_version = {
-        filename = kr_entities_path .. "superior-inserters/hr-superior-inserter-hand-base.png",
+        filename = "__Krastorio2Assets__/entities/superior-inserters/hr-superior-inserter-hand-base.png",
         priority = "extra-high",
         width = 32,
         height = 136,
@@ -53,12 +53,12 @@ data:extend({
       },
     },
     hand_closed_picture = {
-      filename = kr_entities_path .. "superior-inserters/superior-inserter/superior-inserter-hand-closed.png",
+      filename = "__Krastorio2Assets__/entities/superior-inserters/superior-inserter/superior-inserter-hand-closed.png",
       priority = "extra-high",
       width = 24,
       height = 41,
       hr_version = {
-        filename = kr_entities_path .. "superior-inserters/superior-inserter/hr-superior-inserter-hand-closed.png",
+        filename = "__Krastorio2Assets__/entities/superior-inserters/superior-inserter/hr-superior-inserter-hand-closed.png",
         priority = "extra-high",
         width = 100,
         height = 164,
@@ -66,12 +66,12 @@ data:extend({
       },
     },
     hand_open_picture = {
-      filename = kr_entities_path .. "superior-inserters/superior-inserter/superior-inserter-hand-open.png",
+      filename = "__Krastorio2Assets__/entities/superior-inserters/superior-inserter/superior-inserter-hand-open.png",
       priority = "extra-high",
       width = 32,
       height = 41,
       hr_version = {
-        filename = kr_entities_path .. "superior-inserters/superior-inserter/hr-superior-inserter-hand-open.png",
+        filename = "__Krastorio2Assets__/entities/superior-inserters/superior-inserter/hr-superior-inserter-hand-open.png",
         priority = "extra-high",
         width = 130,
         height = 164,
@@ -92,12 +92,12 @@ data:extend({
       },
     },
     hand_closed_shadow = {
-      filename = kr_entities_path .. "superior-inserters/superior-inserter-hand-closed-shadow.png",
+      filename = "__Krastorio2Assets__/entities/superior-inserters/superior-inserter-hand-closed-shadow.png",
       priority = "extra-high",
       width = 24,
       height = 41,
       hr_version = {
-        filename = kr_entities_path .. "superior-inserters/hr-superior-inserter-hand-closed-shadow.png",
+        filename = "__Krastorio2Assets__/entities/superior-inserters/hr-superior-inserter-hand-closed-shadow.png",
         priority = "extra-high",
         width = 100,
         height = 164,
@@ -105,12 +105,12 @@ data:extend({
       },
     },
     hand_open_shadow = {
-      filename = kr_entities_path .. "superior-inserters/superior-inserter-hand-open-shadow.png",
+      filename = "__Krastorio2Assets__/entities/superior-inserters/superior-inserter-hand-open-shadow.png",
       priority = "extra-high",
       width = 32,
       height = 41,
       hr_version = {
-        filename = kr_entities_path .. "superior-inserters/hr-superior-inserter-hand-open-shadow.png",
+        filename = "__Krastorio2Assets__/entities/superior-inserters/hr-superior-inserter-hand-open-shadow.png",
         priority = "extra-high",
         width = 130,
         height = 164,
@@ -119,13 +119,13 @@ data:extend({
     },
     platform_picture = {
       sheet = {
-        filename = kr_entities_path .. "superior-inserters/superior-inserter-platform.png",
+        filename = "__Krastorio2Assets__/entities/superior-inserters/superior-inserter-platform.png",
         priority = "extra-high",
         width = 46,
         height = 46,
         shift = { 0.09375, 0 },
         hr_version = {
-          filename = kr_entities_path .. "superior-inserters/hr-superior-inserter-platform.png",
+          filename = "__Krastorio2Assets__/entities/superior-inserters/hr-superior-inserter-platform.png",
           priority = "extra-high",
           width = 105,
           height = 79,
@@ -145,7 +145,7 @@ data:extend({
   {
     type = "inserter",
     name = "kr-superior-long-inserter",
-    icon = kr_entities_icons_path .. "inserters/superior-long-inserter.png",
+    icon = "__Krastorio2Assets__/icons/entities/inserters/superior-long-inserter.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -177,12 +177,12 @@ data:extend({
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = sounds.inserter_fast,
     hand_base_picture = {
-      filename = kr_entities_path .. "superior-inserters/superior-inserter-hand-base.png",
+      filename = "__Krastorio2Assets__/entities/superior-inserters/superior-inserter-hand-base.png",
       priority = "extra-high",
       width = 8,
       height = 34,
       hr_version = {
-        filename = kr_entities_path .. "superior-inserters/hr-superior-inserter-hand-base.png",
+        filename = "__Krastorio2Assets__/entities/superior-inserters/hr-superior-inserter-hand-base.png",
         priority = "extra-high",
         width = 32,
         height = 136,
@@ -190,13 +190,12 @@ data:extend({
       },
     },
     hand_closed_picture = {
-      filename = kr_entities_path .. "superior-inserters/superior-long-inserter/superior-long-inserter-hand-closed.png",
+      filename = "__Krastorio2Assets__/entities/superior-inserters/superior-long-inserter/superior-long-inserter-hand-closed.png",
       priority = "extra-high",
       width = 24,
       height = 41,
       hr_version = {
-        filename = kr_entities_path
-          .. "superior-inserters/superior-long-inserter/hr-superior-long-inserter-hand-closed.png",
+        filename = "__Krastorio2Assets__/entities/superior-inserters/superior-long-inserter/hr-superior-long-inserter-hand-closed.png",
         priority = "extra-high",
         width = 100,
         height = 164,
@@ -204,13 +203,12 @@ data:extend({
       },
     },
     hand_open_picture = {
-      filename = kr_entities_path .. "superior-inserters/superior-long-inserter/superior-long-inserter-hand-open.png",
+      filename = "__Krastorio2Assets__/entities/superior-inserters/superior-long-inserter/superior-long-inserter-hand-open.png",
       priority = "extra-high",
       width = 32,
       height = 41,
       hr_version = {
-        filename = kr_entities_path
-          .. "superior-inserters/superior-long-inserter/hr-superior-long-inserter-hand-open.png",
+        filename = "__Krastorio2Assets__/entities/superior-inserters/superior-long-inserter/hr-superior-long-inserter-hand-open.png",
         priority = "extra-high",
         width = 130,
         height = 164,
@@ -231,12 +229,12 @@ data:extend({
       },
     },
     hand_closed_shadow = {
-      filename = kr_entities_path .. "superior-inserters/superior-inserter-hand-closed-shadow.png",
+      filename = "__Krastorio2Assets__/entities/superior-inserters/superior-inserter-hand-closed-shadow.png",
       priority = "extra-high",
       width = 24,
       height = 41,
       hr_version = {
-        filename = kr_entities_path .. "superior-inserters/hr-superior-inserter-hand-closed-shadow.png",
+        filename = "__Krastorio2Assets__/entities/superior-inserters/hr-superior-inserter-hand-closed-shadow.png",
         priority = "extra-high",
         width = 100,
         height = 164,
@@ -244,12 +242,12 @@ data:extend({
       },
     },
     hand_open_shadow = {
-      filename = kr_entities_path .. "superior-inserters/superior-inserter-hand-open-shadow.png",
+      filename = "__Krastorio2Assets__/entities/superior-inserters/superior-inserter-hand-open-shadow.png",
       priority = "extra-high",
       width = 32,
       height = 41,
       hr_version = {
-        filename = kr_entities_path .. "superior-inserters/hr-superior-inserter-hand-open-shadow.png",
+        filename = "__Krastorio2Assets__/entities/superior-inserters/hr-superior-inserter-hand-open-shadow.png",
         priority = "extra-high",
         width = 130,
         height = 164,
@@ -258,13 +256,13 @@ data:extend({
     },
     platform_picture = {
       sheet = {
-        filename = kr_entities_path .. "superior-inserters/superior-inserter-platform.png",
+        filename = "__Krastorio2Assets__/entities/superior-inserters/superior-inserter-platform.png",
         priority = "extra-high",
         width = 46,
         height = 46,
         shift = { 0.09375, 0 },
         hr_version = {
-          filename = kr_entities_path .. "superior-inserters/hr-superior-inserter-platform.png",
+          filename = "__Krastorio2Assets__/entities/superior-inserters/hr-superior-inserter-platform.png",
           priority = "extra-high",
           width = 105,
           height = 79,
@@ -284,7 +282,7 @@ data:extend({
   {
     type = "inserter",
     name = "kr-superior-filter-inserter",
-    icon = kr_entities_icons_path .. "inserters/superior-filter-inserter.png",
+    icon = "__Krastorio2Assets__/icons/entities/inserters/superior-filter-inserter.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -317,12 +315,12 @@ data:extend({
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = sounds.inserter_fast,
     hand_base_picture = {
-      filename = kr_entities_path .. "superior-inserters/superior-inserter-hand-base.png",
+      filename = "__Krastorio2Assets__/entities/superior-inserters/superior-inserter-hand-base.png",
       priority = "extra-high",
       width = 8,
       height = 34,
       hr_version = {
-        filename = kr_entities_path .. "superior-inserters/hr-superior-inserter-hand-base.png",
+        filename = "__Krastorio2Assets__/entities/superior-inserters/hr-superior-inserter-hand-base.png",
         priority = "extra-high",
         width = 32,
         height = 136,
@@ -330,14 +328,12 @@ data:extend({
       },
     },
     hand_closed_picture = {
-      filename = kr_entities_path
-        .. "superior-inserters/superior-filter-inserter/superior-filter-inserter-hand-closed.png",
+      filename = "__Krastorio2Assets__/entities/superior-inserters/superior-filter-inserter/superior-filter-inserter-hand-closed.png",
       priority = "extra-high",
       width = 24,
       height = 41,
       hr_version = {
-        filename = kr_entities_path
-          .. "superior-inserters/superior-filter-inserter/hr-superior-filter-inserter-hand-closed.png",
+        filename = "__Krastorio2Assets__/entities/superior-inserters/superior-filter-inserter/hr-superior-filter-inserter-hand-closed.png",
         priority = "extra-high",
         width = 100,
         height = 164,
@@ -345,14 +341,12 @@ data:extend({
       },
     },
     hand_open_picture = {
-      filename = kr_entities_path
-        .. "superior-inserters/superior-filter-inserter/superior-filter-inserter-hand-open.png",
+      filename = "__Krastorio2Assets__/entities/superior-inserters/superior-filter-inserter/superior-filter-inserter-hand-open.png",
       priority = "extra-high",
       width = 32,
       height = 41,
       hr_version = {
-        filename = kr_entities_path
-          .. "superior-inserters/superior-filter-inserter/hr-superior-filter-inserter-hand-open.png",
+        filename = "__Krastorio2Assets__/entities/superior-inserters/superior-filter-inserter/hr-superior-filter-inserter-hand-open.png",
         priority = "extra-high",
         width = 130,
         height = 164,
@@ -373,12 +367,12 @@ data:extend({
       },
     },
     hand_closed_shadow = {
-      filename = kr_entities_path .. "superior-inserters/superior-inserter-hand-closed-shadow.png",
+      filename = "__Krastorio2Assets__/entities/superior-inserters/superior-inserter-hand-closed-shadow.png",
       priority = "extra-high",
       width = 24,
       height = 41,
       hr_version = {
-        filename = kr_entities_path .. "superior-inserters/hr-superior-inserter-hand-closed-shadow.png",
+        filename = "__Krastorio2Assets__/entities/superior-inserters/hr-superior-inserter-hand-closed-shadow.png",
         priority = "extra-high",
         width = 100,
         height = 164,
@@ -386,12 +380,12 @@ data:extend({
       },
     },
     hand_open_shadow = {
-      filename = kr_entities_path .. "superior-inserters/superior-inserter-hand-open-shadow.png",
+      filename = "__Krastorio2Assets__/entities/superior-inserters/superior-inserter-hand-open-shadow.png",
       priority = "extra-high",
       width = 32,
       height = 41,
       hr_version = {
-        filename = kr_entities_path .. "superior-inserters/hr-superior-inserter-hand-open-shadow.png",
+        filename = "__Krastorio2Assets__/entities/superior-inserters/hr-superior-inserter-hand-open-shadow.png",
         priority = "extra-high",
         width = 130,
         height = 164,
@@ -400,13 +394,13 @@ data:extend({
     },
     platform_picture = {
       sheet = {
-        filename = kr_entities_path .. "superior-inserters/superior-inserter-platform.png",
+        filename = "__Krastorio2Assets__/entities/superior-inserters/superior-inserter-platform.png",
         priority = "extra-high",
         width = 46,
         height = 46,
         shift = { 0.09375, 0 },
         hr_version = {
-          filename = kr_entities_path .. "superior-inserters/hr-superior-inserter-platform.png",
+          filename = "__Krastorio2Assets__/entities/superior-inserters/hr-superior-inserter-platform.png",
           priority = "extra-high",
           width = 105,
           height = 79,
@@ -426,7 +420,7 @@ data:extend({
   {
     type = "inserter",
     name = "kr-superior-long-filter-inserter",
-    icon = kr_entities_icons_path .. "inserters/superior-long-filter-inserter.png",
+    icon = "__Krastorio2Assets__/icons/entities/inserters/superior-long-filter-inserter.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -459,12 +453,12 @@ data:extend({
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = sounds.inserter_fast,
     hand_base_picture = {
-      filename = kr_entities_path .. "superior-inserters/superior-inserter-hand-base.png",
+      filename = "__Krastorio2Assets__/entities/superior-inserters/superior-inserter-hand-base.png",
       priority = "extra-high",
       width = 8,
       height = 34,
       hr_version = {
-        filename = kr_entities_path .. "superior-inserters/hr-superior-inserter-hand-base.png",
+        filename = "__Krastorio2Assets__/entities/superior-inserters/hr-superior-inserter-hand-base.png",
         priority = "extra-high",
         width = 32,
         height = 136,
@@ -472,14 +466,12 @@ data:extend({
       },
     },
     hand_closed_picture = {
-      filename = kr_entities_path
-        .. "superior-inserters/superior-long-filter-inserter/superior-long-filter-inserter-hand-closed.png",
+      filename = "__Krastorio2Assets__/entities/superior-inserters/superior-long-filter-inserter/superior-long-filter-inserter-hand-closed.png",
       priority = "extra-high",
       width = 24,
       height = 41,
       hr_version = {
-        filename = kr_entities_path
-          .. "superior-inserters/superior-long-filter-inserter/hr-superior-long-filter-inserter-hand-closed.png",
+        filename = "__Krastorio2Assets__/entities/superior-inserters/superior-long-filter-inserter/hr-superior-long-filter-inserter-hand-closed.png",
         priority = "extra-high",
         width = 100,
         height = 164,
@@ -487,14 +479,12 @@ data:extend({
       },
     },
     hand_open_picture = {
-      filename = kr_entities_path
-        .. "superior-inserters/superior-long-filter-inserter/superior-long-filter-inserter-hand-open.png",
+      filename = "__Krastorio2Assets__/entities/superior-inserters/superior-long-filter-inserter/superior-long-filter-inserter-hand-open.png",
       priority = "extra-high",
       width = 32,
       height = 41,
       hr_version = {
-        filename = kr_entities_path
-          .. "superior-inserters/superior-long-filter-inserter/hr-superior-long-filter-inserter-hand-open.png",
+        filename = "__Krastorio2Assets__/entities/superior-inserters/superior-long-filter-inserter/hr-superior-long-filter-inserter-hand-open.png",
         priority = "extra-high",
         width = 130,
         height = 164,
@@ -515,12 +505,12 @@ data:extend({
       },
     },
     hand_closed_shadow = {
-      filename = kr_entities_path .. "superior-inserters/superior-inserter-hand-closed-shadow.png",
+      filename = "__Krastorio2Assets__/entities/superior-inserters/superior-inserter-hand-closed-shadow.png",
       priority = "extra-high",
       width = 24,
       height = 41,
       hr_version = {
-        filename = kr_entities_path .. "superior-inserters/hr-superior-inserter-hand-closed-shadow.png",
+        filename = "__Krastorio2Assets__/entities/superior-inserters/hr-superior-inserter-hand-closed-shadow.png",
         priority = "extra-high",
         width = 100,
         height = 164,
@@ -528,12 +518,12 @@ data:extend({
       },
     },
     hand_open_shadow = {
-      filename = kr_entities_path .. "superior-inserters/superior-inserter-hand-open-shadow.png",
+      filename = "__Krastorio2Assets__/entities/superior-inserters/superior-inserter-hand-open-shadow.png",
       priority = "extra-high",
       width = 32,
       height = 41,
       hr_version = {
-        filename = kr_entities_path .. "superior-inserters/hr-superior-inserter-hand-open-shadow.png",
+        filename = "__Krastorio2Assets__/entities/superior-inserters/hr-superior-inserter-hand-open-shadow.png",
         priority = "extra-high",
         width = 130,
         height = 164,
@@ -542,13 +532,13 @@ data:extend({
     },
     platform_picture = {
       sheet = {
-        filename = kr_entities_path .. "superior-inserters/superior-inserter-platform.png",
+        filename = "__Krastorio2Assets__/entities/superior-inserters/superior-inserter-platform.png",
         priority = "extra-high",
         width = 46,
         height = 46,
         shift = { 0.09375, 0 },
         hr_version = {
-          filename = kr_entities_path .. "superior-inserters/hr-superior-inserter-platform.png",
+          filename = "__Krastorio2Assets__/entities/superior-inserters/hr-superior-inserter-platform.png",
           priority = "extra-high",
           width = 105,
           height = 79,

@@ -2,7 +2,7 @@ data:extend({
   {
     type = "transport-belt",
     name = "kr-superior-transport-belt",
-    icon = kr_entities_icons_path .. "transport-belts/superior-transport-belt/superior-transport-belt.png",
+    icon = "__Krastorio2Assets__/icons/entities/transport-belts/superior-transport-belt/superior-transport-belt.png",
     icon_size = 64,
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 0.2, result = "kr-superior-transport-belt" },
@@ -24,16 +24,14 @@ data:extend({
       persistent = true,
     },
     animations = {
-      filename = kr_entities_path
-        .. "transport-belts/superior-transport-belt/transport-belt/superior-transport-belt.png",
+      filename = "__Krastorio2Assets__/entities/transport-belts/superior-transport-belt/transport-belt/superior-transport-belt.png",
       priority = "extra-high",
       width = 40,
       height = 40,
       frame_count = 32,
       direction_count = 12,
       hr_version = {
-        filename = kr_entities_path
-          .. "transport-belts/superior-transport-belt/transport-belt/hr-superior-transport-belt.png",
+        filename = "__Krastorio2Assets__/entities/transport-belts/superior-transport-belt/transport-belt/hr-superior-transport-belt.png",
         priority = "extra-high",
         width = 128,
         height = 128,
