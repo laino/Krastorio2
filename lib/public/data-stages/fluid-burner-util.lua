@@ -8,7 +8,8 @@ if not krastorio.fluid_burner_util then
   krastorio.fluid_burner_util = {}
   -- CONSTANTS
   krastorio.fluid_burner_util.CORNER_PATH = "__Krastorio2Assets__/icons/burn-recipes-background/burn-recipe-corner.png"
-  krastorio.fluid_burner_util.CORNER_PATH_MASK = "__Krastorio2Assets__/icons/burn-recipes-background/burn-recipe-corner-mask.png"
+  krastorio.fluid_burner_util.CORNER_PATH_MASK =
+    "__Krastorio2Assets__/icons/burn-recipes-background/burn-recipe-corner-mask.png"
   krastorio.fluid_burner_util.ICON_SIZE = 64
   krastorio.fluid_burner_util.SCALE = 0.34
 end
@@ -167,10 +168,8 @@ function krastorio.fluid_burner_util.generateBurnFluidsRecipe(fluid_name)
         ingredients = {
           { type = "fluid", name = fluid.name, amount = 100 },
         },
-        results = {
-          { type = "item", name = "kr-void", amount = 0 },
-        },
-        subgroup = "kr-void",
+        results = {},
+        subgroup = "other",
         order = fluid.order,
       }
 

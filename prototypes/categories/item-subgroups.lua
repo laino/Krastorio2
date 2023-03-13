@@ -76,14 +76,6 @@ data:extend({
     order = "zz",
   },
 
-  -- Nothing
-  {
-    type = "item-subgroup",
-    name = "kr-void",
-    group = "other",
-    order = "zzz",
-  },
-
   -- Matter
 
   {
