@@ -3,6 +3,12 @@ require("__Krastorio2__/prototypes/compatibility/space-exploration-pre")
 
 require("__Krastorio2__/prototypes/achievements")
 
+require("__Krastorio2__/prototypes/categories/ammo-category")
+require("__Krastorio2__/prototypes/categories/equipment-category")
+require("__Krastorio2__/prototypes/categories/fuel-category")
+require("__Krastorio2__/prototypes/categories/recipe-category")
+require("__Krastorio2__/prototypes/categories/resource-category")
+
 -- Library - to be deprecated
 krastorio = {}
 require("__Krastorio2__/lib/private/data-stages/utils/krastorio_utils")
@@ -15,7 +21,6 @@ require("__Krastorio2__/lib/private/data-stages/modules")
 require("__Krastorio2__/lib/private/data-stages/recipes")
 require("__Krastorio2__/lib/private/data-stages/technologies")
 
-require("__Krastorio2__/prototypes/categories/categories-initialization")
 require("__Krastorio2__/prototypes/damages/damages-initialization")
 require("__Krastorio2__/prototypes/entities/entities-initialization")
 require("__Krastorio2__/prototypes/equipments/equipments-initialization")

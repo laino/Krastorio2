@@ -113,4 +113,23 @@ data:extend({
     group = "smelting-crafting",
     order = "m4",
   },
+
+  {
+    type = "item-subgroup",
+    group = "combat",
+    name = "character-equipment",
+    order = "e-e2",
+  },
+  {
+    type = "item-subgroup",
+    group = "combat",
+    name = "vehicle-equipment",
+    order = "e-e3",
+  },
+  {
+    type = "item-subgroup",
+    group = "combat",
+    name = "vehicle-motor",
+    order = "e-e4",
+  },
 })

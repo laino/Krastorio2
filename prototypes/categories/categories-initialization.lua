@@ -1,6 +1,0 @@
-require("__Krastorio2__/prototypes/categories/item-subgroups")
-require("__Krastorio2__/prototypes/categories/fuel-categories")
-require("__Krastorio2__/prototypes/categories/recipe-categories")
-require("__Krastorio2__/prototypes/categories/resource-categories")
-require("__Krastorio2__/prototypes/categories/equipment-categories")
-require("__Krastorio2__/prototypes/categories/ammos-categories")
