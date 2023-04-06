@@ -1,6 +1,8 @@
 kr_optimization_tech_card_name = "space-science-pack"
 require("__Krastorio2__/prototypes/compatibility/space-exploration-pre")
 
+require("__Krastorio2__/prototypes/achievements")
+
 -- Library - to be deprecated
 krastorio = {}
 require("__Krastorio2__/lib/private/data-stages/utils/krastorio_utils")
@@ -13,7 +15,6 @@ require("__Krastorio2__/lib/private/data-stages/modules")
 require("__Krastorio2__/lib/private/data-stages/recipes")
 require("__Krastorio2__/lib/private/data-stages/technologies")
 
-require("__Krastorio2__/prototypes/achievements/achievements-initialization")
 require("__Krastorio2__/prototypes/categories/categories-initialization")
 require("__Krastorio2__/prototypes/damages/damages-initialization")
 require("__Krastorio2__/prototypes/entities/entities-initialization")
