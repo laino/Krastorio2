@@ -2,6 +2,7 @@ kr_optimization_tech_card_name = "space-science-pack"
 require("__Krastorio2__/prototypes/compatibility/space-exploration-pre")
 
 require("__Krastorio2__/prototypes/achievements")
+require("__Krastorio2__/prototypes/damage-type")
 
 require("__Krastorio2__/prototypes/categories/ammo-category")
 require("__Krastorio2__/prototypes/categories/equipment-category")
@@ -21,7 +22,6 @@ require("__Krastorio2__/lib/private/data-stages/modules")
 require("__Krastorio2__/lib/private/data-stages/recipes")
 require("__Krastorio2__/lib/private/data-stages/technologies")
 
-require("__Krastorio2__/prototypes/damages/damages-initialization")
 require("__Krastorio2__/prototypes/entities/entities-initialization")
 require("__Krastorio2__/prototypes/equipments/equipments-initialization")
 require("__Krastorio2__/prototypes/fluids/fluids-initialization")
