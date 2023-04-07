@@ -3,7 +3,6 @@ local table = require("__flib__/table")
 
 local compatibility = require("__Krastorio2__/scripts/compatibility")
 -- local creep = require("__Krastorio2__/scripts/creep")
-local energy_absorber = require("__Krastorio2__/scripts/energy-absorber")
 local freeplay = require("__Krastorio2__/scripts/freeplay")
 local inserter = require("__Krastorio2__/scripts/inserter")
 local intergalactic_transceiver = require("__Krastorio2__/scripts/intergalactic-transceiver")
@@ -26,7 +25,6 @@ function migrations.generic()
   freeplay.disable_rocket_victory()
   util.ensure_turret_force()
 
-  energy_absorber.init()
   inserter.find_droplanes()
   intergalactic_transceiver.get_max_energy()
   radioactivity.refresh_players()
@@ -243,7 +241,6 @@ migrations.versions = {
     end
   end,
   ["1.3.0"] = function()
-    energy_absorber.init()
     if game.finished or game.finished_but_continuing then
       for _, force in pairs(game.forces) do
         force.technologies["kr-logo"].enabled = true

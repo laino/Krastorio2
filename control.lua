@@ -1,6 +1,7 @@
 local handler = require("__core__/lualib/event_handler")
 
 handler.add_lib(require("__Krastorio2__/scripts/creep-collector"))
+handler.add_lib(require("__Krastorio2__/scripts/energy-absorber"))
 handler.add_lib(require("__Krastorio2__/scripts/jackhammer"))
 handler.add_lib(require("__Krastorio2__/scripts/loader-snapping"))
 handler.add_lib(require("__Krastorio2__/scripts/offshore-pump"))
@@ -10,7 +11,6 @@ local migration = require("__flib__/migration")
 local on_tick_n = require("__flib__/on-tick-n")
 
 -- local creep = require("__Krastorio2__/scripts/creep")
-local energy_absorber = require("__Krastorio2__/scripts/energy-absorber")
 local inserter = require("__Krastorio2__/scripts/inserter")
 local intergalactic_transceiver = require("__Krastorio2__/scripts/intergalactic-transceiver")
 local migrations = require("__Krastorio2__/scripts/migrations")
@@ -189,7 +189,6 @@ end
 
 -- EQUIPMENT
 
-legacy_lib.events[defines.events.on_player_placed_equipment] = energy_absorber.on_placed
 legacy_lib.events[defines.events.on_equipment_inserted] = function(e)
   if e.equipment.valid and e.equipment.name == "energy-absorber" then
     tesla_coil.update_target_grid(e.grid)
