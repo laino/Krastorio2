@@ -2,14 +2,22 @@ local bounding_box = require("__flib__/bounding-box")
 local math = require("__flib__/math")
 local position = require("__flib__/position")
 
-local constants = require("__Krastorio2__/scripts/constants")
 local util = require("__Krastorio2__/scripts/util")
 
-local creep_collector = {}
+local min_collection_rate = 30
+local max_collection_rate = 80
 
---- @param e EventData.on_player_selected_area|EventData.on_player_alt_selected_area
-function creep_collector.collect(e)
-  local player = game.get_player(e.player_index) --[[@as LuaPlayer]]
+--- @param e EventData.on_player_selected_area
+local function on_player_selected_area(e)
+  if e.item ~= "kr-creep-collector" then
+    return
+  end
+
+  local player = game.get_player(e.player_index)
+  if not player then
+    return
+  end
+
   local player_pos = player.position
 
   if #e.entities > 0 then
@@ -31,7 +39,7 @@ function creep_collector.collect(e)
   end
 
   if i > 0 then
-    local percentage = math.random(constants.creep_collection_rate.min, constants.creep_collection_rate.max)
+    local percentage = math.random(min_collection_rate, max_collection_rate)
     local collected_amount = math.ceil(i * (percentage / 100)) --[[@as uint]]
     local inventory = player.get_main_inventory()
     if not inventory then
@@ -60,5 +68,12 @@ function creep_collector.collect(e)
     )
   end
 end
+
+local creep_collector = {}
+
+creep_collector.events = {
+  [defines.events.on_player_selected_area] = on_player_selected_area,
+  [defines.events.on_player_alt_selected_area] = on_player_selected_area,
+}
 
 return creep_collector

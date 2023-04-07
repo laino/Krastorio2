@@ -1,13 +1,16 @@
+local handler = require("__core__/lualib/event_handler")
+
+handler.add_lib(require("__Krastorio2__/scripts/creep-collector"))
+handler.add_lib(require("__Krastorio2__/scripts/jackhammer"))
+
 local gui = require("__flib__/gui")
 local migration = require("__flib__/migration")
 local on_tick_n = require("__flib__/on-tick-n")
 
-local creep_collector = require("__Krastorio2__/scripts/creep-collector")
 local creep = require("__Krastorio2__/scripts/creep")
 local energy_absorber = require("__Krastorio2__/scripts/energy-absorber")
 local inserter = require("__Krastorio2__/scripts/inserter")
 local intergalactic_transceiver = require("__Krastorio2__/scripts/intergalactic-transceiver")
-local jackhammer = require("__Krastorio2__/scripts/jackhammer")
 local migrations = require("__Krastorio2__/scripts/migrations")
 local offshore_pump = require("__Krastorio2__/scripts/offshore-pump")
 local patreon = require("__Krastorio2__/scripts/patreon")
@@ -34,7 +37,9 @@ remote.add_interface("kr-radioactivity", radioactivity.remote_interface)
 
 -- BOOTSTRAP
 
-script.on_init(function()
+local legacy_lib = {}
+
+function legacy_lib.on_init()
   -- Initialize libraries
   on_tick_n.init()
 
@@ -52,14 +57,21 @@ script.on_init(function()
 
   -- Initialize mod
   migrations.generic()
-end)
+end
 
-migration.handle_on_configuration_changed(migrations.versions, migrations.generic)
+--- @param e ConfigurationChangedData
+function legacy_lib.on_configuration_changed(e)
+  if migration.on_config_changed(e, migrations.versions) then
+    migrations.generic()
+  end
+end
+
+legacy_lib.events = {}
 
 -- CUSTOM INPUT
 
 if not script.active_mods["bobinserters"] then
-  script.on_event("kr-inserter-change-lane", function(e)
+  legacy_lib.events["kr-inserter-change-lane"] = function(e)
     local player = game.get_player(e.player_index)
     if not player then
       return
@@ -68,10 +80,10 @@ if not script.active_mods["bobinserters"] then
     if selected and selected.valid and selected.type == "inserter" then
       inserter.change_lane(selected, player)
     end
-  end)
+  end
 end
 
-script.on_event("kr-change-roboport-state", function(e)
+legacy_lib.events["kr-change-roboport-state"] = function(e)
   local player = game.get_player(e.player_index)
   if not player then
     return
@@ -80,17 +92,11 @@ script.on_event("kr-change-roboport-state", function(e)
   if selected and selected.valid and selected.type == "roboport" then
     roboport.change_mode(selected, player)
   end
-end)
+end
 
 -- ENTITY
 
-script.on_event({
-  defines.events.on_built_entity,
-  defines.events.on_entity_cloned,
-  defines.events.on_robot_built_entity,
-  defines.events.script_raised_built,
-  defines.events.script_raised_revive,
-}, function(e)
+local function on_entity_created(e)
   local entity = e.entity or e.created_entity or e.destination
   if not entity or not entity.valid then
     return
@@ -127,14 +133,15 @@ script.on_event({
   elseif string.match(entity_name, "^kr.*%-loader$") then
     snap_loader(entity)
   end
-end)
+end
 
-script.on_event({
-  defines.events.on_player_mined_entity,
-  defines.events.on_robot_mined_entity,
-  defines.events.on_entity_died,
-  defines.events.script_raised_destroy,
-}, function(e)
+legacy_lib.events[defines.events.on_built_entity] = on_entity_created
+legacy_lib.events[defines.events.on_entity_cloned] = on_entity_created
+legacy_lib.events[defines.events.on_robot_built_entity] = on_entity_created
+legacy_lib.events[defines.events.script_raised_built] = on_entity_created
+legacy_lib.events[defines.events.script_raised_revive] = on_entity_created
+
+local function on_entity_destroyed(e)
   local entity = e.entity
   if not entity or not entity.valid then
     return
@@ -151,59 +158,64 @@ script.on_event({
   elseif entity_name == "kr-tesla-coil" then
     tesla_coil.destroy(entity)
   end
-end)
+end
 
-script.on_event(defines.events.on_entity_destroyed, function(e)
+legacy_lib.events[defines.events.on_player_mined_entity] = on_entity_destroyed
+legacy_lib.events[defines.events.on_robot_mined_entity] = on_entity_destroyed
+legacy_lib.events[defines.events.on_entity_died] = on_entity_destroyed
+legacy_lib.events[defines.events.script_raised_destroy] = on_entity_destroyed
+
+legacy_lib.events[defines.events.on_entity_destroyed] = function(e)
   local beam_data = global.tesla_coil.beams[e.registration_number]
   if beam_data then
     tesla_coil.remove_connection(beam_data.target_data, beam_data.tower_data)
   end
-end)
+end
 
-script.on_event(defines.events.on_biter_base_built, function(e)
+legacy_lib.events[defines.events.on_biter_base_built] = function(e)
   creep.on_biter_base_built(e.entity)
-end)
+end
 
-script.on_event(defines.events.on_pre_entity_settings_pasted, function(e)
+legacy_lib.events[defines.events.on_pre_entity_settings_pasted] = function(e)
   if e.destination.valid and e.destination.type == "inserter" then
     inserter.save_settings(e.destination)
   end
-end)
+end
 
-script.on_event(defines.events.on_entity_settings_pasted, function(e)
+legacy_lib.events[defines.events.on_entity_settings_pasted] = function(e)
   local source = e.source
   local destination = e.destination
 
   if source.valid and destination.valid and source.type == "inserter" and destination.type == "inserter" then
     inserter.copy_settings(source, destination)
   end
-end)
+end
 
 -- EQUIPMENT
 
-script.on_event(defines.events.on_player_placed_equipment, energy_absorber.on_placed)
-script.on_event(defines.events.on_equipment_inserted, function(e)
+legacy_lib.events[defines.events.on_player_placed_equipment] = energy_absorber.on_placed
+legacy_lib.events[defines.events.on_equipment_inserted] = function(e)
   if e.equipment.valid and e.equipment.name == "energy-absorber" then
     tesla_coil.update_target_grid(e.grid)
   end
-end)
-script.on_event(defines.events.on_equipment_removed, function(e)
+end
+legacy_lib.events[defines.events.on_equipment_removed] = function(e)
   if e.equipment == "energy-absorber" then
     tesla_coil.update_target_grid(e.grid)
   end
-end)
+end
 
 -- FORCE
 
-script.on_event(defines.events.on_force_created, function(e)
+legacy_lib.events[defines.events.on_force_created] = function(e)
   shelter.force_init(e.force)
-end)
+end
 
-script.on_event(defines.events.on_technology_effects_reset, function(e)
+legacy_lib.events[defines.events.on_technology_effects_reset] = function(e)
   if game.finished or game.finished_but_continuing then
     e.force.technologies["kr-logo"].enabled = true
   end
-end)
+end
 
 -- GUI
 
@@ -224,9 +236,9 @@ local function handle_gui_event(e)
   return false
 end
 
-gui.hook_events(handle_gui_event)
+gui.hook_events(handle_gui_event) -- FIXME:
 
-script.on_event(defines.events.on_gui_opened, function(e)
+legacy_lib.events[defines.events.on_gui_opened] = function(e)
   if not handle_gui_event(e) then
     local entity = e.entity
     if entity and entity.valid then
@@ -246,15 +258,15 @@ script.on_event(defines.events.on_gui_opened, function(e)
       end
     end
   end
-end)
+end
 
-script.on_event("kr-linked-focus-search", planetary_teleporter.on_focus_search)
+legacy_lib.events["kr-linked-focus-search"] = planetary_teleporter.on_focus_search
 
 -- PLAYER
 
-script.on_event(defines.events.on_player_used_capsule, virus.on_player_used_capsule)
+legacy_lib.events[defines.events.on_player_used_capsule] = virus.on_player_used_capsule
 
-script.on_event(defines.events.on_player_created, function(e)
+legacy_lib.events[defines.events.on_player_created] = function(e)
   local player = game.get_player(e.player_index)
   if not player then
     return
@@ -264,25 +276,25 @@ script.on_event(defines.events.on_player_created, function(e)
   planetary_teleporter.request_translation(player)
   radioactivity.add_player(player)
   roboport.refresh_gui(player)
-end)
+end
 
-script.on_event(defines.events.on_player_removed, function(e)
+legacy_lib.events[defines.events.on_player_removed] = function(e)
   inserter.destroy_gui(e.player_index)
   planetary_teleporter.clean_up_player(e.player_index)
   radioactivity.remove_player(e.player_index)
   roboport.destroy_gui(e.player_index)
-end)
+end
 
-script.on_event(defines.events.on_player_joined_game, function(e)
+legacy_lib.events[defines.events.on_player_joined_game] = function(e)
   local player = game.get_player(e.player_index)
   if not player then
     return
   end
   radioactivity.check_around_player(player)
   radioactivity.check_inventory(player)
-end)
+end
 
-script.on_event(defines.events.on_player_setup_blueprint, function(e)
+legacy_lib.events[defines.events.on_player_setup_blueprint] = function(e)
   local player = game.get_player(e.player_index)
   if not player then
     return
@@ -330,90 +342,76 @@ script.on_event(defines.events.on_player_setup_blueprint, function(e)
   if changed_entity then
     bp.set_blueprint_entities(entities)
   end
-end)
+end
 
-script.on_event(defines.events.on_player_changed_position, function(e)
+legacy_lib.events[defines.events.on_player_changed_position] = function(e)
   local player = game.get_player(e.player_index)
   if not player then
     return
   end
   radioactivity.check_around_player(player)
-end)
+end
 
-script.on_event(
-  { defines.events.on_player_main_inventory_changed, defines.events.on_player_trash_inventory_changed },
-  function(e)
-    local player = game.get_player(e.player_index)
-    if not player then
-      return
-    end
-    radioactivity.check_inventory(player)
+local function on_player_inventory_changed(e)
+  local player = game.get_player(e.player_index)
+  if not player then
+    return
   end
-)
+  radioactivity.check_inventory(player)
+end
 
-script.on_event(defines.events.on_player_armor_inventory_changed, tesla_coil.on_player_armor_inventory_changed)
+legacy_lib.events[defines.events.on_player_main_inventory_changed] = on_player_inventory_changed
+legacy_lib.events[defines.events.on_player_trash_inventory_changed] = on_player_inventory_changed
 
-script.on_event(
-  { defines.events.on_player_died, defines.events.on_player_respawned, defines.events.on_player_toggled_map_editor },
-  function(e)
-    local player = game.get_player(e.player_index)
-    if not player then
-      return
-    end
-    radioactivity.check_around_player(player)
-    radioactivity.check_inventory(player)
+legacy_lib.events[defines.events.on_player_armor_inventory_changed] = tesla_coil.on_player_armor_inventory_changed
+
+local function on_player_moved(e)
+  local player = game.get_player(e.player_index)
+  if not player then
+    return
   end
-)
+  radioactivity.check_around_player(player)
+  radioactivity.check_inventory(player)
+end
 
-script.on_event(defines.events.on_cutscene_cancelled, function(e)
+legacy_lib.events[defines.events.on_player_died] = on_player_moved
+legacy_lib.events[defines.events.on_player_respawned] = on_player_moved
+legacy_lib.events[defines.events.on_player_toggled_map_editor] = on_player_moved
+
+legacy_lib.events[defines.events.on_cutscene_cancelled] = function(e)
   local player = game.get_player(e.player_index)
   if not player then
     return
   end
   patreon.give_items(player, false)
-end)
+end
 
-script.on_event({
-  defines.events.on_player_selected_area,
-  defines.events.on_player_alt_selected_area,
-}, function(e)
-  local player = game.get_player(e.player_index)
-  if not player then
-    return
-  end
-  if e.item == "kr-creep-collector" then
-    creep_collector.collect(e)
-  elseif e.item == "kr-jackhammer" then
-    jackhammer.collect(player, e.surface, e.tiles, e.area)
-  end
-end)
-
-script.on_event(defines.events.on_string_translated, planetary_teleporter.on_string_translated)
+legacy_lib.events[defines.events.on_string_translated] = planetary_teleporter.on_string_translated
 
 -- SURFACES
 
-script.on_event(defines.events.on_chunk_generated, function(e)
+legacy_lib.events[defines.events.on_chunk_generated] = function(e)
   creep.on_chunk_generated(e.area, e.surface)
-end)
+end
 
-script.on_event(defines.events.on_surface_created, function(e)
+legacy_lib.events[defines.events.on_surface_created] = function(e)
   -- Space Exploration: only generate creep on Nauvis
   if not script.active_mods["space-exploration"] then
     creep.add_surface(e.surface_index)
   end
-end)
+end
 
 -- TICKS AND TRIGGERS
 
-script.on_event(defines.events.on_script_trigger_effect, function(e)
+legacy_lib.events[defines.events.on_script_trigger_effect] = function(e)
   if e.effect_id == "kr-tesla-coil-trigger" then
     tesla_coil.process_turret_fire(e.target_entity, e.source_entity)
   elseif e.effect_id == "kr-planetary-teleporter-character-trigger" then
     planetary_teleporter.update_players_in_range(e.source_entity, e.target_entity)
   end
-end)
+end
 
-script.on_event(defines.events.on_tick, function()
+legacy_lib.events[defines.events.on_tick] = function()
   intergalactic_transceiver.iterate()
   -- NOTE: These two are out of order on purpose, update_gui_statuses() must run first
   planetary_teleporter.update_gui_statuses()
@@ -429,7 +427,7 @@ script.on_event(defines.events.on_tick, function()
       end
     end
   end
-end)
+end
 
 script.on_nth_tick(20, function()
   radioactivity.update_and_damage()
@@ -439,3 +437,5 @@ script.on_nth_tick(180, function()
   intergalactic_transceiver.spawn_flying_texts()
   shelter.spawn_flying_texts()
 end)
+
+handler.add_lib(legacy_lib)

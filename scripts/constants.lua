@@ -16,13 +16,6 @@ constants.bonus_items = {
   { name = "landfill", count = 50 },
 }
 
-constants.creep_collection_rate = {
-  min = 30,
-  max = 80,
-}
-
-constants.creep_max_reach = 10
-
 constants.freeplay_crash_site_parts = {
   {
     name = "kr-crash-site-generator",
@@ -259,8 +252,6 @@ constants.intergalactic_transceiver = {
     },
   },
 }
-
-constants.jackhammer_max_reach = 15
 
 constants.mode_change_flying_text_color = { r = 1, g = 0.5, b = 0.25 }
 
