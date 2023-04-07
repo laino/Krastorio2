@@ -2,8 +2,8 @@ local bounding_box = require("__flib__/bounding-box")
 local math = require("__flib__/math")
 local position = require("__flib__/position")
 
-local constants = require("scripts/constants")
-local util = require("scripts/util")
+local constants = require("__Krastorio2__/scripts/constants")
+local util = require("__Krastorio2__/scripts/util")
 
 local jackhammer = {}
 

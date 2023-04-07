@@ -1,1 +1,1 @@
-require("compatibility-scripts/settings-updates/aai-industry")
+require("__Krastorio2__/compatibility-scripts/settings-updates/aai-industry")

@@ -1,7 +1,7 @@
 local gui = require("__flib__/gui")
 
-local constants = require("scripts/constants")
-local util = require("scripts/util")
+local constants = require("__Krastorio2__/scripts/constants")
+local util = require("__Krastorio2__/scripts/util")
 
 local roboport = {}
 

@@ -4,8 +4,8 @@ local on_tick_n = require("__flib__/on-tick-n")
 local reverse_defines = require("__flib__/reverse-defines")
 local position = require("__flib__/position")
 
-local constants = require("scripts/constants")
-local util = require("scripts/util")
+local constants = require("__Krastorio2__/scripts/constants")
+local util = require("__Krastorio2__/scripts/util")
 
 local intergalactic_transceiver = {}
 
