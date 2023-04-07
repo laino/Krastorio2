@@ -3,6 +3,7 @@ require("__Krastorio2__/prototypes/compatibility/space-exploration-pre")
 
 require("__Krastorio2__/prototypes/achievements")
 require("__Krastorio2__/prototypes/damage-type")
+require("__Krastorio2__/prototypes/item-groups")
 
 require("__Krastorio2__/prototypes/categories/ammo-category")
 require("__Krastorio2__/prototypes/categories/equipment-category")

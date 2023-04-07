@@ -1,32 +1,35 @@
 data:extend({
-
-  -- Radars and rocket
   {
-    type = "item-subgroup",
-    name = "vanilla-turrets",
-    group = "combat",
-    order = "g1",
+    type = "item-group",
+    name = "smelting-crafting",
+    order = "m4",
+    icon = "__Krastorio2Assets__/others/smelting-crafting.png",
+    icon_size = 64,
   },
   {
     type = "item-subgroup",
-    name = "railgun-turret",
+    name = "character-equipment",
     group = "combat",
-    order = "g2",
+    order = "e-e2",
   },
   {
     type = "item-subgroup",
-    name = "rocket-turret",
-    group = "combat",
-    order = "g3",
+    name = "crash-site",
+    group = "other",
+    order = "zz",
   },
   {
     type = "item-subgroup",
-    name = "radars-and-rockets",
-    group = "combat",
-    order = "g4",
+    name = "kr-decorations-1",
+    group = "environment",
+    order = "d1",
   },
-
-  -- Containers and logistics containers
+  {
+    type = "item-subgroup",
+    name = "kr-decorations-2",
+    group = "environment",
+    order = "d2",
+  },
   {
     type = "item-subgroup",
     name = "kr-logistics-1",
@@ -47,65 +50,45 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "kr-logistics-4", -- for compatibility
+    name = "kr-logistics-4",
     group = "logistics",
     order = "a4",
   },
-
-  -- Decorations
-
-  {
-    type = "item-subgroup",
-    name = "kr-decorations-1",
-    group = "environment",
-    order = "d1",
-  },
-  {
-    type = "item-subgroup",
-    name = "kr-decorations-2",
-    group = "environment",
-    order = "d2",
-  },
-
-  -- Crash site
-
-  {
-    type = "item-subgroup",
-    name = "crash-site",
-    group = "other",
-    order = "zz",
-  },
-
-  -- Matter
-
   {
     type = "item-subgroup",
     name = "matter-conversion",
     group = "intermediate-products",
     order = "m1",
   },
-  -- From matter to items
   {
     type = "item-subgroup",
     name = "matter-deconversion",
     group = "intermediate-products",
     order = "m2",
   },
-  -- Items that in parts use matter
   {
     type = "item-subgroup",
     name = "matter-items",
     group = "intermediate-products",
     order = "m3",
   },
-
-  --
   {
-    type = "item-group",
-    name = "smelting-crafting",
-    order = "m4",
-    icon = "__Krastorio2Assets__/others/smelting-crafting.png",
-    icon_size = 64,
+    type = "item-subgroup",
+    name = "radars-and-rockets",
+    group = "combat",
+    order = "g4",
+  },
+  {
+    type = "item-subgroup",
+    name = "railgun-turret",
+    group = "combat",
+    order = "g2",
+  },
+  {
+    type = "item-subgroup",
+    name = "rocket-turret",
+    group = "combat",
+    order = "g3",
   },
   {
     type = "item-subgroup",
@@ -113,23 +96,22 @@ data:extend({
     group = "smelting-crafting",
     order = "m4",
   },
-
   {
     type = "item-subgroup",
+    name = "vanilla-turrets",
     group = "combat",
-    name = "character-equipment",
-    order = "e-e2",
+    order = "g1",
   },
   {
     type = "item-subgroup",
-    group = "combat",
     name = "vehicle-equipment",
+    group = "combat",
     order = "e-e3",
   },
   {
     type = "item-subgroup",
-    group = "combat",
     name = "vehicle-motor",
+    group = "combat",
     order = "e-e4",
   },
 })
