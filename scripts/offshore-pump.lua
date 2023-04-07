@@ -1,4 +1,4 @@
-local compatibility = require("scripts.compatibility")
+local compatibility = require("scripts/compatibility")
 
 local offshore_pump = {}
 

@@ -1,4 +1,4 @@
-local constants = require("scripts.constants")
+local constants = require("scripts/constants")
 
 local patreon = {}
 

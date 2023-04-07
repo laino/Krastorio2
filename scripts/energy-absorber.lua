@@ -1,4 +1,4 @@
-local util = require("scripts.util")
+local util = require("scripts/util")
 
 local energy_absorber = {}
 

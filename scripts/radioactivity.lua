@@ -1,6 +1,6 @@
-local table = require("__flib__.table")
+local table = require("__flib__/table")
 
-local constants = require("scripts.constants")
+local constants = require("scripts/constants")
 
 local radioactivity = {}
 

@@ -1,11 +1,11 @@
-local gui = require("__flib__.gui")
-local math = require("__flib__.math")
-local on_tick_n = require("__flib__.on-tick-n")
-local reverse_defines = require("__flib__.reverse-defines")
-local position = require("__flib__.position")
+local gui = require("__flib__/gui")
+local math = require("__flib__/math")
+local on_tick_n = require("__flib__/on-tick-n")
+local reverse_defines = require("__flib__/reverse-defines")
+local position = require("__flib__/position")
 
-local constants = require("scripts.constants")
-local util = require("scripts.util")
+local constants = require("scripts/constants")
+local util = require("scripts/util")
 
 local intergalactic_transceiver = {}
 

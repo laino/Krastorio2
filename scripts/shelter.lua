@@ -1,4 +1,4 @@
-local util = require("scripts.util")
+local util = require("scripts/util")
 
 --- @class ShelterData
 --- @field container LuaEntity

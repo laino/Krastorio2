@@ -1,8 +1,8 @@
-local gui = require("__flib__.gui")
-local math = require("__flib__.math")
+local gui = require("__flib__/gui")
+local math = require("__flib__/math")
 
-local constants = require("scripts.constants")
-local util = require("scripts.util")
+local constants = require("scripts/constants")
+local util = require("scripts/util")
 
 local inserter = {}
 

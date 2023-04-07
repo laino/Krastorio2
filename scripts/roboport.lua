@@ -1,7 +1,7 @@
-local gui = require("__flib__.gui")
+local gui = require("__flib__/gui")
 
-local constants = require("scripts.constants")
-local util = require("scripts.util")
+local constants = require("scripts/constants")
+local util = require("scripts/util")
 
 local roboport = {}
 

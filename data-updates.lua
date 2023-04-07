@@ -9,7 +9,7 @@ krastorio.stage = "data-updates"
 require("__Krastorio2__/prototypes/vanilla-changes/mandatory-vanilla-updates")
 require("__Krastorio2__/prototypes/vanilla-changes/optional-vanilla-updates")
 -- Generate tree and rock recipes
-require("prototypes.others.greenhouse")
+require("prototypes/others/greenhouse")
 -- Generating buring recipes for fluids
 local fluid_burner_util = require("__Krastorio2__/lib/public/data-stages/fluid-burner-util")
 fluid_burner_util.generateBurnFluidsRecipes()
