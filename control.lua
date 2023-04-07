@@ -2,6 +2,7 @@ local handler = require("__core__/lualib/event_handler")
 
 handler.add_lib(require("__Krastorio2__/scripts/creep-collector"))
 handler.add_lib(require("__Krastorio2__/scripts/jackhammer"))
+handler.add_lib(require("__Krastorio2__/scripts/loader-snapping"))
 
 local gui = require("__flib__/gui")
 local migration = require("__flib__/migration")
@@ -18,7 +19,6 @@ local planetary_teleporter = require("__Krastorio2__/scripts/planetary-teleporte
 local radioactivity = require("__Krastorio2__/scripts/radioactivity")
 local roboport = require("__Krastorio2__/scripts/roboport")
 local shelter = require("__Krastorio2__/scripts/shelter")
-local snap_loader = require("__Krastorio2__/scripts/snap-loader")
 local tesla_coil = require("__Krastorio2__/scripts/tesla-coil")
 local util = require("__Krastorio2__/scripts/util")
 local virus = require("__Krastorio2__/scripts/virus")
@@ -130,8 +130,6 @@ local function on_entity_created(e)
     tesla_coil.build(entity)
   elseif entity_name == "offshore-pump" then
     offshore_pump.build(entity)
-  elseif string.match(entity_name, "^kr.*%-loader$") then
-    snap_loader(entity)
   end
 end
 

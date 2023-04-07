@@ -138,8 +138,13 @@ local function snap_to_belt(entity)
   end
 end
 
---- @param entity LuaEntity
-return function(entity)
+--- @param e EntityBuiltEvent
+local function on_entity_built(e)
+  local entity = e.entity or e.created_entity or e.destination
+  if not entity.valid or not string.match(entity.name, "^kr.*%-loader$") then
+    return
+  end
+
   entity.update_connections()
   if not entity.loader_container then
     snap_direction(entity)
@@ -147,3 +152,15 @@ return function(entity)
 
   snap_to_belt(entity)
 end
+
+local snap_loader = {}
+
+snap_loader.events = {
+  [defines.events.on_built_entity] = on_entity_built,
+  [defines.events.on_entity_cloned] = on_entity_built,
+  [defines.events.on_robot_built_entity] = on_entity_built,
+  [defines.events.script_raised_built] = on_entity_built,
+  [defines.events.script_raised_revive] = on_entity_built,
+}
+
+return snap_loader
