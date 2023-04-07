@@ -1,7 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.0
 Date: ????
-  Compatibility:
+  Changes:
+    - Relocated inserter drop lane functionality to a standalone mod
     - Removed Industrial Revolution 2 compatibility
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.17
