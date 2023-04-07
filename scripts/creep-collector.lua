@@ -1,6 +1,5 @@
-local bounding_box = require("__flib__/bounding-box")
-local math = require("__flib__/math")
-local position = require("__flib__/position")
+local flib_bounding_box = require("__flib__/bounding-box")
+local flib_position = require("__flib__/position")
 
 local util = require("__Krastorio2__/scripts/util")
 
@@ -24,7 +23,7 @@ local function on_player_selected_area(e)
     util.flying_text_with_sound(
       player,
       { "message.kr-enemy-entities-nearby" },
-      { position = bounding_box.center(e.area) }
+      { position = flib_bounding_box.center(e.area) }
     )
     return
   end
@@ -32,7 +31,7 @@ local function on_player_selected_area(e)
   local tiles_to_set = {}
   local i = 0
   for _, tile in pairs(e.tiles) do
-    if position.distance(tile.position, player_pos) <= player.reach_distance then
+    if flib_position.distance(tile.position, player_pos) <= player.reach_distance then
       i = i + 1
       tiles_to_set[i] = { name = tile.hidden_tile or "landfill", position = tile.position }
     end
@@ -50,21 +49,21 @@ local function on_player_selected_area(e)
       e.surface.set_tiles(tiles_to_set)
 
       util.flying_text_with_sound(player, { "message.kr-collected-amount", collected_amount, { "item-name.biomass" } }, {
-        position = bounding_box.center(e.area),
+        position = flib_bounding_box.center(e.area),
         sound = { path = "kr-collect-creep", volume_modifier = 1 },
       })
     else
       util.flying_text_with_sound(
         player,
         { "message.kr-inventory-is-full" },
-        { position = bounding_box.center(e.area) }
+        { position = flib_bounding_box.center(e.area) }
       )
     end
   else
     util.flying_text_with_sound(
       player,
       { "message.kr-no-creep-in-selection" },
-      { position = bounding_box.center(e.area) }
+      { position = flib_bounding_box.center(e.area) }
     )
   end
 end

@@ -1,5 +1,5 @@
-local direction_util = require("__flib__/direction")
-local position = require("__flib__/position")
+local flib_direction = require("__flib__/direction")
+local flib_position = require("__flib__/position")
 
 --- @type table<defines.direction, Vector>
 local offsets = {
@@ -38,7 +38,7 @@ local container_types = {
 
 --- @param entity LuaEntity
 local function flip_loader(entity)
-  entity.direction = direction_util.opposite(entity.direction)
+  entity.direction = flib_direction.opposite(entity.direction)
   entity.loader_type = entity.loader_type == "output" and "input" or "output"
 end
 
@@ -70,9 +70,9 @@ end
 local function snap_direction(entity)
   local offset_direction = entity.direction
   if entity.loader_type == "input" then
-    offset_direction = direction_util.opposite(offset_direction)
+    offset_direction = flib_direction.opposite(offset_direction)
   end
-  local container_position = position.add(entity.position, offsets[offset_direction])
+  local container_position = flib_position.add(entity.position, offsets[offset_direction])
 
   -- Case 1: If a container is in front, then flip the loader
   local containers = find_entities(entity.surface, container_position, entity.force, container_types)
@@ -90,8 +90,8 @@ local function snap_direction(entity)
   end
 
   -- Case 2: If a belt is behind, then flip the loader
-  local offset_direction = direction_util.opposite(offset_direction)
-  local belt_position = position.add(entity.position, offsets[offset_direction])
+  local offset_direction = flib_direction.opposite(offset_direction)
+  local belt_position = flib_position.add(entity.position, offsets[offset_direction])
   local belt = find_entities(entity.surface, belt_position, entity.force, belt_types)[1]
   if not belt then
     return
@@ -114,9 +114,9 @@ end
 local function snap_to_belt(entity)
   local offset_direction = entity.direction
   if entity.loader_type == "input" then
-    offset_direction = direction_util.opposite(offset_direction)
+    offset_direction = flib_direction.opposite(offset_direction)
   end
-  local belt_position = position.add(entity.position, offsets[offset_direction])
+  local belt_position = flib_position.add(entity.position, offsets[offset_direction])
 
   local belt = find_entities(entity.surface, belt_position, entity.force, belt_types)[1]
   if not belt then
@@ -130,7 +130,7 @@ local function snap_to_belt(entity)
   end
   if entity.direction == belt_direction then
     -- Pass
-  elseif entity.direction == direction_util.opposite(belt_direction) then
+  elseif entity.direction == flib_direction.opposite(belt_direction) then
     entity.loader_type = "input"
   elseif belt_type == "transport-belt" or belt_type == "underground-belt" then
     -- Sideloading

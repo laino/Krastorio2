@@ -1,4 +1,3 @@
-local table = require("__flib__/table")
 local flib_position = require("__flib__/position")
 
 --- @class RadioactivityPlayerData

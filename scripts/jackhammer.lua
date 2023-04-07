@@ -1,6 +1,5 @@
-local bounding_box = require("__flib__/bounding-box")
-local math = require("__flib__/math")
-local position = require("__flib__/position")
+local flib_bounding_box = require("__flib__/bounding-box")
+local flib_position = require("__flib__/position")
 
 local util = require("__Krastorio2__/scripts/util")
 
@@ -23,7 +22,7 @@ local function on_player_selected_area(e)
   local tiles_to_set = {}
   local i = 0
   for _, tile in pairs(e.tiles) do
-    if position.distance(tile.position, player_pos) > max_reach then
+    if flib_position.distance(tile.position, player_pos) > max_reach then
       goto continue
     end
 
@@ -62,7 +61,7 @@ local function on_player_selected_area(e)
         util.flying_text_with_sound(
           player,
           { "message.kr-inventory-is-full" },
-          { position = bounding_box.center(e.area) }
+          { position = flib_bounding_box.center(e.area) }
         )
         return
       end
@@ -84,7 +83,7 @@ local function on_player_selected_area(e)
     util.flying_text_with_sound(
       player,
       { "message.kr-no-tiles-in-selection" },
-      { position = bounding_box.center(e.area) }
+      { position = flib_bounding_box.center(e.area) }
     )
   end
 end
