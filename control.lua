@@ -9,7 +9,7 @@ local gui = require("__flib__/gui")
 local migration = require("__flib__/migration")
 local on_tick_n = require("__flib__/on-tick-n")
 
-local creep = require("__Krastorio2__/scripts/creep")
+-- local creep = require("__Krastorio2__/scripts/creep")
 local energy_absorber = require("__Krastorio2__/scripts/energy-absorber")
 local inserter = require("__Krastorio2__/scripts/inserter")
 local intergalactic_transceiver = require("__Krastorio2__/scripts/intergalactic-transceiver")
@@ -25,13 +25,13 @@ local virus = require("__Krastorio2__/scripts/virus")
 
 -- COMMANDS
 
-util.add_commands(creep.commands)
+-- util.add_commands(creep.commands)
 util.add_commands(patreon.commands)
 util.add_commands(radioactivity.commands)
 
 -- INTERFACES
 
-remote.add_interface("kr-creep", creep.remote_interface)
+-- remote.add_interface("kr-creep", creep.remote_interface)
 remote.add_interface("kr-intergalactic-transceiver", intergalactic_transceiver.remote_interface)
 remote.add_interface("kr-radioactivity", radioactivity.remote_interface)
 
@@ -44,7 +44,7 @@ function legacy_lib.on_init()
   on_tick_n.init()
 
   -- Initialize `global` table
-  creep.init()
+  -- creep.init()
   inserter.init()
   intergalactic_transceiver.init()
   patreon.init()
@@ -168,9 +168,9 @@ legacy_lib.events[defines.events.on_entity_destroyed] = function(e)
   end
 end
 
-legacy_lib.events[defines.events.on_biter_base_built] = function(e)
-  creep.on_biter_base_built(e.entity)
-end
+-- legacy_lib.events[defines.events.on_biter_base_built] = function(e)
+--   creep.on_biter_base_built(e.entity)
+-- end
 
 legacy_lib.events[defines.events.on_pre_entity_settings_pasted] = function(e)
   if e.destination.valid and e.destination.type == "inserter" then
@@ -383,16 +383,16 @@ legacy_lib.events[defines.events.on_string_translated] = planetary_teleporter.on
 
 -- SURFACES
 
-legacy_lib.events[defines.events.on_chunk_generated] = function(e)
-  creep.on_chunk_generated(e.area, e.surface)
-end
+-- legacy_lib.events[defines.events.on_chunk_generated] = function(e)
+--   creep.on_chunk_generated(e.area, e.surface)
+-- end
 
-legacy_lib.events[defines.events.on_surface_created] = function(e)
-  -- Space Exploration: only generate creep on Nauvis
-  if not script.active_mods["space-exploration"] then
-    creep.add_surface(e.surface_index)
-  end
-end
+-- legacy_lib.events[defines.events.on_surface_created] = function(e)
+--   -- Space Exploration: only generate creep on Nauvis
+--   if not script.active_mods["space-exploration"] then
+--     creep.add_surface(e.surface_index)
+--   end
+-- end
 
 -- TICKS AND TRIGGERS
 

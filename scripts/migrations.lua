@@ -2,7 +2,7 @@ local on_tick_n = require("__flib__/on-tick-n")
 local table = require("__flib__/table")
 
 local compatibility = require("__Krastorio2__/scripts/compatibility")
-local creep = require("__Krastorio2__/scripts/creep")
+-- local creep = require("__Krastorio2__/scripts/creep")
 local energy_absorber = require("__Krastorio2__/scripts/energy-absorber")
 local freeplay = require("__Krastorio2__/scripts/freeplay")
 local inserter = require("__Krastorio2__/scripts/inserter")
@@ -96,7 +96,7 @@ migrations.versions = {
 
     on_tick_n.init()
 
-    creep.init()
+    -- creep.init()
     inserter.init()
     intergalactic_transceiver.init()
     patreon.init()
@@ -107,39 +107,39 @@ migrations.versions = {
     tesla_coil.init()
     virus.init()
 
-    -- MIGRATE
+    -- -- MIGRATE
 
-    -- Creep
-    global.creep.on_biter_base_built = old_global.creep_on_biter_base_built
-    global.creep.on_chunk_generated = old_global.creep_on_chunk_generated
-    if not old_global.creep_on_chunk_generated then
-      global.creep.surfaces[game.get_surface("nauvis").index] = nil
-    end
+    -- -- Creep
+    -- global.creep.on_biter_base_built = old_global.creep_on_biter_base_built
+    -- global.creep.on_chunk_generated = old_global.creep_on_chunk_generated
+    -- if not old_global.creep_on_chunk_generated then
+    --   global.creep.surfaces[game.get_surface("nauvis").index] = nil
+    -- end
 
-    -- Intergalactic Transceiver
-    -- There should only be one of each, so this one is easy
-    for _, transceiver in pairs(find_on_all_surfaces({ name = "kr-intergalactic-transceiver" })) do
-      intergalactic_transceiver.build(transceiver)
-    end
-    for _, transceiver in pairs(find_on_all_surfaces({ name = "kr-activated-intergalactic-transceiver" })) do
-      global.intergalactic_transceiver.forces[transceiver.force.index] = { entity = transceiver }
-    end
+    -- -- Intergalactic Transceiver
+    -- -- There should only be one of each, so this one is easy
+    -- for _, transceiver in pairs(find_on_all_surfaces({ name = "kr-intergalactic-transceiver" })) do
+    --   intergalactic_transceiver.build(transceiver)
+    -- end
+    -- for _, transceiver in pairs(find_on_all_surfaces({ name = "kr-activated-intergalactic-transceiver" })) do
+    --   global.intergalactic_transceiver.forces[transceiver.force.index] = { entity = transceiver }
+    -- end
 
-    -- Patreon items
-    for player_name in pairs(old_global.patreon_item_given) do
-      local player = game.get_player(player_name)
-      if player then
-        global.patreon_items_given[player.index] = true
-      end
-    end
+    -- -- Patreon items
+    -- for player_name in pairs(old_global.patreon_item_given) do
+    --   local player = game.get_player(player_name)
+    --   if player then
+    --     global.patreon_items_given[player.index] = true
+    --   end
+    -- end
 
-    -- Planetary teleporter
-    global.planetary_teleporter = {
-      data = old_global.planetary_teleporters or {},
-      guis = old_global.planetary_teleporter_guis or {},
-      players = old_global.planetary_teleporter_players or {},
-      unnamed_translations = old_global.planetary_teleporter_unnamed_translations or {},
-    }
+    -- -- Planetary teleporter
+    -- global.planetary_teleporter = {
+    --   data = old_global.planetary_teleporters or {},
+    --   guis = old_global.planetary_teleporter_guis or {},
+    --   players = old_global.planetary_teleporter_players or {},
+    --   unnamed_translations = old_global.planetary_teleporter_unnamed_translations or {},
+    -- }
 
     -- Radioactivity
     local old_enabled = old_global.radioactivity_enabled
