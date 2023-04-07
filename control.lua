@@ -3,6 +3,7 @@ local handler = require("__core__/lualib/event_handler")
 handler.add_lib(require("__Krastorio2__/scripts/creep-collector"))
 handler.add_lib(require("__Krastorio2__/scripts/jackhammer"))
 handler.add_lib(require("__Krastorio2__/scripts/loader-snapping"))
+handler.add_lib(require("__Krastorio2__/scripts/offshore-pump"))
 
 local gui = require("__flib__/gui")
 local migration = require("__flib__/migration")
@@ -13,7 +14,6 @@ local energy_absorber = require("__Krastorio2__/scripts/energy-absorber")
 local inserter = require("__Krastorio2__/scripts/inserter")
 local intergalactic_transceiver = require("__Krastorio2__/scripts/intergalactic-transceiver")
 local migrations = require("__Krastorio2__/scripts/migrations")
-local offshore_pump = require("__Krastorio2__/scripts/offshore-pump")
 local patreon = require("__Krastorio2__/scripts/patreon")
 local planetary_teleporter = require("__Krastorio2__/scripts/planetary-teleporter")
 local radioactivity = require("__Krastorio2__/scripts/radioactivity")
@@ -128,8 +128,6 @@ local function on_entity_created(e)
     shelter.build(entity)
   elseif entity_name == "kr-tesla-coil" then
     tesla_coil.build(entity)
-  elseif entity_name == "offshore-pump" then
-    offshore_pump.build(entity)
   end
 end
 
@@ -327,10 +325,7 @@ legacy_lib.events[defines.events.on_player_setup_blueprint] = function(e)
   for i = 1, #entities do
     local entity = entities[i]
     local entity_name = entity.name
-    if entity_name == "kr-electric-offshore-pump" then
-      changed_entity = true
-      offshore_pump.setup_blueprint(entity)
-    elseif entity_name == "kr-planetary-teleporter" then
+    if entity_name == "kr-planetary-teleporter" then
       changed_entity = true
       planetary_teleporter.setup_blueprint(entity, mapping[i])
     end
