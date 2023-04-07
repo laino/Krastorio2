@@ -268,24 +268,6 @@ constants.patreon_items = {
   { name = "potato", count = 6 },
 }
 
-constants.radioactivity_defaults = {
-  { type = "entity", tbl = "entities", objects = { "uranium-ore" } },
-  {
-    type = "item",
-    tbl = "items",
-    objects = {
-      "nuclear-fuel",
-      "uranium-235",
-      "uranium-238",
-      "uranium-fuel-cell",
-      "uranium-ore",
-      "used-up-uranium-fuel-cell",
-    },
-  },
-}
-
-constants.radioactivity_range = 7
-
 constants.roboport_modes = {
   normal = { suffix = "", text = "normal" },
   construction = { color = { r = 0.5, g = 1, b = 0.4 }, suffix = "-construction-mode", text = "construction" },

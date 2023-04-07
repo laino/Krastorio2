@@ -5,6 +5,7 @@ handler.add_lib(require("__Krastorio2__/scripts/energy-absorber"))
 handler.add_lib(require("__Krastorio2__/scripts/jackhammer"))
 handler.add_lib(require("__Krastorio2__/scripts/loader-snapping"))
 handler.add_lib(require("__Krastorio2__/scripts/offshore-pump"))
+handler.add_lib(require("__Krastorio2__/scripts/radioactivity"))
 
 local gui = require("__flib__/gui")
 local migration = require("__flib__/migration")
@@ -16,7 +17,6 @@ local intergalactic_transceiver = require("__Krastorio2__/scripts/intergalactic-
 local migrations = require("__Krastorio2__/scripts/migrations")
 local patreon = require("__Krastorio2__/scripts/patreon")
 local planetary_teleporter = require("__Krastorio2__/scripts/planetary-teleporter")
-local radioactivity = require("__Krastorio2__/scripts/radioactivity")
 local roboport = require("__Krastorio2__/scripts/roboport")
 local shelter = require("__Krastorio2__/scripts/shelter")
 local tesla_coil = require("__Krastorio2__/scripts/tesla-coil")
@@ -27,13 +27,13 @@ local virus = require("__Krastorio2__/scripts/virus")
 
 -- util.add_commands(creep.commands)
 util.add_commands(patreon.commands)
-util.add_commands(radioactivity.commands)
+-- util.add_commands(radioactivity.commands)
 
 -- INTERFACES
 
 -- remote.add_interface("kr-creep", creep.remote_interface)
 remote.add_interface("kr-intergalactic-transceiver", intergalactic_transceiver.remote_interface)
-remote.add_interface("kr-radioactivity", radioactivity.remote_interface)
+-- remote.add_interface("kr-radioactivity", radioactivity.remote_interface)
 
 -- BOOTSTRAP
 
@@ -49,7 +49,6 @@ function legacy_lib.on_init()
   intergalactic_transceiver.init()
   patreon.init()
   planetary_teleporter.init()
-  radioactivity.init()
   roboport.init()
   shelter.init()
   tesla_coil.init()
@@ -269,24 +268,13 @@ legacy_lib.events[defines.events.on_player_created] = function(e)
   inserter.refresh_gui(player)
   patreon.give_items(player, false)
   planetary_teleporter.request_translation(player)
-  radioactivity.add_player(player)
   roboport.refresh_gui(player)
 end
 
 legacy_lib.events[defines.events.on_player_removed] = function(e)
   inserter.destroy_gui(e.player_index)
   planetary_teleporter.clean_up_player(e.player_index)
-  radioactivity.remove_player(e.player_index)
   roboport.destroy_gui(e.player_index)
-end
-
-legacy_lib.events[defines.events.on_player_joined_game] = function(e)
-  local player = game.get_player(e.player_index)
-  if not player then
-    return
-  end
-  radioactivity.check_around_player(player)
-  radioactivity.check_inventory(player)
 end
 
 legacy_lib.events[defines.events.on_player_setup_blueprint] = function(e)
@@ -336,39 +324,7 @@ legacy_lib.events[defines.events.on_player_setup_blueprint] = function(e)
   end
 end
 
-legacy_lib.events[defines.events.on_player_changed_position] = function(e)
-  local player = game.get_player(e.player_index)
-  if not player then
-    return
-  end
-  radioactivity.check_around_player(player)
-end
-
-local function on_player_inventory_changed(e)
-  local player = game.get_player(e.player_index)
-  if not player then
-    return
-  end
-  radioactivity.check_inventory(player)
-end
-
-legacy_lib.events[defines.events.on_player_main_inventory_changed] = on_player_inventory_changed
-legacy_lib.events[defines.events.on_player_trash_inventory_changed] = on_player_inventory_changed
-
 legacy_lib.events[defines.events.on_player_armor_inventory_changed] = tesla_coil.on_player_armor_inventory_changed
-
-local function on_player_moved(e)
-  local player = game.get_player(e.player_index)
-  if not player then
-    return
-  end
-  radioactivity.check_around_player(player)
-  radioactivity.check_inventory(player)
-end
-
-legacy_lib.events[defines.events.on_player_died] = on_player_moved
-legacy_lib.events[defines.events.on_player_respawned] = on_player_moved
-legacy_lib.events[defines.events.on_player_toggled_map_editor] = on_player_moved
 
 legacy_lib.events[defines.events.on_cutscene_cancelled] = function(e)
   local player = game.get_player(e.player_index)
@@ -408,7 +364,6 @@ legacy_lib.events[defines.events.on_tick] = function()
   -- NOTE: These two are out of order on purpose, update_gui_statuses() must run first
   planetary_teleporter.update_gui_statuses()
   planetary_teleporter.update_all_destination_availability()
-  radioactivity.update_sounds()
   virus.iterate()
 
   local tasks = on_tick_n.retrieve(game.tick)
@@ -420,10 +375,6 @@ legacy_lib.events[defines.events.on_tick] = function()
     end
   end
 end
-
-script.on_nth_tick(20, function()
-  radioactivity.update_and_damage()
-end)
 
 script.on_nth_tick(180, function()
   intergalactic_transceiver.spawn_flying_texts()
