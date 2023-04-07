@@ -12,7 +12,6 @@ local migration = require("__flib__/migration")
 local on_tick_n = require("__flib__/on-tick-n")
 
 -- local creep = require("__Krastorio2__/scripts/creep")
-local inserter = require("__Krastorio2__/scripts/inserter")
 local intergalactic_transceiver = require("__Krastorio2__/scripts/intergalactic-transceiver")
 local migrations = require("__Krastorio2__/scripts/migrations")
 local patreon = require("__Krastorio2__/scripts/patreon")
@@ -45,7 +44,6 @@ function legacy_lib.on_init()
 
   -- Initialize `global` table
   -- creep.init()
-  inserter.init()
   intergalactic_transceiver.init()
   patreon.init()
   planetary_teleporter.init()
@@ -68,19 +66,6 @@ end
 legacy_lib.events = {}
 
 -- CUSTOM INPUT
-
-if not script.active_mods["bobinserters"] then
-  legacy_lib.events["kr-inserter-change-lane"] = function(e)
-    local player = game.get_player(e.player_index)
-    if not player then
-      return
-    end
-    local selected = player.selected
-    if selected and selected.valid and selected.type == "inserter" then
-      inserter.change_lane(selected, player)
-    end
-  end
-end
 
 legacy_lib.events["kr-change-roboport-state"] = function(e)
   local player = game.get_player(e.player_index)
@@ -171,21 +156,6 @@ end
 --   creep.on_biter_base_built(e.entity)
 -- end
 
-legacy_lib.events[defines.events.on_pre_entity_settings_pasted] = function(e)
-  if e.destination.valid and e.destination.type == "inserter" then
-    inserter.save_settings(e.destination)
-  end
-end
-
-legacy_lib.events[defines.events.on_entity_settings_pasted] = function(e)
-  local source = e.source
-  local destination = e.destination
-
-  if source.valid and destination.valid and source.type == "inserter" and destination.type == "inserter" then
-    inserter.copy_settings(source, destination)
-  end
-end
-
 -- EQUIPMENT
 
 legacy_lib.events[defines.events.on_equipment_inserted] = function(e)
@@ -216,9 +186,7 @@ end
 local function handle_gui_event(e)
   local msg = gui.read_action(e)
   if msg then
-    if msg.gui == "inserter" then
-      inserter.handle_gui_action(msg, e)
-    elseif msg.gui == "intergalactic_transceiver" then
+    if msg.gui == "intergalactic_transceiver" then
       intergalactic_transceiver.gui_actions[msg.action](e)
     elseif msg.gui == "planetary_teleporter" then
       planetary_teleporter.handle_gui_action(msg, e)
@@ -245,8 +213,6 @@ legacy_lib.events[defines.events.on_gui_opened] = function(e)
         intergalactic_transceiver.create_gui(player, entity)
       elseif name == "kr-planetary-teleporter" then
         planetary_teleporter.create_gui(player, entity)
-      elseif entity.type == "inserter" then
-        inserter.update_gui(player, entity)
       elseif entity.type == "roboport" then
         roboport.update_gui(player, entity)
       end
@@ -265,14 +231,12 @@ legacy_lib.events[defines.events.on_player_created] = function(e)
   if not player then
     return
   end
-  inserter.refresh_gui(player)
   patreon.give_items(player, false)
   planetary_teleporter.request_translation(player)
   roboport.refresh_gui(player)
 end
 
 legacy_lib.events[defines.events.on_player_removed] = function(e)
-  inserter.destroy_gui(e.player_index)
   planetary_teleporter.clean_up_player(e.player_index)
   roboport.destroy_gui(e.player_index)
 end

@@ -103,29 +103,6 @@ data:extend({
   },
   {
     type = "tips-and-tricks-item",
-    name = "kr-inserters-krastorio-hotkey",
-    order = "g",
-    trigger = {
-      type = "or",
-      triggers = {
-        {
-          type = "build-entity",
-          entity = "burner-inserter",
-          count = 1,
-        },
-        {
-          type = "build-entity",
-          entity = "inserter",
-          count = 1,
-        },
-      },
-    },
-    category = "kr-about-k2",
-    indent = 1,
-    image = "__Krastorio2Assets__/gui/tip&tricks/inserters-hotkey-tip&tricks.png",
-  },
-  {
-    type = "tips-and-tricks-item",
     name = "kr-roboports-hotkey",
     order = "h",
     trigger = {

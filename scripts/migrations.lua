@@ -4,7 +4,6 @@ local table = require("__flib__/table")
 local compatibility = require("__Krastorio2__/scripts/compatibility")
 -- local creep = require("__Krastorio2__/scripts/creep")
 local freeplay = require("__Krastorio2__/scripts/freeplay")
-local inserter = require("__Krastorio2__/scripts/inserter")
 local intergalactic_transceiver = require("__Krastorio2__/scripts/intergalactic-transceiver")
 local patreon = require("__Krastorio2__/scripts/patreon")
 local planetary_teleporter = require("__Krastorio2__/scripts/planetary-teleporter")
@@ -24,7 +23,6 @@ function migrations.generic()
   freeplay.disable_rocket_victory()
   util.ensure_turret_force()
 
-  inserter.find_droplanes()
   intergalactic_transceiver.get_max_energy()
   roboport.find_variants()
   tesla_coil.get_absorber_buffer_capacity()
@@ -35,7 +33,6 @@ function migrations.generic()
   compatibility.schall_uranium()
 
   for _, player in pairs(game.players) do
-    inserter.refresh_gui(player)
     roboport.refresh_gui(player)
   end
 end
@@ -92,7 +89,6 @@ migrations.versions = {
     on_tick_n.init()
 
     -- creep.init()
-    inserter.init()
     intergalactic_transceiver.init()
     patreon.init()
     planetary_teleporter.init()
@@ -250,18 +246,8 @@ migrations.versions = {
       force.reset_technology_effects()
     end
   end,
-  ["1.3.7"] = function()
-    global.inserter_has_droplane_gui = nil
-  end,
   ["1.3.8"] = function()
-    -- Clean up any invalid inserter and roboport GUIs
-    local new = {}
-    for player_index, player_gui in pairs(global.inserter_guis) do
-      if player_gui.valid then
-        new[player_index] = player_gui
-      end
-    end
-    global.inserter_guis = new
+    -- Clean up any invalid roboport GUIs
     local new = {}
     for player_index, player_gui in pairs(global.roboport_guis) do
       if player_gui.valid then
