@@ -34,6 +34,7 @@ local function check_inventory(player)
   end
 
   for _, item_name in pairs(global.radioactivity.items) do
+    -- FIXME: This does not check trash inventory
     if player.get_item_count(item_name) > 0 then
       player_data.inventory = true
       return
