@@ -5,6 +5,7 @@ handler.add_lib(require("__Krastorio2__/scripts/energy-absorber"))
 handler.add_lib(require("__Krastorio2__/scripts/jackhammer"))
 handler.add_lib(require("__Krastorio2__/scripts/loader-snapping"))
 handler.add_lib(require("__Krastorio2__/scripts/offshore-pump"))
+handler.add_lib(require("__Krastorio2__/scripts/patreon"))
 handler.add_lib(require("__Krastorio2__/scripts/radioactivity"))
 
 local gui = require("__flib__/gui")
@@ -14,18 +15,15 @@ local on_tick_n = require("__flib__/on-tick-n")
 -- local creep = require("__Krastorio2__/scripts/creep")
 local intergalactic_transceiver = require("__Krastorio2__/scripts/intergalactic-transceiver")
 local migrations = require("__Krastorio2__/scripts/migrations")
-local patreon = require("__Krastorio2__/scripts/patreon")
 local planetary_teleporter = require("__Krastorio2__/scripts/planetary-teleporter")
 local roboport = require("__Krastorio2__/scripts/roboport")
 local shelter = require("__Krastorio2__/scripts/shelter")
 local tesla_coil = require("__Krastorio2__/scripts/tesla-coil")
-local util = require("__Krastorio2__/scripts/util")
 local virus = require("__Krastorio2__/scripts/virus")
 
 -- COMMANDS
 
 -- util.add_commands(creep.commands)
-util.add_commands(patreon.commands)
 -- util.add_commands(radioactivity.commands)
 
 -- INTERFACES
@@ -45,7 +43,6 @@ function legacy_lib.on_init()
   -- Initialize `global` table
   -- creep.init()
   intergalactic_transceiver.init()
-  patreon.init()
   planetary_teleporter.init()
   roboport.init()
   shelter.init()
@@ -231,7 +228,6 @@ legacy_lib.events[defines.events.on_player_created] = function(e)
   if not player then
     return
   end
-  patreon.give_items(player, false)
   planetary_teleporter.request_translation(player)
   roboport.refresh_gui(player)
 end
@@ -289,14 +285,6 @@ legacy_lib.events[defines.events.on_player_setup_blueprint] = function(e)
 end
 
 legacy_lib.events[defines.events.on_player_armor_inventory_changed] = tesla_coil.on_player_armor_inventory_changed
-
-legacy_lib.events[defines.events.on_cutscene_cancelled] = function(e)
-  local player = game.get_player(e.player_index)
-  if not player then
-    return
-  end
-  patreon.give_items(player, false)
-end
 
 legacy_lib.events[defines.events.on_string_translated] = planetary_teleporter.on_string_translated
 
