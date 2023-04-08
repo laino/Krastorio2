@@ -6,7 +6,7 @@ local function on_entity_built(e)
     return
   end
 
-  local entity = e.created_entity or e.entity
+  local entity = e.entity or e.created_entity or e.destination
   if not entity.valid or entity.name ~= "offshore-pump" then
     return
   end

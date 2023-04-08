@@ -7,6 +7,7 @@ handler.add_lib(require("__Krastorio2__/scripts/loader-snapping"))
 handler.add_lib(require("__Krastorio2__/scripts/offshore-pump"))
 handler.add_lib(require("__Krastorio2__/scripts/patreon"))
 handler.add_lib(require("__Krastorio2__/scripts/radioactivity"))
+handler.add_lib(require("__Krastorio2__/scripts/shelter"))
 
 local gui = require("__flib__/gui")
 local migration = require("__flib__/migration")
@@ -17,7 +18,6 @@ local intergalactic_transceiver = require("__Krastorio2__/scripts/intergalactic-
 local migrations = require("__Krastorio2__/scripts/migrations")
 local planetary_teleporter = require("__Krastorio2__/scripts/planetary-teleporter")
 local roboport = require("__Krastorio2__/scripts/roboport")
-local shelter = require("__Krastorio2__/scripts/shelter")
 local tesla_coil = require("__Krastorio2__/scripts/tesla-coil")
 local virus = require("__Krastorio2__/scripts/virus")
 
@@ -45,7 +45,6 @@ function legacy_lib.on_init()
   intergalactic_transceiver.init()
   planetary_teleporter.init()
   roboport.init()
-  shelter.init()
   tesla_coil.init()
   virus.init()
 
@@ -105,8 +104,6 @@ local function on_entity_created(e)
     intergalactic_transceiver.build_activated(entity)
   elseif entity_name == "kr-planetary-teleporter" then
     planetary_teleporter.build(entity, e.tags)
-  elseif entity_name == "kr-shelter-container" or entity_name == "kr-shelter-plus-container" then
-    shelter.build(entity)
   elseif entity_name == "kr-tesla-coil" then
     tesla_coil.build(entity)
   end
@@ -128,8 +125,6 @@ local function on_entity_destroyed(e)
     intergalactic_transceiver.destroy(entity)
   elseif entity_name == "kr-inactive-intergalactic-transceiver" then
     intergalactic_transceiver.destroy_inactive(entity)
-  elseif entity_name == "kr-shelter-container" or entity_name == "kr-shelter-plus-container" then
-    shelter.destroy(entity)
   elseif entity_name == "kr-planetary-teleporter" then
     planetary_teleporter.destroy(entity)
   elseif entity_name == "kr-tesla-coil" then
@@ -167,10 +162,6 @@ legacy_lib.events[defines.events.on_equipment_removed] = function(e)
 end
 
 -- FORCE
-
-legacy_lib.events[defines.events.on_force_created] = function(e)
-  shelter.force_init(e.force)
-end
 
 legacy_lib.events[defines.events.on_technology_effects_reset] = function(e)
   if game.finished or game.finished_but_continuing then
@@ -328,9 +319,8 @@ legacy_lib.events[defines.events.on_tick] = function()
   end
 end
 
-script.on_nth_tick(180, function()
-  intergalactic_transceiver.spawn_flying_texts()
-  shelter.spawn_flying_texts()
-end)
+legacy_lib.on_nth_tick = {
+  [180] = intergalactic_transceiver.spawn_flying_texts,
+}
 
 handler.add_lib(legacy_lib)
