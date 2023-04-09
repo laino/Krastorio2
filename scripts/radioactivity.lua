@@ -1,5 +1,7 @@
 local flib_position = require("__flib__/position")
 
+local util = require("__Krastorio2__/scripts/util")
+
 --- @class RadioactivityPlayerData
 --- @field entity boolean
 --- @field inventory boolean
@@ -199,18 +201,7 @@ function radioactivity.on_configuration_changed()
   end
 end
 
-radioactivity.commands = {
-  ["kr-disable-radioactivity"] = function()
-    global.radioactivity.enabled = false
-    game.print({ "message.kr-radioactivity-disabled" })
-  end,
-  ["kr-enable-radioactivity"] = function()
-    global.radioactivity.enabled = true
-    game.print({ "message.kr-radioactivity-enabled" })
-  end,
-}
-
-radioactivity.remote_interface = {
+remote.add_interface("kr-radioactivity", {
   add_entity = function(name)
     if not global.radioactivity then
       return
@@ -249,7 +240,18 @@ radioactivity.remote_interface = {
 
     global.radioactivity.enabled = to_state
   end,
-}
+})
+
+util.add_commands({
+  ["kr-disable-radioactivity"] = function()
+    global.radioactivity.enabled = false
+    game.print({ "message.kr-radioactivity-disabled" })
+  end,
+  ["kr-enable-radioactivity"] = function()
+    global.radioactivity.enabled = true
+    game.print({ "message.kr-radioactivity-enabled" })
+  end,
+})
 
 radioactivity.events = {
   [defines.events.on_player_changed_position] = on_player_moved,
