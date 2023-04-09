@@ -8,6 +8,7 @@ handler.add_lib(require("__Krastorio2__/scripts/offshore-pump"))
 handler.add_lib(require("__Krastorio2__/scripts/patreon"))
 handler.add_lib(require("__Krastorio2__/scripts/radioactivity"))
 handler.add_lib(require("__Krastorio2__/scripts/shelter"))
+handler.add_lib(require("__Krastorio2__/scripts/virus"))
 
 local gui = require("__flib__/gui")
 local migration = require("__flib__/migration")
@@ -19,12 +20,10 @@ local migrations = require("__Krastorio2__/scripts/migrations")
 local planetary_teleporter = require("__Krastorio2__/scripts/planetary-teleporter")
 local roboport = require("__Krastorio2__/scripts/roboport")
 local tesla_coil = require("__Krastorio2__/scripts/tesla-coil")
-local virus = require("__Krastorio2__/scripts/virus")
 
 -- COMMANDS
 
 -- util.add_commands(creep.commands)
--- util.add_commands(radioactivity.commands)
 
 -- INTERFACES
 
@@ -46,7 +45,6 @@ function legacy_lib.on_init()
   planetary_teleporter.init()
   roboport.init()
   tesla_coil.init()
-  virus.init()
 
   -- Initialize mod
   migrations.generic()
@@ -212,8 +210,6 @@ legacy_lib.events["kr-linked-focus-search"] = planetary_teleporter.on_focus_sear
 
 -- PLAYER
 
-legacy_lib.events[defines.events.on_player_used_capsule] = virus.on_player_used_capsule
-
 legacy_lib.events[defines.events.on_player_created] = function(e)
   local player = game.get_player(e.player_index)
   if not player then
@@ -307,7 +303,6 @@ legacy_lib.events[defines.events.on_tick] = function()
   -- NOTE: These two are out of order on purpose, update_gui_statuses() must run first
   planetary_teleporter.update_gui_statuses()
   planetary_teleporter.update_all_destination_availability()
-  virus.iterate()
 
   local tasks = on_tick_n.retrieve(game.tick)
   if tasks then

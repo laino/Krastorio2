@@ -10,7 +10,6 @@ local roboport = require("__Krastorio2__/scripts/roboport")
 local shelter = require("__Krastorio2__/scripts/shelter")
 local tesla_coil = require("__Krastorio2__/scripts/tesla-coil")
 local util = require("__Krastorio2__/scripts/util")
-local virus = require("__Krastorio2__/scripts/virus")
 
 local migrations = {}
 
@@ -93,7 +92,6 @@ migrations.versions = {
     roboport.init()
     shelter.init()
     tesla_coil.init()
-    virus.init()
 
     -- -- MIGRATE
 
