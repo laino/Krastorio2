@@ -12,13 +12,13 @@ if [ -z "$commit_delta" ]; then
     commit_delta="1"
 fi
 
-outdir="$(dirname $FACTORIO)/../../script-output"
+outdir=$FACTORIO/script-output
 if [ ! -d "$outdir" ]; then
     mkdir "$outdir"
 fi
 
 dump() {
-    $FACTORIO --dump-data > /dev/null
+    frun -- --dump-data > /dev/null
     echo $(md5sum "$outdir/data-raw-dump.json" | awk '{ print $1 }')
 }
 
